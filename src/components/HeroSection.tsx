@@ -3,16 +3,12 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-start justify-start overflow-hidden">
-      {/* Hero Background Video */}
-      <video 
+      {/* Hero Background Image */}
+      <img 
         className="absolute inset-0 w-full h-full object-cover z-0"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="https://cdn.midjourney.com/video/99c62fa0-8afa-4340-b382-47bd2c5b1b41/1.mp4" type="video/mp4" />
-      </video>
+        src="https://cdn.midjourney.com/8335a5df-3c57-491e-b57f-baedf9babf49/0_0.png"
+        alt="Jardins de la Côte d'Azur background"
+      />
       
       {/* Hero Content - Top Left Positioned */}
       <div className="relative z-20 p-8 md:p-16 lg:p-24 max-w-2xl animate-fade-in-slow">
