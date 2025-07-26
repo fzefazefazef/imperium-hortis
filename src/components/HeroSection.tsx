@@ -11,7 +11,7 @@ const HeroSection = () => {
         loop
         playsInline
       >
-        <source src="https://cdn.midjourney.com/video/7ed7e45f-530b-4d88-a3bf-fe0caf974a84/2.mp4" type="video/mp4" />
+        <source src="https://cdn.midjourney.com/video/7ed7e45f-530b-4d88-a3bf-fe0caf974a84/1.mp4" type="video/mp4" />
       </video>
       
       {/* Hero Content - Top Left Positioned */}
