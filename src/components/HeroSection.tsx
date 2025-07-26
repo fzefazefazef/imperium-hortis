@@ -14,9 +14,6 @@ const HeroSection = () => {
         <source src="https://cdn.midjourney.com/video/d82dd674-a518-49af-a182-3cfcaba83169/2.mp4" type="video/mp4" />
       </video>
       
-      {/* Light Overlay */}
-      <div className="absolute inset-0 bg-gradient-hero z-10"></div>
-      
       {/* Hero Content - Top Left Positioned */}
       <div className="relative z-20 p-8 md:p-16 lg:p-24 max-w-2xl animate-fade-in-slow">
         <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-soft-white mb-6 leading-tight">
