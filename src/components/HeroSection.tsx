@@ -15,7 +15,7 @@ const HeroSection = () => {
       
       {/* Hero Background Video */}
       <video 
-        className="absolute inset-0 w-11/12 h-5/6 object-fill z-0 mx-auto my-auto rounded-3xl shadow-luxury border border-sage-green/10"
+        className="absolute inset-0 w-4/5 aspect-video object-contain z-0 mx-auto my-auto rounded-3xl shadow-luxury border border-sage-green/10"
         autoPlay
         muted
         loop
