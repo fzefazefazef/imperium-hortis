@@ -25,15 +25,6 @@ const HeroSection = () => {
       </video>
       
       
-      {/* Logo */}
-      <div className="absolute top-8 left-8 z-30">
-        <img 
-          src="/lovable-uploads/12e7e74f-73e9-42a0-9464-5a0dcb8c1c16.png" 
-          alt="Imperium Hortis Logo"
-          className="h-16 md:h-20 lg:h-24 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
-        />
-      </div>
-      
       {/* Navigation */}
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
