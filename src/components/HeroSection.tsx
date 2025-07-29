@@ -11,7 +11,7 @@ const HeroSection = () => {
         loop
         playsInline
       >
-        <source src="https://i.imgur.com/t6bdNAl.mp4" type="video/mp4" />
+        <source src="/Professional_Mode_make_the_wind_naturaly_go_very_s.mp4" type="video/mp4" />
       </video>
       
       {/* Hero Content - Top Left Positioned */}
