@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const HeroSection = () => {
+  const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
+
   return (
     <section className="relative h-screen flex items-start justify-start overflow-hidden">
       {/* Hero Background Video */}
@@ -26,11 +29,32 @@ const HeroSection = () => {
           Nous créons des espaces verts d'exception qui capturent l'essence éternelle de la Riviera française.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button variant="minimal" size="xl" className="font-inter font-medium hover-scale animate-fade-in transform transition-all duration-300 hover:animate-glow-pulse">
+        <div 
+          ref={buttonsRef}
+          className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 ${
+            buttonsVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <Button 
+            variant="minimal" 
+            size="xl" 
+            className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse ${
+              buttonsVisible ? 'animate-fade-in' : ''
+            }`}
+            style={{ animationDelay: buttonsVisible ? '0.2s' : '0s' }}
+          >
             Nos savoir-faire
           </Button>
-          <Button variant="luxury" size="xl" className="font-inter font-medium hover-scale animate-fade-in transform transition-all duration-300 hover:shadow-luxury hover:scale-110">
+          <Button 
+            variant="luxury" 
+            size="xl" 
+            className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 ${
+              buttonsVisible ? 'animate-fade-in' : ''
+            }`}
+            style={{ animationDelay: buttonsVisible ? '0.4s' : '0s' }}
+          >
             Consultation privée
           </Button>
         </div>

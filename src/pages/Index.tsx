@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const Index = () => {
+  const { ref: servicesRef, isIntersecting: servicesVisible } = useIntersectionObserver();
+  const { ref: titleRef, isIntersecting: titleVisible } = useIntersectionObserver();
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Hero Section */}
@@ -41,11 +45,21 @@ const Index = () => {
       {/* Services Section */}
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-midnight-blue/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 animate-fade-in">
+          <h2 
+            ref={titleRef}
+            className={`font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
+              titleVisible 
+                ? 'opacity-100 translate-y-0 animate-fade-in' 
+                : 'opacity-0 translate-y-12'
+            }`}
+          >
             Nos savoir-faire
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div 
+            ref={servicesRef}
+            className="grid md:grid-cols-3 gap-8"
+          >
             {[
               {
                 title: "Jardins d'exception",
@@ -65,14 +79,25 @@ const Index = () => {
             ].map((service, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-2xl bg-card border border-sage-green/20 hover:border-sage-green/40 transition-all duration-500 animate-fade-in hover:shadow-glow"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className={`group p-8 rounded-2xl bg-card border border-sage-green/20 hover:border-sage-green/40 transition-all duration-700 hover:shadow-glow hover:scale-105 transform ${
+                  servicesVisible 
+                    ? 'opacity-100 translate-y-0 animate-fade-in' 
+                    : 'opacity-0 translate-y-16'
+                }`}
+                style={{ 
+                  animationDelay: servicesVisible ? `${index * 0.3}s` : '0s',
+                  transitionDelay: servicesVisible ? `${index * 0.2}s` : '0s'
+                }}
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="font-cinzel text-xl font-semibold text-foreground mb-4">
+                <div className={`text-4xl mb-4 transition-all duration-500 ${
+                  servicesVisible ? 'animate-scale-in' : ''
+                }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
+                  {service.icon}
+                </div>
+                <h3 className="font-cinzel text-xl font-semibold text-foreground mb-4 group-hover:text-sage-green transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="font-inter text-muted-foreground leading-relaxed">
+                <p className="font-inter text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   {service.description}
                 </p>
               </div>
