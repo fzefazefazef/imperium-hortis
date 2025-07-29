@@ -20,13 +20,9 @@ const HeroSection = () => {
         muted
         loop
         playsInline
-        preload="auto"
-        onLoadStart={() => console.log('Video loading started')}
-        onCanPlay={() => console.log('Video can play')}
-        onError={(e) => console.error('Video error:', e)}
+        preload="metadata"
       >
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
-        Votre navigateur ne supporte pas la lecture de vidéos.
       </video>
       
 
