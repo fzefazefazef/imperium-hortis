@@ -50,7 +50,7 @@ const HeroSection = () => {
       </nav>
       
       {/* Hero Content - Top Left Positioned */}
-      <div className="relative z-20 p-8 md:p-16 lg:p-24 pt-32 md:pt-40 lg:pt-48 max-w-2xl animate-fade-in-slow ml-4 md:ml-8 lg:ml-12">
+      <div className="relative z-20 pl-8 md:pl-12 lg:pl-16 pr-8 md:pr-16 lg:pr-24 pt-32 md:pt-40 lg:pt-48 max-w-2xl animate-fade-in-slow">
         <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-soft-white mb-6 leading-tight">
           Imperium
           <span className="block text-sage-green">Hortis</span>
