@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
@@ -22,6 +23,31 @@ const HeroSection = () => {
       >
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
+      
+      
+      {/* Navigation */}
+      <nav className="absolute top-8 right-8 z-30">
+        <div className="flex space-x-8">
+          {[
+            { name: "PHILOSOPHIE", path: "/philosophie" },
+            { name: "NOS SERVICES", path: "/services" },
+            { name: "PORTFOLIO", path: "/portfolio" },
+            { name: "CONTACT", path: "/contact" }
+          ].map((item, index) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className="font-cinzel text-sm font-medium text-soft-white/90 hover:text-sage-green transition-all duration-300 hover:scale-105 tracking-wider"
+              style={{ 
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </nav>
       
       {/* Hero Content - Top Left Positioned */}
       <div className="relative z-20 p-8 md:p-16 lg:p-24 max-w-2xl animate-fade-in-slow">
