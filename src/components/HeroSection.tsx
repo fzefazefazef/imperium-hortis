@@ -14,17 +14,15 @@ const HeroSection = () => {
       <div className="absolute bottom-32 left-32 w-64 h-64 bg-sage-green/3 rounded-full blur-2xl"></div>
       
       {/* Hero Background Video */}
-      <div className="absolute inset-0 w-11/12 h-5/6 mx-auto my-auto rounded-3xl shadow-luxury border border-sage-green/10 overflow-hidden z-0">
-        <video 
-          className="w-full h-full object-contain"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
-        </video>
-      </div>
+      <video 
+        className="absolute inset-0 w-11/12 h-5/6 object-fill z-0 mx-auto my-auto rounded-3xl shadow-luxury border border-sage-green/10"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
+      </video>
       
       
       {/* Navigation */}
