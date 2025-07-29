@@ -28,9 +28,9 @@ const HeroSection = () => {
       {/* Logo */}
       <div className="absolute top-8 left-8 z-30">
         <img 
-          src="/lovable-uploads/12e7e74f-73e9-42a0-9464-5a0dcb8c1c16.png" 
+          src="/lovable-uploads/logo-transparent.png" 
           alt="Imperium Hortis Logo"
-          className="h-16 md:h-20 lg:h-24 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
+          className="h-20 md:h-24 lg:h-28 w-auto opacity-90 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
       
