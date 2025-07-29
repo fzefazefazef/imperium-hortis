@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 
 export const useIntersectionObserver = (options = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -11,10 +10,7 @@ export const useIntersectionObserver = (options = {}) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setIsIntersecting(true);
-          setHasAnimated(true);
-        }
+        setIsIntersecting(entry.isIntersecting);
       },
       {
         threshold: 0.1,
@@ -30,7 +26,7 @@ export const useIntersectionObserver = (options = {}) => {
         observer.unobserve(element);
       }
     };
-  }, [hasAnimated, options]);
+  }, [options]);
 
-  return { ref: elementRef, isIntersecting, hasAnimated };
+  return { ref: elementRef, isIntersecting };
 };

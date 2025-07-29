@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { Button3DWrapper } from "@/components/Button3DWrapper";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
@@ -37,26 +38,45 @@ const HeroSection = () => {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <Button 
-            variant="minimal" 
-            size="xl" 
-            className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse ${
-              buttonsVisible ? 'animate-fade-in' : ''
-            }`}
-            style={{ animationDelay: buttonsVisible ? '0.2s' : '0s' }}
+          <Button3DWrapper 
+            isVisible={buttonsVisible} 
+            delay={0.2}
+            className="w-full sm:w-auto"
           >
-            Nos savoir-faire
-          </Button>
-          <Button 
-            variant="luxury" 
-            size="xl" 
-            className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 ${
-              buttonsVisible ? 'animate-fade-in' : ''
-            }`}
-            style={{ animationDelay: buttonsVisible ? '0.4s' : '0s' }}
+            <Button 
+              variant="minimal" 
+              size="xl" 
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full ${
+                buttonsVisible ? 'animate-fade-in' : ''
+              }`}
+              style={{ 
+                animationDelay: buttonsVisible ? '0.2s' : '0s',
+                background: buttonsVisible ? 'rgba(34, 197, 94, 0.1)' : 'transparent'
+              }}
+            >
+              Nos savoir-faire
+            </Button>
+          </Button3DWrapper>
+          
+          <Button3DWrapper 
+            isVisible={buttonsVisible} 
+            delay={0.4}
+            className="w-full sm:w-auto"
           >
-            Consultation privée
-          </Button>
+            <Button 
+              variant="luxury" 
+              size="xl" 
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
+                buttonsVisible ? 'animate-fade-in' : ''
+              }`}
+              style={{ 
+                animationDelay: buttonsVisible ? '0.4s' : '0s',
+                background: buttonsVisible ? 'rgba(34, 197, 94, 0.05)' : 'transparent'
+              }}
+            >
+              Consultation privée
+            </Button>
+          </Button3DWrapper>
         </div>
       </div>
     </section>

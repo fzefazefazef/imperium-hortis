@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { Button3DWrapper } from "@/components/Button3DWrapper";
 
 const Index = () => {
   const { ref: servicesRef, isIntersecting: servicesVisible } = useIntersectionObserver();
   const { ref: titleRef, isIntersecting: titleVisible } = useIntersectionObserver();
+  const { ref: contactButtonsRef, isIntersecting: contactButtonsVisible } = useIntersectionObserver();
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -117,13 +119,53 @@ const Index = () => {
             Découvrez comment nous pouvons transformer votre vision en réalité.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button variant="minimal" size="xl" className="font-inter font-medium animate-glow-pulse">
-              Prendre rendez-vous
-            </Button>
-            <Button variant="luxury" size="xl" className="font-inter font-medium">
-              Portfolio complet
-            </Button>
+          <div 
+            ref={contactButtonsRef}
+            className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 ${
+              contactButtonsVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
+            <Button3DWrapper 
+              isVisible={contactButtonsVisible} 
+              delay={0.1}
+              className="w-full sm:w-auto"
+            >
+              <Button 
+                variant="minimal" 
+                size="xl" 
+                className={`font-inter font-medium animate-glow-pulse transform transition-all duration-500 ${
+                  contactButtonsVisible ? 'animate-fade-in' : ''
+                }`}
+                style={{ 
+                  animationDelay: contactButtonsVisible ? '0.1s' : '0s',
+                  background: contactButtonsVisible ? 'rgba(34, 197, 94, 0.1)' : 'transparent'
+                }}
+              >
+                Prendre rendez-vous
+              </Button>
+            </Button3DWrapper>
+            
+            <Button3DWrapper 
+              isVisible={contactButtonsVisible} 
+              delay={0.3}
+              className="w-full sm:w-auto"
+            >
+              <Button 
+                variant="luxury" 
+                size="xl" 
+                className={`font-inter font-medium transform transition-all duration-500 ${
+                  contactButtonsVisible ? 'animate-fade-in' : ''
+                }`}
+                style={{ 
+                  animationDelay: contactButtonsVisible ? '0.3s' : '0s',
+                  background: contactButtonsVisible ? 'rgba(34, 197, 94, 0.05)' : 'transparent'
+                }}
+              >
+                Portfolio complet
+              </Button>
+            </Button3DWrapper>
           </div>
         </div>
       </section>
