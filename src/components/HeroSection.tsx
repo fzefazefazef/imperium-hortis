@@ -24,7 +24,7 @@ const HeroSection = () => {
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
       
-      
+
       {/* Navigation */}
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
