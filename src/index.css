@@ -8,52 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* French Riviera Luxury Garden Design System */
-    --background: 210 100% 98%;
-    --foreground: 210 15% 15%;
+    /* Light Blue, Marine Blue & Green Design System */
+    --background: 195 100% 98%;
+    --foreground: 208 15% 15%;
 
-    --card: 210 50% 96%;
-    --card-foreground: 210 15% 20%;
+    --card: 195 50% 96%;
+    --card-foreground: 208 15% 20%;
 
-    --popover: 210 50% 96%;
-    --popover-foreground: 210 15% 20%;
+    --popover: 195 50% 96%;
+    --popover-foreground: 208 15% 20%;
 
-    --primary: 200 85% 70%;
+    --primary: 195 85% 75%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 50% 90%;
-    --secondary-foreground: 210 15% 25%;
+    --secondary: 208 65% 85%;
+    --secondary-foreground: 208 15% 25%;
 
-    --muted: 210 30% 92%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 195 30% 92%;
+    --muted-foreground: 208 15% 45%;
 
-    --accent: 120 50% 60%;
+    --accent: 120 65% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 85%;
-    --input: 210 20% 90%;
-    --ring: 200 85% 70%;
+    --border: 195 20% 85%;
+    --input: 195 20% 90%;
+    --ring: 195 85% 75%;
 
     --radius: 0.75rem;
 
-    /* Custom luxury colors */
-    --riviera-blue: 200 85% 70%;
+    /* Custom theme colors */
+    --riviera-blue: 195 85% 75%;
     --soft-white: 0 0% 100%;
-    --stone-grey: 210 20% 85%;
-    --deep-charcoal: 210 15% 15%;
-    --sage-green: 120 50% 60%;
-    --midnight-blue: 200 40% 25%;
+    --stone-grey: 195 20% 85%;
+    --deep-charcoal: 208 15% 15%;
+    --sage-green: 120 65% 55%;
+    --midnight-blue: 208 90% 35%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(200 85% 70% / 0.3), hsl(120 50% 60% / 0.2));
-    --gradient-accent: linear-gradient(90deg, hsl(120 50% 60% / 0.2), hsl(200 85% 70% / 0.2));
+    --gradient-hero: linear-gradient(135deg, hsl(195 85% 75% / 0.3), hsl(120 65% 55% / 0.2));
+    --gradient-accent: linear-gradient(90deg, hsl(120 65% 55% / 0.2), hsl(195 85% 75% / 0.2));
 
     /* Shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(200 85% 70% / 0.3);
-    --shadow-glow: 0 0 40px hsl(120 50% 60% / 0.3);
+    --shadow-luxury: 0 25px 50px -12px hsl(195 85% 75% / 0.3);
+    --shadow-glow: 0 0 40px hsl(120 65% 55% / 0.3);
 
     /* Transitions */
     --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
