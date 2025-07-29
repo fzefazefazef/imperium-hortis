@@ -6,10 +6,15 @@ const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
 
   return (
-    <section className="relative h-screen flex items-start justify-start overflow-hidden">
+    <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 z-10"></div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-sage-green/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-32 w-64 h-64 bg-sage-green/3 rounded-full blur-2xl"></div>
+      
       {/* Hero Background Video */}
       <video 
-        className="absolute inset-0 w-4/5 h-4/5 object-contain z-0 mx-auto my-auto"
+        className="absolute inset-0 w-4/5 h-4/5 object-contain z-0 mx-auto my-auto rounded-3xl shadow-luxury border border-sage-green/10"
         autoPlay
         muted
         loop
