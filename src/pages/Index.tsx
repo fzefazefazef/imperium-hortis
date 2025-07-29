@@ -176,7 +176,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
               <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4">
-                Jardins de la Côte d'Azur
+                Imperium Hortis
               </h3>
               <p className="font-inter text-soft-white/60">
                 L'excellence paysagère depuis 1952
@@ -200,7 +200,7 @@ const Index = () => {
           
           <div className="mt-12 pt-8 border-t border-sage-green/20 text-center">
             <p className="font-inter text-soft-white/40">
-              © 2024 Jardins de la Côte d'Azur. Tous droits réservés.
+              © 2024 Imperium Hortis. Tous droits réservés.
             </p>
           </div>
         </div>

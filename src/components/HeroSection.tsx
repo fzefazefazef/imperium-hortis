@@ -26,8 +26,8 @@ const HeroSection = () => {
       {/* Hero Content - Top Left Positioned */}
       <div className="relative z-20 p-8 md:p-16 lg:p-24 max-w-2xl animate-fade-in-slow">
         <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-soft-white mb-6 leading-tight">
-          Jardins de la
-          <span className="block text-sage-green">Côte d'Azur</span>
+          Imperium
+          <span className="block text-sage-green">Hortis</span>
         </h1>
         
         <p className="font-inter text-lg md:text-xl text-soft-white/90 mb-8 leading-relaxed max-w-lg">
