@@ -27,10 +27,10 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button variant="minimal" size="xl" className="font-inter font-medium">
-            Découvrir nos jardins
+          <Button variant="minimal" size="xl" className="font-inter font-medium hover-scale animate-fade-in transform transition-all duration-300 hover:animate-glow-pulse">
+            Nos savoir-faire
           </Button>
-          <Button variant="luxury" size="xl" className="font-inter font-medium">
+          <Button variant="luxury" size="xl" className="font-inter font-medium hover-scale animate-fade-in transform transition-all duration-300 hover:shadow-luxury hover:scale-110">
             Consultation privée
           </Button>
         </div>
