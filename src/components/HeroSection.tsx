@@ -15,20 +15,19 @@ const HeroSection = () => {
       
       {/* Hero Background Video */}
       <video 
-        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/5 aspect-video object-contain z-0 rounded-3xl shadow-luxury border border-sage-green/10"
+        className="absolute inset-0 w-4/5 aspect-video object-contain z-0 mx-auto my-auto rounded-3xl shadow-luxury border border-sage-green/10"
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
       >
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
       
-
+      
       {/* Navigation */}
       <nav className="absolute top-8 right-8 z-30">
-        <div className="flex space-x-12">
+        <div className="flex space-x-8">
           {[
             { name: "PHILOSOPHIE", path: "/philosophie" },
             { name: "NOS SERVICES", path: "/services" },
@@ -38,7 +37,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel text-base font-medium text-soft-white/90 hover:text-sage-green transition-all duration-300 hover:scale-105 tracking-wider"
+              className="font-cinzel text-sm font-medium text-soft-white/90 hover:text-sage-green transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`
