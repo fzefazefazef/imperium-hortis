@@ -18,15 +18,15 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 drop-shadow-lg">
+              <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
                 Une tradition d'excellence
               </h2>
-              <p className="font-opensans text-lg text-white/95 mb-6 leading-relaxed drop-shadow-sm">
+              <p className="font-inter text-lg text-soft-white/80 mb-6 leading-relaxed">
                 Depuis 1952, notre maison façonne les jardins les plus prestigieux 
                 de la Côte d'Azur. De Monaco à Saint-Tropez, nous créons des havres 
                 de paix qui transcendent les saisons.
               </p>
-              <p className="font-opensans text-lg text-white/95 leading-relaxed drop-shadow-sm">
+              <p className="font-inter text-lg text-soft-white/80 leading-relaxed">
                 Chaque projet est une œuvre unique, pensée en harmonie avec 
                 l'architecture, le climat méditerranéen et la vision de nos clients.
               </p>
@@ -34,7 +34,7 @@ const Index = () => {
             
             <div className="relative animate-fade-in">
               <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-sage-green/20 flex items-center justify-center">
-                <p className="font-opensans text-white/80 text-center px-8 text-lg">
+                <p className="font-inter text-soft-white/60 text-center px-8">
                   [Galerie de nos créations les plus emblématiques]
                 </p>
               </div>
@@ -49,7 +49,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             ref={titleRef}
-            className={`font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-16 transition-all duration-1000 drop-shadow-lg ${
+            className={`font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
               titleVisible 
                 ? 'opacity-100 translate-y-0 animate-fade-in' 
                 : 'opacity-0 translate-y-12'
@@ -96,10 +96,10 @@ const Index = () => {
                 }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
                   {service.icon}
                 </div>
-                <h3 className="font-playfair text-xl font-bold text-deep-charcoal mb-4 group-hover:text-sage-green transition-colors duration-300">
+                <h3 className="font-cinzel text-xl font-semibold text-foreground mb-4 group-hover:text-sage-green transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="font-opensans text-slate-600 leading-relaxed group-hover:text-deep-charcoal transition-colors duration-300">
+                <p className="font-inter text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   {service.description}
                 </p>
               </div>
@@ -111,10 +111,10 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 drop-shadow-lg">
+          <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
             Créons ensemble votre jardin d'éternité
           </h2>
-          <p className="font-opensans text-lg text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
+          <p className="font-inter text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             Chaque jardin raconte une histoire. Quelle sera la vôtre ? 
             Découvrez comment nous pouvons transformer votre vision en réalité.
           </p>
@@ -135,7 +135,7 @@ const Index = () => {
               <Button 
                 variant="minimal" 
                 size="xl" 
-                className={`font-opensans font-semibold animate-glow-pulse transform transition-all duration-500 text-white border-2 border-white/80 hover:border-sage-green ${
+                className={`font-inter font-medium animate-glow-pulse transform transition-all duration-500 ${
                   contactButtonsVisible ? 'animate-fade-in' : ''
                 }`}
                 style={{ 
@@ -155,7 +155,7 @@ const Index = () => {
               <Button 
                 variant="luxury" 
                 size="xl" 
-                className={`font-opensans font-semibold transform transition-all duration-500 text-white border-2 border-white/60 hover:border-sage-green ${
+                className={`font-inter font-medium transform transition-all duration-500 ${
                   contactButtonsVisible ? 'animate-fade-in' : ''
                 }`}
                 style={{ 
@@ -175,23 +175,23 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
-              <h3 className="font-playfair text-xl font-bold text-white mb-4">
+              <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4">
                 Jardins de la Côte d'Azur
               </h3>
-              <p className="font-opensans text-white/80">
+              <p className="font-inter text-soft-white/60">
                 L'excellence paysagère depuis 1952
               </p>
             </div>
             
             <div>
-              <h4 className="font-opensans font-semibold text-white mb-4">Contact</h4>
-              <p className="font-opensans text-white/80 mb-2">+33 4 93 xx xx xx</p>
-              <p className="font-opensans text-white/80">contact@jardins-cotedazur.fr</p>
+              <h4 className="font-inter font-medium text-soft-white mb-4">Contact</h4>
+              <p className="font-inter text-soft-white/60 mb-2">+33 4 93 xx xx xx</p>
+              <p className="font-inter text-soft-white/60">contact@jardins-cotedazur.fr</p>
             </div>
             
             <div>
-              <h4 className="font-opensans font-semibold text-white mb-4">Showroom</h4>
-              <p className="font-opensans text-white/80">
+              <h4 className="font-inter font-medium text-soft-white mb-4">Showroom</h4>
+              <p className="font-inter text-soft-white/60">
                 123 Boulevard de la Croisette<br />
                 06400 Cannes, France
               </p>
@@ -199,7 +199,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 pt-8 border-t border-sage-green/20 text-center">
-            <p className="font-opensans text-white/60">
+            <p className="font-inter text-soft-white/40">
               © 2024 Jardins de la Côte d'Azur. Tous droits réservés.
             </p>
           </div>

@@ -20,12 +20,12 @@ const HeroSection = () => {
       
       {/* Hero Content - Top Left Positioned */}
       <div className="relative z-20 p-8 md:p-16 lg:p-24 max-w-2xl animate-fade-in-slow">
-        <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+        <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-soft-white mb-6 leading-tight">
           Jardins de la
-          <span className="block text-sage-green drop-shadow-md">Côte d'Azur</span>
+          <span className="block text-sage-green">Côte d'Azur</span>
         </h1>
         
-        <p className="font-opensans text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg drop-shadow-md">
+        <p className="font-inter text-lg md:text-xl text-soft-white/90 mb-8 leading-relaxed max-w-lg">
           L'art du jardin méditerranéen depuis trois générations. 
           Nous créons des espaces verts d'exception qui capturent l'essence éternelle de la Riviera française.
         </p>
@@ -46,7 +46,7 @@ const HeroSection = () => {
             <Button 
               variant="minimal" 
               size="xl" 
-              className={`font-opensans font-semibold hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full text-white border-2 border-white/80 hover:border-sage-green ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
@@ -66,7 +66,7 @@ const HeroSection = () => {
             <Button 
               variant="luxury" 
               size="xl" 
-              className={`font-opensans font-semibold hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full text-white border-2 border-white/60 hover:border-sage-green ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
