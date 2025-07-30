@@ -30,11 +30,11 @@ const HeroSection = () => {
         <div className="flex space-x-4">
           <Button 
             variant="ghost" 
-            size="sm" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            size="lg" 
+            className="p-3 h-auto hover:bg-soft-white/10 transition-all duration-300"
             title="Français"
           >
-            <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="32" height="22" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="8" height="16" fill="#0055A4"/>
               <rect x="8" width="8" height="16" fill="#FFFFFF"/>
               <rect x="16" width="8" height="16" fill="#EF4135"/>
@@ -42,11 +42,11 @@ const HeroSection = () => {
           </Button>
           <Button 
             variant="ghost" 
-            size="sm" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            size="lg" 
+            className="p-3 h-auto hover:bg-soft-white/10 transition-all duration-300"
             title="English"
           >
-            <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="32" height="22" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="24" height="16" fill="#012169"/>
               <path d="M0,0 L24,16 M24,0 L0,16" stroke="#FFFFFF" strokeWidth="2"/>
               <path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" strokeWidth="1"/>
@@ -58,11 +58,11 @@ const HeroSection = () => {
           </Button>
           <Button 
             variant="ghost" 
-            size="sm" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            size="lg" 
+            className="p-3 h-auto hover:bg-soft-white/10 transition-all duration-300"
             title="Italiano"
           >
-            <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="32" height="22" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="8" height="16" fill="#009246"/>
               <rect x="8" width="8" height="16" fill="#FFFFFF"/>
               <rect x="16" width="8" height="16" fill="#CE2B37"/>
