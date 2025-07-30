@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Portfolio = () => {
+  const { t } = useLanguage();
+
   const projects = [
     {
       title: "Villa Azzurra",
@@ -53,10 +56,10 @@ const Portfolio = () => {
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
           {[
-            { name: "ACCUEIL", path: "/" },
-            { name: "PHILOSOPHIE", path: "/philosophie" },
-            { name: "NOS SERVICES", path: "/services" },
-            { name: "CONTACT", path: "/contact" }
+            { name: t('nav.home'), path: "/" },
+            { name: t('nav.philosophie'), path: "/philosophie" },
+            { name: t('nav.services'), path: "/services" },
+            { name: t('nav.contact'), path: "/contact" }
           ].map((item) => (
             <Link
               key={item.name}
@@ -74,21 +77,20 @@ const Portfolio = () => {
       <div className="pt-32 px-8 md:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white mb-8 text-center">
-            Notre <span className="text-sage-green">Portfolio</span>
+            {t('portfolio.title').split(' ')[0]} <span className="text-sage-green">{t('portfolio.title').split(' ').slice(1).join(' ')}</span>
           </h1>
           
           <p className="font-inter text-xl text-soft-white/80 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-            Découvrez nos créations les plus emblématiques, témoins de notre excellence 
-            et de notre passion pour l'art paysager méditerranéen.
+            {t('portfolio.subtitle')}
           </p>
 
           {/* Stats */}
           <div className="grid md:grid-cols-4 gap-8 mb-16">
             {[
-              { number: "150+", label: "Projets réalisés" },
-              { number: "25", label: "Années d'expérience" },
-              { number: "3", label: "Générations d'expertise" },
-              { number: "100%", label: "Clients satisfaits" }
+              { number: "150+", label: t('portfolio.stats.projects') },
+              { number: "25", label: t('portfolio.stats.years') },
+              { number: "3", label: t('portfolio.stats.generations') },
+              { number: "100%", label: t('portfolio.stats.satisfaction') }
             ].map((stat, index) => (
               <div key={index} className="text-center bg-card/20 backdrop-blur-sm p-6 rounded-2xl border border-sage-green/20">
                 <div className="font-cinzel text-3xl md:text-4xl font-bold text-sage-green mb-2">
@@ -103,7 +105,7 @@ const Portfolio = () => {
 
           {/* Featured Projects */}
           <h2 className="font-cinzel text-3xl font-semibold text-soft-white mb-12 text-center">
-            Projets d'Exception
+            {t('portfolio.featured')}
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -114,7 +116,7 @@ const Portfolio = () => {
               >
                 <div className="aspect-video bg-gradient-accent rounded-t-2xl flex items-center justify-center border-b border-sage-green/20">
                   <p className="font-inter text-soft-white/60 text-center px-8">
-                    [Image du projet {project.title}]
+                    [{t('common.image')} {project.title}]
                   </p>
                 </div>
                 <div className="p-8">
@@ -143,20 +145,19 @@ const Portfolio = () => {
           {/* Call to Action */}
           <div className="bg-card/20 backdrop-blur-sm p-12 rounded-2xl border border-sage-green/20 text-center">
             <h2 className="font-cinzel text-3xl font-semibold text-sage-green mb-6">
-              Votre Projet, Notre Prochaine Création
+              {t('portfolio.cta.title')}
             </h2>
             <p className="font-inter text-lg text-soft-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Chaque jardin raconte une histoire unique. Laissez-nous écrire la vôtre 
-              avec la même passion et le même savoir-faire.
+              {t('portfolio.cta.desc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button variant="luxury" size="xl" className="font-inter font-medium">
-                  Démarrer mon projet
+                  {t('portfolio.cta.btn1')}
                 </Button>
               </Link>
               <Button variant="minimal" size="xl" className="font-inter font-medium">
-                Télécharger le portfolio complet
+                {t('portfolio.cta.btn2')}
               </Button>
             </div>
           </div>
@@ -164,7 +165,7 @@ const Portfolio = () => {
           <div className="text-center mt-16">
             <Link to="/">
               <Button variant="minimal" size="xl" className="font-inter font-medium">
-                Retour à l'accueil
+                {t('portfolio.back')}
               </Button>
             </Link>
           </div>

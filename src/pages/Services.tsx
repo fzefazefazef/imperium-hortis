@@ -1,42 +1,45 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
-      title: "Conception de Jardins d'Exception",
-      description: "Création complète de jardins sur-mesure pour propriétés de prestige",
-      features: ["Étude paysagère complète", "Sélection d'essences rares", "Design architectural végétal", "Suivi de réalisation"],
+      title: t('services.service1.title'),
+      description: t('services.service1.desc'),
+      features: t('services.service1.features').split(', '),
       icon: "🌺"
     },
     {
-      title: "Terrasses et Patios Méditerranéens",
-      description: "Aménagement de terrasses avec vue panoramique sur la Côte d'Azur",
-      features: ["Mobilier sur-mesure", "Systèmes d'irrigation intelligents", "Éclairage d'ambiance", "Pergolas et tonnelles"],
+      title: t('services.service2.title'),
+      description: t('services.service2.desc'),
+      features: t('services.service2.features').split(', '),
       icon: "🏛️"
     },
     {
-      title: "Jardins Aquatiques et Fontaines",
-      description: "Installation de bassins, fontaines et cascades pour un ambiance rafraîchissante",
-      features: ["Bassins naturels", "Fontaines artistiques", "Éclairage subaquatique", "Écosystème équilibré"],
+      title: t('services.service3.title'),
+      description: t('services.service3.desc'),
+      features: t('services.service3.features').split(', '),
       icon: "⛲"
     },
     {
-      title: "Maintenance VIP",
-      description: "Entretien premium pour préserver la beauté de votre jardin toute l'année",
-      features: ["Équipe dédiée", "Interventions discrètes", "Produits biologiques", "Conseils saisonniers"],
+      title: t('services.service4.title'),
+      description: t('services.service4.desc'),
+      features: t('services.service4.features').split(', '),
       icon: "✨"
     },
     {
-      title: "Éclairage Paysager",
-      description: "Mise en lumière artistique pour sublimer votre jardin la nuit",
-      features: ["LED dernière génération", "Programmation intelligente", "Effets dramatiques", "Économie d'énergie"],
+      title: t('services.service5.title'),
+      description: t('services.service5.desc'),
+      features: t('services.service5.features').split(', '),
       icon: "💡"
     },
     {
-      title: "Sculptures Végétales",
-      description: "Art topiaire et sculptures vivantes pour des jardins uniques au monde",
-      features: ["Topiaires sur-mesure", "Sculptures temporaires", "Événements privés", "Créations artistiques"],
+      title: t('services.service6.title'),
+      description: t('services.service6.desc'),
+      features: t('services.service6.features').split(', '),
       icon: "🎨"
     }
   ];
@@ -47,10 +50,10 @@ const Services = () => {
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
           {[
-            { name: "ACCUEIL", path: "/" },
-            { name: "PHILOSOPHIE", path: "/philosophie" },
-            { name: "PORTFOLIO", path: "/portfolio" },
-            { name: "CONTACT", path: "/contact" }
+            { name: t('nav.home'), path: "/" },
+            { name: t('nav.philosophie'), path: "/philosophie" },
+            { name: t('nav.portfolio'), path: "/portfolio" },
+            { name: t('nav.contact'), path: "/contact" }
           ].map((item) => (
             <Link
               key={item.name}
@@ -68,12 +71,11 @@ const Services = () => {
       <div className="pt-32 px-8 md:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white mb-8 text-center">
-            Nos <span className="text-sage-green">Services</span>
+            {t('services.title').split(' ')[0]} <span className="text-sage-green">{t('services.title').split(' ').slice(1).join(' ')}</span>
           </h1>
           
           <p className="font-inter text-xl text-soft-white/80 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-            Découvrez notre gamme complète de services paysagers, conçus pour transformer 
-            vos espaces extérieurs en véritables œuvres d'art végétales.
+            {t('services.subtitle')}
           </p>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -103,15 +105,14 @@ const Services = () => {
 
           <div className="bg-card/20 backdrop-blur-sm p-12 rounded-2xl border border-sage-green/20 text-center">
             <h2 className="font-cinzel text-3xl font-semibold text-sage-green mb-6">
-              Service Sur-Mesure
+              {t('services.custom.title')}
             </h2>
             <p className="font-inter text-lg text-soft-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Chaque projet est unique. Nous créons des solutions personnalisées qui 
-              répondent parfaitement à vos besoins spécifiques et à votre vision.
+              {t('services.custom.desc')}
             </p>
             <Link to="/contact">
               <Button variant="luxury" size="xl" className="font-inter font-medium">
-                Consultation gratuite
+                {t('services.custom.btn')}
               </Button>
             </Link>
           </div>
@@ -119,7 +120,7 @@ const Services = () => {
           <div className="text-center mt-16">
             <Link to="/">
               <Button variant="minimal" size="xl" className="font-inter font-medium">
-                Retour à l'accueil
+                {t('services.back')}
               </Button>
             </Link>
           </div>
