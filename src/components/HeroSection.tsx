@@ -34,7 +34,11 @@ const HeroSection = () => {
             className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
             title="Français"
           >
-            🇫🇷
+            <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
+              <rect width="8" height="16" fill="#0055A4"/>
+              <rect x="8" width="8" height="16" fill="#FFFFFF"/>
+              <rect x="16" width="8" height="16" fill="#EF4135"/>
+            </svg>
           </Button>
           <Button 
             variant="ghost" 
@@ -42,7 +46,15 @@ const HeroSection = () => {
             className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
             title="English"
           >
-            🇬🇧
+            <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
+              <rect width="24" height="16" fill="#012169"/>
+              <path d="M0,0 L24,16 M24,0 L0,16" stroke="#FFFFFF" strokeWidth="2"/>
+              <path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" strokeWidth="1"/>
+              <rect x="10" width="4" height="16" fill="#FFFFFF"/>
+              <rect width="24" height="3" y="6.5" fill="#FFFFFF"/>
+              <rect x="11" width="2" height="16" fill="#C8102E"/>
+              <rect width="24" height="1.5" y="7.25" fill="#C8102E"/>
+            </svg>
           </Button>
           <Button 
             variant="ghost" 
@@ -50,7 +62,11 @@ const HeroSection = () => {
             className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
             title="Italiano"
           >
-            🇮🇹
+            <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
+              <rect width="8" height="16" fill="#009246"/>
+              <rect x="8" width="8" height="16" fill="#FFFFFF"/>
+              <rect x="16" width="8" height="16" fill="#CE2B37"/>
+            </svg>
           </Button>
         </div>
       </div>
