@@ -31,7 +31,7 @@ const HeroSection = () => {
           <Button 
             variant="ghost" 
             size="xl" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="Français"
           >
             <svg width="48" height="32" viewBox="0 0 24 16" className="border border-gray-400">
@@ -43,7 +43,7 @@ const HeroSection = () => {
           <Button 
             variant="ghost" 
             size="xl" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="English"
           >
             <svg width="48" height="32" viewBox="0 0 24 16" className="border border-gray-400">
