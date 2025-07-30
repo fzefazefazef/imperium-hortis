@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
+  const { setLanguage, t } = useLanguage();
 
   return (
     <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
@@ -33,6 +35,7 @@ const HeroSection = () => {
             size="xl" 
             className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="Français"
+            onClick={() => setLanguage('fr')}
           >
             <svg width="48" height="32" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="8" height="16" fill="#0055A4"/>
@@ -45,6 +48,7 @@ const HeroSection = () => {
             size="xl" 
             className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="English"
+            onClick={() => setLanguage('en')}
           >
             <svg width="48" height="32" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="24" height="16" fill="#012169"/>
@@ -61,6 +65,7 @@ const HeroSection = () => {
             size="xl" 
             className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="Italiano"
+            onClick={() => setLanguage('it')}
           >
             <svg width="48" height="32" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="8" height="16" fill="#009246"/>
@@ -75,10 +80,10 @@ const HeroSection = () => {
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
           {[
-            { name: "PHILOSOPHIE", path: "/philosophie" },
-            { name: "NOS SERVICES", path: "/services" },
-            { name: "PORTFOLIO", path: "/portfolio" },
-            { name: "CONTACT", path: "/contact" }
+            { name: t('nav.philosophie'), path: "/philosophie" },
+            { name: t('nav.services'), path: "/services" },
+            { name: t('nav.portfolio'), path: "/portfolio" },
+            { name: t('nav.contact'), path: "/contact" }
           ].map((item, index) => (
             <Link
               key={item.name}
@@ -103,8 +108,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="font-inter text-lg md:text-xl text-soft-white/90 mb-8 leading-relaxed max-w-lg">
-          L'art du jardin méditerranéen depuis trois générations. 
-          Nous créons des espaces verts d'exception qui capturent l'essence éternelle de la Riviera française.
+          {t('hero.subtitle')}
         </p>
         
         <div 
@@ -131,7 +135,7 @@ const HeroSection = () => {
                 background: buttonsVisible ? 'rgba(34, 197, 94, 0.1)' : 'transparent'
               }}
             >
-              Nos savoir-faire
+              {t('hero.btn.services')}
             </Button>
           </Button3DWrapper>
           
@@ -151,7 +155,7 @@ const HeroSection = () => {
                 background: buttonsVisible ? 'rgba(34, 197, 94, 0.05)' : 'transparent'
               }}
             >
-              Consultation privée
+              {t('hero.btn.consultation')}
             </Button>
           </Button3DWrapper>
         </div>
