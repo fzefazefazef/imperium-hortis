@@ -8,72 +8,82 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light Blue, Marine Blue & Green Design System */
-    --background: 195 100% 98%;
-    --foreground: 208 15% 15%;
+    /* Premium Luxury Design System */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
-    --card: 195 50% 96%;
-    --card-foreground: 208 15% 20%;
+    --card: 210 30% 97%;
+    --card-foreground: 215 25% 20%;
 
-    --popover: 195 50% 96%;
-    --popover-foreground: 208 15% 20%;
+    --popover: 210 30% 97%;
+    --popover-foreground: 215 25% 20%;
 
-    --primary: 195 85% 75%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 215 30% 25%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 208 65% 85%;
-    --secondary-foreground: 208 15% 25%;
+    --secondary: 210 15% 88%;
+    --secondary-foreground: 215 25% 25%;
 
-    --muted: 195 30% 92%;
-    --muted-foreground: 208 15% 45%;
+    --muted: 210 15% 92%;
+    --muted-foreground: 215 20% 50%;
 
-    --accent: 120 65% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 35 25% 65%;
+    --accent-foreground: 215 25% 15%;
 
-    --destructive: 0 70% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 50% 50%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 195 20% 85%;
-    --input: 195 20% 90%;
-    --ring: 195 85% 75%;
+    --border: 210 20% 88%;
+    --input: 210 20% 90%;
+    --ring: 215 30% 25%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom theme colors */
-    --riviera-blue: 195 85% 75%;
-    --soft-white: 0 0% 100%;
-    --stone-grey: 195 20% 85%;
-    --deep-charcoal: 208 15% 15%;
-    --sage-green: 120 65% 55%;
-    --midnight-blue: 208 90% 35%;
+    /* Premium Luxury Colors */
+    --champagne-gold: 45 35% 85%;
+    --soft-platinum: 210 20% 98%;
+    --warm-pearl: 35 15% 92%;
+    --deep-charcoal: 215 25% 15%;
+    --sage-whisper: 120 15% 75%;
+    --midnight-navy: 215 40% 20%;
+    --ivory-cream: 35 25% 96%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(195 85% 75% / 0.3), hsl(120 65% 55% / 0.2));
-    --gradient-accent: linear-gradient(90deg, hsl(120 65% 55% / 0.2), hsl(195 85% 75% / 0.2));
+    /* Luxury Gradients */
+    --gradient-hero: linear-gradient(135deg, 
+      hsl(210 20% 98%) 0%, 
+      hsl(35 25% 96%) 25%,
+      hsl(210 15% 95%) 50%,
+      hsl(35 15% 92%) 100%);
+    --gradient-accent: linear-gradient(90deg, 
+      hsl(35 25% 85% / 0.15) 0%, 
+      hsl(120 15% 75% / 0.1) 100%);
+    --gradient-luxury: linear-gradient(45deg,
+      hsl(45 35% 85% / 0.3) 0%,
+      hsl(35 25% 85% / 0.2) 50%,
+      hsl(210 20% 90% / 0.1) 100%);
 
-    /* Shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(195 85% 75% / 0.3);
-    --shadow-glow: 0 0 40px hsl(120 65% 55% / 0.3);
+    /* Premium Shadows */
+    --shadow-luxury: 0 32px 64px -12px hsl(215 25% 15% / 0.08), 
+                     0 20px 40px -12px hsl(215 25% 15% / 0.05);
+    --shadow-glow: 0 0 60px hsl(45 35% 85% / 0.4),
+                   0 0 30px hsl(35 25% 85% / 0.2);
+    --shadow-elegant: 0 20px 40px -8px hsl(215 25% 15% / 0.12),
+                      0 8px 16px -4px hsl(215 25% 15% / 0.08);
 
-    /* Transitions */
-    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-cinematic: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Luxury Transitions */
+    --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-cinematic: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-elegant: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 215 25% 15%;
+    --sidebar-primary: 215 30% 25%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 210 15% 92%;
+    --sidebar-accent-foreground: 215 25% 25%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 215 30% 25%;
+  }
   }
 
   .dark {
