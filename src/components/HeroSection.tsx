@@ -25,6 +25,36 @@ const HeroSection = () => {
       </video>
       
       
+      {/* Language Selector */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
+        <div className="flex space-x-4">
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            title="Français"
+          >
+            🇫🇷
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            title="English"
+          >
+            🇬🇧
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300"
+            title="Italiano"
+          >
+            🇮🇹
+          </Button>
+        </div>
+      </div>
+
       {/* Navigation */}
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
