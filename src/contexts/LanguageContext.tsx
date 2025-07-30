@@ -119,14 +119,39 @@ const translations = {
     'philosophy.commitment.luxury.desc': 'Finitions d\'exception',
     'philosophy.back': 'Retour à l\'accueil',
     
+    
     // Common
     'common.image': 'Image du projet',
-    'footer.showroom': 'Showroom sur la Côte d\'Azur',
-    'footer.rights': 'Tous droits réservés.',
     
     // About
     'about.title': 'Une tradition d\'excellence',
-    'about.text': 'Depuis 1923, notre maison perpétue l\'art du jardin méditerranéen avec une passion inégalée. Chaque création reflète notre engagement envers l\'excellence et notre respect profond pour la nature provençale.'
+    'about.text': 'Depuis 1923, notre maison perpétue l\'art du jardin méditerranéen avec une passion inégalée. Chaque création reflète notre engagement envers l\'excellence et notre respect profond pour la nature provençale.',
+    'about.intro.text1': 'Depuis 1952, notre maison façonne les jardins les plus prestigieux de la Côte d\'Azur. De Monaco à Saint-Tropez, nous créons des havres de paix qui transcendent les saisons.',
+    'about.intro.text2': 'Chaque projet est une œuvre unique, pensée en harmonie avec l\'architecture, le climat méditerranéen et la vision de nos clients.',
+    'about.gallery': 'Galerie de nos créations les plus emblématiques',
+    
+    // Home Services
+    'home.services.title': 'Nos savoir-faire',
+    'home.services.gardens.title': 'Jardins d\'exception',
+    'home.services.gardens.desc': 'Conception et réalisation de jardins sur-mesure pour villas de prestige',
+    'home.services.terraces.title': 'Terrasses panoramiques',
+    'home.services.terraces.desc': 'Aménagement de terrasses avec vue sur la Méditerranée',
+    'home.services.art.title': 'Art paysager',
+    'home.services.art.desc': 'Sculptures végétales et installations artistiques uniques',
+    
+    // Home Contact
+    'home.contact.title': 'Créons ensemble votre jardin d\'éternité',
+    'home.contact.desc': 'Chaque jardin raconte une histoire. Quelle sera la vôtre ? Découvrez comment nous pouvons transformer votre vision en réalité.',
+    'home.contact.appointment': 'Prendre rendez-vous',
+    'home.contact.portfolio': 'Portfolio complet',
+    
+    // Footer
+    'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'L\'excellence paysagère depuis 1952',
+    'footer.contact': 'Contact',
+    'footer.showroom': 'Showroom',
+    'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
+    'footer.rights': '© 2024 Imperium Hortis. Tous droits réservés.',
   },
   en: {
     // Navigation
@@ -238,12 +263,36 @@ const translations = {
     
     // Common
     'common.image': 'Project image',
-    'footer.showroom': 'Showroom on the French Riviera',
-    'footer.rights': 'All rights reserved.',
     
     // About
     'about.title': 'A tradition of excellence',
-    'about.text': 'Since 1923, our house has perpetuated the art of Mediterranean gardening with unmatched passion. Each creation reflects our commitment to excellence and our deep respect for Provençal nature.'
+    'about.text': 'Since 1923, our house has perpetuated the art of Mediterranean gardening with unmatched passion. Each creation reflects our commitment to excellence and our deep respect for Provençal nature.',
+    'about.intro.text1': 'Since 1952, our house has shaped the most prestigious gardens of the French Riviera. From Monaco to Saint-Tropez, we create havens of peace that transcend seasons.',
+    'about.intro.text2': 'Each project is a unique work, designed in harmony with architecture, Mediterranean climate and our clients\' vision.',
+    'about.gallery': 'Gallery of our most emblematic creations',
+    
+    // Home Services
+    'home.services.title': 'Our expertise',
+    'home.services.gardens.title': 'Exceptional gardens',
+    'home.services.gardens.desc': 'Design and creation of custom gardens for prestigious villas',
+    'home.services.terraces.title': 'Panoramic terraces',
+    'home.services.terraces.desc': 'Terrace landscaping with Mediterranean views',
+    'home.services.art.title': 'Landscape art',
+    'home.services.art.desc': 'Plant sculptures and unique artistic installations',
+    
+    // Home Contact
+    'home.contact.title': 'Let\'s create your eternal garden together',
+    'home.contact.desc': 'Each garden tells a story. What will yours be? Discover how we can transform your vision into reality.',
+    'home.contact.appointment': 'Book appointment',
+    'home.contact.portfolio': 'Full portfolio',
+    
+    // Footer
+    'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'Landscape excellence since 1952',
+    'footer.contact': 'Contact',
+    'footer.showroom': 'Showroom',
+    'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
+    'footer.rights': '© 2024 Imperium Hortis. All rights reserved.',
   },
   it: {
     // Navigation
@@ -355,12 +404,36 @@ const translations = {
     
     // Common
     'common.image': 'Immagine del progetto',
-    'footer.showroom': 'Showroom sulla Costa Azzurra',
-    'footer.rights': 'Tutti i diritti riservati.',
     
     // About
     'about.title': 'Una tradizione di eccellenza',
-    'about.text': 'Dal 1923, la nostra casa perpetua l\'arte del giardino mediterraneo con passione ineguagliabile. Ogni creazione riflette il nostro impegno verso l\'eccellenza e il nostro profondo rispetto per la natura provenzale.'
+    'about.text': 'Dal 1923, la nostra casa perpetua l\'arte del giardino mediterraneo con passione ineguagliabile. Ogni creazione riflette il nostro impegno verso l\'eccellenza e il nostro profondo rispetto per la natura provenzale.',
+    'about.intro.text1': 'Dal 1952, la nostra casa modella i giardini più prestigiosi della Costa Azzurra. Da Monaco a Saint-Tropez, creiamo rifugi di pace che trascendono le stagioni.',
+    'about.intro.text2': 'Ogni progetto è un\'opera unica, pensata in armonia con l\'architettura, il clima mediterraneo e la visione dei nostri clienti.',
+    'about.gallery': 'Galleria delle nostre creazioni più emblematiche',
+    
+    // Home Services
+    'home.services.title': 'Le nostre competenze',
+    'home.services.gardens.title': 'Giardini d\'eccezione',
+    'home.services.gardens.desc': 'Progettazione e realizzazione di giardini su misura per ville di prestigio',
+    'home.services.terraces.title': 'Terrazze panoramiche',
+    'home.services.terraces.desc': 'Paesaggistica di terrazze con vista sul Mediterraneo',
+    'home.services.art.title': 'Arte paesaggistica',
+    'home.services.art.desc': 'Sculture vegetali e installazioni artistiche uniche',
+    
+    // Home Contact
+    'home.contact.title': 'Creiamo insieme il vostro giardino dell\'eternità',
+    'home.contact.desc': 'Ogni giardino racconta una storia. Quale sarà la vostra? Scoprite come possiamo trasformare la vostra visione in realtà.',
+    'home.contact.appointment': 'Prenota appuntamento',
+    'home.contact.portfolio': 'Portfolio completo',
+    
+    // Footer
+    'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'Eccellenza paesaggistica dal 1952',
+    'footer.contact': 'Contatto',
+    'footer.showroom': 'Showroom',
+    'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
+    'footer.rights': '© 2024 Imperium Hortis. Tutti i diritti riservati.',
   }
 };
 

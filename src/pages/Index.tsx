@@ -2,8 +2,10 @@ import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
   const { ref: servicesRef, isIntersecting: servicesVisible } = useIntersectionObserver();
   const { ref: titleRef, isIntersecting: titleVisible } = useIntersectionObserver();
   const { ref: contactButtonsRef, isIntersecting: contactButtonsVisible } = useIntersectionObserver();
@@ -19,23 +21,20 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
               <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
-                Une tradition d'excellence
+                {t('about.title')}
               </h2>
               <p className="font-inter text-lg text-soft-white/80 mb-6 leading-relaxed">
-                Depuis 1952, notre maison façonne les jardins les plus prestigieux 
-                de la Côte d'Azur. De Monaco à Saint-Tropez, nous créons des havres 
-                de paix qui transcendent les saisons.
+                {t('about.intro.text1')}
               </p>
               <p className="font-inter text-lg text-soft-white/80 leading-relaxed">
-                Chaque projet est une œuvre unique, pensée en harmonie avec 
-                l'architecture, le climat méditerranéen et la vision de nos clients.
+                {t('about.intro.text2')}
               </p>
             </div>
             
             <div className="relative animate-fade-in">
               <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-sage-green/20 flex items-center justify-center">
                 <p className="font-inter text-soft-white/60 text-center px-8">
-                  [Galerie de nos créations les plus emblématiques]
+                  [{t('about.gallery')}]
                 </p>
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sage-green/20 rounded-full blur-xl"></div>
@@ -55,7 +54,7 @@ const Index = () => {
                 : 'opacity-0 translate-y-12'
             }`}
           >
-            Nos savoir-faire
+            {t('home.services.title')}
           </h2>
           
           <div 
@@ -64,18 +63,18 @@ const Index = () => {
           >
             {[
               {
-                title: "Jardins d'exception",
-                description: "Conception et réalisation de jardins sur-mesure pour villas de prestige",
+                title: t('home.services.gardens.title'),
+                description: t('home.services.gardens.desc'),
                 icon: "🌿"
               },
               {
-                title: "Terrasses panoramiques", 
-                description: "Aménagement de terrasses avec vue sur la Méditerranée",
+                title: t('home.services.terraces.title'), 
+                description: t('home.services.terraces.desc'),
                 icon: "🏔️"
               },
               {
-                title: "Art paysager",
-                description: "Sculptures végétales et installations artistiques uniques",
+                title: t('home.services.art.title'),
+                description: t('home.services.art.desc'),
                 icon: "🎨"
               }
             ].map((service, index) => (
@@ -112,11 +111,10 @@ const Index = () => {
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
-            Créons ensemble votre jardin d'éternité
+            {t('home.contact.title')}
           </h2>
           <p className="font-inter text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Chaque jardin raconte une histoire. Quelle sera la vôtre ? 
-            Découvrez comment nous pouvons transformer votre vision en réalité.
+            {t('home.contact.desc')}
           </p>
           
           <div 
@@ -143,7 +141,7 @@ const Index = () => {
                   background: contactButtonsVisible ? 'rgba(34, 197, 94, 0.1)' : 'transparent'
                 }}
               >
-                Prendre rendez-vous
+                {t('home.contact.appointment')}
               </Button>
             </Button3DWrapper>
             
@@ -163,7 +161,7 @@ const Index = () => {
                   background: contactButtonsVisible ? 'rgba(34, 197, 94, 0.05)' : 'transparent'
                 }}
               >
-                Portfolio complet
+                {t('home.contact.portfolio')}
               </Button>
             </Button3DWrapper>
           </div>
@@ -176,31 +174,35 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
               <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4">
-                Imperium Hortis
+                {t('footer.company')}
               </h3>
               <p className="font-inter text-soft-white/60">
-                L'excellence paysagère depuis 1952
+                {t('footer.tagline')}
               </p>
             </div>
             
             <div>
-              <h4 className="font-inter font-medium text-soft-white mb-4">Contact</h4>
+              <h4 className="font-inter font-medium text-soft-white mb-4">{t('footer.contact')}</h4>
               <p className="font-inter text-soft-white/60 mb-2">+33 4 93 xx xx xx</p>
               <p className="font-inter text-soft-white/60">contact@jardins-cotedazur.fr</p>
             </div>
             
             <div>
-              <h4 className="font-inter font-medium text-soft-white mb-4">Showroom</h4>
+              <h4 className="font-inter font-medium text-soft-white mb-4">{t('footer.showroom')}</h4>
               <p className="font-inter text-soft-white/60">
-                123 Boulevard de la Croisette<br />
-                06400 Cannes, France
+                {t('footer.address').split('\n').map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    {index < t('footer.address').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
           
           <div className="mt-12 pt-8 border-t border-sage-green/20 text-center">
             <p className="font-inter text-soft-white/40">
-              © 2024 Imperium Hortis. Tous droits réservés.
+              {t('footer.rights')}
             </p>
           </div>
         </div>
