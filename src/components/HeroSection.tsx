@@ -127,7 +127,7 @@ const HeroSection = () => {
             <Button 
               variant="minimal" 
               size="xl" 
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full mt-75 ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full mt-80 ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
