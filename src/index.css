@@ -8,81 +8,85 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Luxury Design System */
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    /* Ultra-Premium Design System */
+    --background: 0 0% 99%;
+    --foreground: 210 15% 20%;
 
-    --card: 210 30% 97%;
-    --card-foreground: 215 25% 20%;
+    --card: 0 0% 98%;
+    --card-foreground: 210 15% 25%;
 
-    --popover: 210 30% 97%;
-    --popover-foreground: 215 25% 20%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 210 15% 25%;
 
-    --primary: 215 30% 25%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 210 15% 25%;
+    --primary-foreground: 0 0% 99%;
 
-    --secondary: 210 15% 88%;
-    --secondary-foreground: 215 25% 25%;
+    --secondary: 210 10% 90%;
+    --secondary-foreground: 210 15% 30%;
 
-    --muted: 210 15% 92%;
-    --muted-foreground: 215 20% 50%;
+    --muted: 210 8% 94%;
+    --muted-foreground: 210 12% 55%;
 
-    --accent: 35 25% 65%;
-    --accent-foreground: 215 25% 15%;
+    --accent: 40 15% 80%;
+    --accent-foreground: 210 15% 25%;
 
-    --destructive: 0 50% 50%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 0 40% 55%;
+    --destructive-foreground: 0 0% 99%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 90%;
-    --ring: 215 30% 25%;
+    --border: 210 12% 88%;
+    --input: 210 12% 90%;
+    --ring: 210 15% 25%;
 
-    --radius: 1rem;
+    --radius: 0.875rem;
 
-    /* Premium Luxury Colors */
-    --champagne-gold: 45 35% 85%;
-    --soft-platinum: 210 20% 98%;
-    --warm-pearl: 35 15% 92%;
-    --deep-charcoal: 215 25% 15%;
-    --sage-whisper: 120 15% 75%;
-    --midnight-navy: 215 40% 20%;
-    --ivory-cream: 35 25% 96%;
+    /* Refined Luxury Colors */
+    --pearl-white: 0 0% 99%;
+    --warm-ivory: 40 20% 96%;
+    --soft-graphite: 210 15% 25%;
+    --whisper-gold: 40 25% 85%;
+    --muted-sage: 120 8% 80%;
+    --charcoal-navy: 210 20% 18%;
+    --pure-alabaster: 35 30% 98%;
 
-    /* Luxury Gradients */
+    /* Subtle Premium Gradients */
     --gradient-hero: linear-gradient(135deg, 
-      hsl(210 20% 98%) 0%, 
-      hsl(35 25% 96%) 25%,
-      hsl(210 15% 95%) 50%,
-      hsl(35 15% 92%) 100%);
+      hsl(0 0% 99%) 0%, 
+      hsl(40 20% 97%) 30%,
+      hsl(210 10% 96%) 70%,
+      hsl(40 15% 94%) 100%);
     --gradient-accent: linear-gradient(90deg, 
-      hsl(35 25% 85% / 0.15) 0%, 
-      hsl(120 15% 75% / 0.1) 100%);
+      hsl(40 25% 85% / 0.08) 0%, 
+      hsl(120 8% 80% / 0.05) 100%);
     --gradient-luxury: linear-gradient(45deg,
-      hsl(45 35% 85% / 0.3) 0%,
-      hsl(35 25% 85% / 0.2) 50%,
-      hsl(210 20% 90% / 0.1) 100%);
+      hsl(40 25% 85% / 0.15) 0%,
+      hsl(210 10% 90% / 0.08) 50%,
+      hsl(0 0% 95% / 0.05) 100%);
 
-    /* Premium Shadows */
-    --shadow-luxury: 0 32px 64px -12px hsl(215 25% 15% / 0.08), 
-                     0 20px 40px -12px hsl(215 25% 15% / 0.05);
-    --shadow-glow: 0 0 60px hsl(45 35% 85% / 0.4),
-                   0 0 30px hsl(35 25% 85% / 0.2);
-    --shadow-elegant: 0 20px 40px -8px hsl(215 25% 15% / 0.12),
-                      0 8px 16px -4px hsl(215 25% 15% / 0.08);
+    /* Exquisite Shadows */
+    --shadow-luxury: 0 25px 50px -15px hsl(210 15% 25% / 0.04), 
+                     0 15px 30px -10px hsl(210 15% 25% / 0.03),
+                     0 5px 15px -5px hsl(210 15% 25% / 0.02);
+    --shadow-glow: 0 0 40px hsl(40 25% 85% / 0.2),
+                   0 0 20px hsl(40 25% 85% / 0.1);
+    --shadow-elegant: 0 12px 24px -6px hsl(210 15% 25% / 0.06),
+                      0 6px 12px -3px hsl(210 15% 25% / 0.04);
+    --shadow-whisper: 0 6px 12px -4px hsl(210 15% 25% / 0.03),
+                      0 3px 6px -2px hsl(210 15% 25% / 0.02);
 
-    /* Luxury Transitions */
-    --transition-smooth: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-cinematic: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    --transition-elegant: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Refined Transitions */
+    --transition-smooth: all 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-cinematic: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-elegant: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-whisper: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    --sidebar-background: 210 20% 98%;
-    --sidebar-foreground: 215 25% 15%;
-    --sidebar-primary: 215 30% 25%;
-    --sidebar-primary-foreground: 210 20% 98%;
-    --sidebar-accent: 210 15% 92%;
-    --sidebar-accent-foreground: 215 25% 25%;
-    --sidebar-border: 210 20% 88%;
-    --sidebar-ring: 215 30% 25%;
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 210 15% 25%;
+    --sidebar-primary: 210 15% 25%;
+    --sidebar-primary-foreground: 0 0% 99%;
+    --sidebar-accent: 210 8% 94%;
+    --sidebar-accent-foreground: 210 15% 30%;
+    --sidebar-border: 210 12% 88%;
+    --sidebar-ring: 210 15% 25%;
   }
 
   .dark {
