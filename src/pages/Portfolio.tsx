@@ -10,43 +10,43 @@ const Portfolio = () => {
       title: "Villa Azzurra",
       location: "Cap d'Antibes",
       year: "2024",
-      description: "Jardin méditerranéen de 2000m² avec terrasses étagées et bassin à débordement",
-      category: "Résidence privée"
+      description: t('projects.villa.azzurra'),
+      category: t('category.residence')
     },
     {
       title: "Château de Lumière",
       location: "Saint-Paul-de-Vence",
       year: "2023",
-      description: "Restauration complète des jardins historiques avec création d'un labyrinthe de buis",
-      category: "Patrimoine historique"
+      description: t('projects.chateau.lumiere'),
+      category: t('category.heritage')
     },
     {
       title: "Penthouse Croisette",
       location: "Cannes",
       year: "2024",
-      description: "Terrasse panoramique de 500m² avec jardins suspendus et sculptures végétales",
-      category: "Terrasse de luxe"
+      description: t('projects.penthouse.croisette'),
+      category: t('category.terrace')
     },
     {
       title: "Villa del Mare",
       location: "Monaco",
       year: "2023",
-      description: "Jardin vertical et terrasses aquatiques avec vue sur la Méditerranée",
-      category: "Innovation paysagère"
+      description: t('projects.villa.del.mare'),
+      category: t('category.innovation')
     },
     {
       title: "Domaine des Oliviers",
       location: "Mougins",
       year: "2022",
-      description: "Parc de 5 hectares avec oliveraie centenaire et jardins thématiques",
-      category: "Grand domaine"
+      description: t('projects.domaine.oliviers'),
+      category: t('category.domain')
     },
     {
       title: "Spa Impérial",
       location: "Juan-les-Pins",
       year: "2024",
-      description: "Jardins sensoriels et thérapeutiques pour centre de bien-être de luxe",
-      category: "Espace commercial"
+      description: t('projects.spa.imperial'),
+      category: t('category.commercial')
     }
   ];
 

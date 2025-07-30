@@ -51,8 +51,21 @@ const translations = {
     'services.custom.btn': 'Consultation gratuite',
     'services.back': 'Retour à l\'accueil',
     
-    // Portfolio Page
-    'portfolio.title': 'Notre Portfolio',
+    // Projects
+    'projects.villa.azzurra': 'Jardin méditerranéen de 2000m² avec terrasses étagées et bassin à débordement',
+    'projects.chateau.lumiere': 'Restauration complète des jardins historiques avec création d\'un labyrinthe de buis',
+    'projects.penthouse.croisette': 'Terrasse panoramique de 500m² avec jardins suspendus et sculptures végétales',
+    'projects.villa.del.mare': 'Jardin vertical et terrasses aquatiques avec vue sur la Méditerranée',
+    'projects.domaine.oliviers': 'Parc de 5 hectares avec oliveraie centenaire et jardins thématiques',
+    'projects.spa.imperial': 'Jardins sensoriels et thérapeutiques pour centre de bien-être de luxe',
+    
+    // Categories
+    'category.residence': 'Résidence privée',
+    'category.heritage': 'Patrimoine historique',
+    'category.terrace': 'Terrasse de luxe',
+    'category.innovation': 'Innovation paysagère',
+    'category.domain': 'Grand domaine',
+    'category.commercial': 'Espace commercial',
     'portfolio.subtitle': 'Découvrez nos créations les plus emblématiques, témoins de notre excellence et de notre passion pour l\'art paysager méditerranéen.',
     'portfolio.stats.projects': 'Projets réalisés',
     'portfolio.stats.years': 'Années d\'expérience',
@@ -155,8 +168,21 @@ const translations = {
     'services.custom.btn': 'Free consultation',
     'services.back': 'Back to home',
     
-    // Portfolio Page
-    'portfolio.title': 'Our Portfolio',
+    // Projects
+    'projects.villa.azzurra': '2000m² Mediterranean garden with tiered terraces and infinity pool',
+    'projects.chateau.lumiere': 'Complete restoration of historic gardens with creation of a boxwood labyrinth',
+    'projects.penthouse.croisette': '500m² panoramic terrace with hanging gardens and plant sculptures',
+    'projects.villa.del.mare': 'Vertical garden and aquatic terraces with Mediterranean views',
+    'projects.domaine.oliviers': '5-hectare park with century-old olive grove and themed gardens',
+    'projects.spa.imperial': 'Sensory and therapeutic gardens for luxury wellness center',
+    
+    // Categories
+    'category.residence': 'Private residence',
+    'category.heritage': 'Historic heritage',
+    'category.terrace': 'Luxury terrace',
+    'category.innovation': 'Landscape innovation',
+    'category.domain': 'Large estate',
+    'category.commercial': 'Commercial space',
     'portfolio.subtitle': 'Discover our most emblematic creations, witnesses of our excellence and passion for Mediterranean landscape art.',
     'portfolio.stats.projects': 'Completed projects',
     'portfolio.stats.years': 'Years of experience',
@@ -259,8 +285,21 @@ const translations = {
     'services.custom.btn': 'Consulenza gratuita',
     'services.back': 'Torna alla home',
     
-    // Portfolio Page
-    'portfolio.title': 'Il Nostro Portfolio',
+    // Projects
+    'projects.villa.azzurra': 'Giardino mediterraneo di 2000m² con terrazze a gradoni e piscina a sfioro',
+    'projects.chateau.lumiere': 'Restauro completo dei giardini storici con creazione di un labirinto di bosso',
+    'projects.penthouse.croisette': 'Terrazza panoramica di 500m² con giardini pensili e sculture vegetali',
+    'projects.villa.del.mare': 'Giardino verticale e terrazze acquatiche con vista sul Mediterraneo',
+    'projects.domaine.oliviers': 'Parco di 5 ettari con uliveto centenario e giardini tematici',
+    'projects.spa.imperial': 'Giardini sensoriali e terapeutici per centro benessere di lusso',
+    
+    // Categories
+    'category.residence': 'Residenza privata',
+    'category.heritage': 'Patrimonio storico',
+    'category.terrace': 'Terrazza di lusso',
+    'category.innovation': 'Innovazione paesaggistica',
+    'category.domain': 'Grande tenuta',
+    'category.commercial': 'Spazio commerciale',
     'portfolio.subtitle': 'Scoprite le nostre creazioni più emblematiche, testimoni della nostra eccellenza e passione per l\'arte paesaggistica mediterranea.',
     'portfolio.stats.projects': 'Progetti completati',
     'portfolio.stats.years': 'Anni di esperienza',
