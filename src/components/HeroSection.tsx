@@ -28,7 +28,7 @@ const HeroSection = () => {
       
       
       {/* Language Selector */}
-      <div className="absolute top-8 left-4 md:left-6 lg:left-8 z-30">
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="flex space-x-6">
           <Button 
             variant="ghost" 
