@@ -11,7 +11,8 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
       {/* Luxury Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-soft-white/10 via-transparent to-soft-white/5 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-soft-white/5 via-transparent to-soft-white/5 z-11"></div>
       <div className="absolute top-20 right-20 w-96 h-96 bg-sage-green/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-32 w-64 h-64 bg-sage-green/3 rounded-full blur-2xl"></div>
       
