@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
+import { Logo3D } from "@/components/Logo3D";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -25,6 +26,18 @@ const HeroSection = () => {
       >
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
+      
+      {/* Logo 3D en haut à gauche */}
+      <div className="absolute top-8 left-8 z-30">
+        <Logo3D 
+          modelPath="/logo-3d.glb"
+          width="w-24"
+          height="h-16"
+          scale={0.8}
+          autoRotate={true}
+          className="filter drop-shadow-lg"
+        />
+      </div>
       
       
       {/* Language Selector */}
