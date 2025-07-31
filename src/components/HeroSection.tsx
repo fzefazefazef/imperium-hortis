@@ -27,10 +27,9 @@ const HeroSection = () => {
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
       
-      {/* Logo 3D en haut à gauche */}
+      {/* Logo 3D en haut à gauche - Sans modelPath pour utiliser le fallback */}
       <div className="absolute top-8 left-8 z-30">
         <Logo3D 
-          modelPath="/logo-3d.glb"
           width="w-24"
           height="h-16"
           scale={0.8}

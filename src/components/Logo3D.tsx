@@ -3,6 +3,15 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, useGLTF } from '@react-three/drei';
 import { Group, Mesh } from 'three';
 
+// Composant ErrorBoundary simple
+const ErrorBoundary = ({ children, fallback }: { children: React.ReactNode, fallback: React.ReactNode }) => {
+  try {
+    return <>{children}</>;
+  } catch (error) {
+    return <>{fallback}</>;
+  }
+};
+
 interface LogoModelProps {
   modelPath: string;
   scale?: number;
@@ -12,20 +21,26 @@ interface LogoModelProps {
 
 const LogoModel = ({ modelPath, scale = 1, rotation = [0, 0, 0], position = [0, 0, 0] }: LogoModelProps) => {
   const modelRef = useRef<Group>(null);
-  const { scene } = useGLTF(modelPath);
   
-  useFrame((state) => {
-    if (modelRef.current) {
-      // Animation de rotation douce
-      modelRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
-    }
-  });
+  try {
+    const { scene } = useGLTF(modelPath);
+    
+    useFrame((state) => {
+      if (modelRef.current) {
+        // Animation de rotation douce
+        modelRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
+      }
+    });
 
-  return (
-    <group ref={modelRef} scale={scale} rotation={rotation} position={position}>
-      <primitive object={scene} />
-    </group>
-  );
+    return (
+      <group ref={modelRef} scale={scale} rotation={rotation} position={position}>
+        <primitive object={scene} />
+      </group>
+    );
+  } catch (error) {
+    console.log('Erreur GLB, utilisation du fallback:', error);
+    return <FallbackLogo />;
+  }
 };
 
 const FallbackLogo = () => {
@@ -91,10 +106,12 @@ export const Logo3D = ({
         
         <Suspense fallback={<FallbackLogo />}>
           {modelPath ? (
-            <LogoModel 
-              modelPath={modelPath} 
-              scale={scale}
-            />
+            <ErrorBoundary fallback={<FallbackLogo />}>
+              <LogoModel 
+                modelPath={modelPath} 
+                scale={scale}
+              />
+            </ErrorBoundary>
           ) : (
             <FallbackLogo />
           )}
