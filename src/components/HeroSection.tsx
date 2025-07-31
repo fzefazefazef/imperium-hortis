@@ -37,7 +37,7 @@ const HeroSection = () => {
             title="Français"
             onClick={() => setLanguage('fr')}
           >
-            <svg width="64" height="42" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="80" height="53" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="8" height="16" fill="#0055A4"/>
               <rect x="8" width="8" height="16" fill="#FFFFFF"/>
               <rect x="16" width="8" height="16" fill="#EF4135"/>
@@ -50,7 +50,7 @@ const HeroSection = () => {
             title="English"
             onClick={() => setLanguage('en')}
           >
-            <svg width="64" height="42" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="80" height="53" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="24" height="16" fill="#012169"/>
               <path d="M0,0 L24,16 M24,0 L0,16" stroke="#FFFFFF" strokeWidth="2"/>
               <path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" strokeWidth="1"/>
@@ -67,7 +67,7 @@ const HeroSection = () => {
             title="Italiano"
             onClick={() => setLanguage('it')}
           >
-            <svg width="64" height="42" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="80" height="53" viewBox="0 0 24 16" className="border border-gray-400">
               <rect width="8" height="16" fill="#009246"/>
               <rect x="8" width="8" height="16" fill="#FFFFFF"/>
               <rect x="16" width="8" height="16" fill="#CE2B37"/>
