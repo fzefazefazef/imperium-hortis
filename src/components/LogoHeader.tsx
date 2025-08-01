@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const LogoHeader = () => {
   return (
-    <div className="fixed top-4 left-12 z-50">
+    <div className="absolute top-4 left-12 z-50">
       <Link to="/" className="block">
         <img 
           src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
