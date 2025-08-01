@@ -60,6 +60,7 @@ const Portfolio = () => {
           {[
             { name: t('nav.philosophie'), path: "/philosophie" },
             { name: t('nav.services'), path: "/services" },
+            { name: t('nav.portfolio'), path: "/portfolio" },
             { name: t('nav.contact'), path: "/contact" }
           ].map((item) => (
             <Link
