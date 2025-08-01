@@ -108,7 +108,7 @@ const Contact = () => {
       <div className="pt-32 px-8 md:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white mb-8 text-center">
-            <span className="text-whisper-gold">{t('contact.title')}</span>
+            <span className="text-sage-green">{t('contact.title')}</span>
           </h1>
           
           <p className="font-inter text-xl text-soft-white/80 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
