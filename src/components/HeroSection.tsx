@@ -125,32 +125,6 @@ const HeroSection = () => {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <OptimizedButton3DWrapper 
-            isVisible={buttonsVisible} 
-            delay={0.2}
-            className="w-full sm:w-auto"
-          >
-             <Button 
-               variant="hero-luxury" 
-               size="xl"
-               onClick={() => {
-                 navigate('/services');
-                 window.scrollTo(0, 0);
-               }}
-               className={`relative overflow-hidden font-playfair font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full mt-75 ${
-                 buttonsVisible ? 'animate-fade-in animate-light-sweep' : ''
-               }`}
-               style={{ 
-                 animationDelay: buttonsVisible ? '0.2s' : '0s',
-                 background: buttonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
-                 backgroundSize: '300% 100%',
-                 boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
-               }}
-             >
-               <FluidButtonBackground />
-               <span className="relative z-10">{t('hero.btn.services')}</span>
-             </Button>
-           </OptimizedButton3DWrapper>
           
           <OptimizedButton3DWrapper 
             isVisible={buttonsVisible} 
