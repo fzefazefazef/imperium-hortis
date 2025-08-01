@@ -10,12 +10,11 @@ const HeroSection = () => {
   const { setLanguage, t } = useLanguage();
 
   return (
-    <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-hero">
-      {/* Éléments décoratifs Empire Romain Lumineux */}
-      <div className="absolute inset-0 bg-gradient-to-t from-gold-pale/30 via-transparent to-amber-cream/20 z-10"></div>
-      <div className="absolute top-20 right-20 w-96 h-96 bg-imperial-gold/25 rounded-full blur-3xl animate-glow-pulse"></div>
-      <div className="absolute bottom-32 left-32 w-64 h-64 bg-roman-amber/20 rounded-full blur-2xl animate-imperial-glow"></div>
-      <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-brass-bright/15 rounded-full blur-3xl animate-whisper-float"></div>
+    <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
+      {/* Luxury Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 z-10"></div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-whisper-gold/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-32 w-64 h-64 bg-whisper-gold/3 rounded-full blur-2xl"></div>
       
       {/* Hero Background Video */}
       <video 
@@ -91,7 +90,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel text-sm font-medium text-primary-foreground hover:text-imperial-gold transition-imperial duration-300 hover:scale-105 tracking-wider font-semibold"
+              className="font-cinzel text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`
@@ -105,12 +104,12 @@ const HeroSection = () => {
       
       {/* Hero Content - Left Center Positioned */}
       <div className="absolute left-0 top-[40%] z-20 pl-4 md:pl-6 lg:pl-8 max-w-2xl animate-fade-in-slow">
-        <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight tracking-wider drop-shadow-2xl">
+        <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Imperium
-          <span className="block text-imperial-gold animate-imperial-glow">Hortis</span>
+          <span className="block text-whisper-gold">Hortis</span>
         </h1>
         
-        <p className="font-inter text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed max-w-lg font-medium">
+        <p className="font-inter text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">
           {t('hero.subtitle')}
         </p>
         
@@ -128,13 +127,15 @@ const HeroSection = () => {
             className="w-full sm:w-auto"
           >
             <Button 
-              variant="hero-bronze" 
+              variant="hero-minimal" 
               size="xl"
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 w-full animate-golden-wave ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full mt-75 ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
-                animationDelay: buttonsVisible ? '0.2s' : '0s'
+                animationDelay: buttonsVisible ? '0.2s' : '0s',
+                background: buttonsVisible ? 'hsl(40 25% 85% / 0.25)' : 'transparent',
+                boxShadow: buttonsVisible ? '0 0 30px hsl(40 25% 85% / 0.3)' : 'none'
               }}
             >
               {t('hero.btn.services')}
@@ -147,13 +148,15 @@ const HeroSection = () => {
             className="w-full sm:w-auto"
           >
             <Button 
-              variant="hero-imperial" 
+              variant="hero-luxury" 
               size="xl"
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:scale-110 w-full animate-amber-flow ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
-                animationDelay: buttonsVisible ? '0.4s' : '0s'
+                animationDelay: buttonsVisible ? '0.4s' : '0s',
+                background: buttonsVisible ? 'hsl(40 25% 85% / 0.2)' : 'transparent',
+                boxShadow: buttonsVisible ? '0 0 25px hsl(40 25% 85% / 0.25)' : 'none'
               }}
             >
               {t('hero.btn.consultation')}
