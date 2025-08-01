@@ -5,6 +5,7 @@ import { Logo3D } from "@/components/Logo3D";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import FluidButtonBackground from "@/components/FluidButtonBackground";
+import MobileMenu from "@/components/MobileMenu";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
@@ -33,8 +34,11 @@ const HeroSection = () => {
       
       
       
-      {/* Language Selector */}
-      <div className="absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-30">
+      {/* Mobile Menu */}
+      <MobileMenu />
+
+      {/* Language Selector - Desktop Only */}
+      <div className="absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-30 hidden sm:block">
         <div className="flex space-x-2 sm:space-x-6">
           <Button 
             variant="ghost" 
@@ -82,8 +86,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="absolute top-16 sm:top-8 right-2 sm:right-8 z-30">
+      {/* Navigation - Desktop Only */}
+      <nav className="absolute top-16 sm:top-8 right-2 sm:right-8 z-30 hidden sm:block">
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
           {[
             { name: t('nav.philosophie'), path: "/philosophie" },
