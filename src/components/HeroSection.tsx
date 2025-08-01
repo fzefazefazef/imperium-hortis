@@ -133,6 +133,10 @@ const HeroSection = () => {
              <Button 
                variant="hero-luxury" 
                size="xl"
+               onClick={() => {
+                 navigate('/services');
+                 window.scrollTo(0, 0);
+               }}
                className={`relative overflow-hidden font-playfair font-medium hover-scale transform transition-all duration-500 w-full mt-75 ${
                  buttonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                }`}
