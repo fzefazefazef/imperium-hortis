@@ -199,17 +199,6 @@ const Index = () => {
               <p className="font-inter text-soft-white/60">contact@imperiumhortis.com</p>
             </div>
             
-            <div>
-              <h4 className="font-inter font-medium text-soft-white mb-4">{t('footer.showroom')}</h4>
-              <p className="font-inter text-soft-white/60">
-                {t('footer.address').split('\n').map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    {index < t('footer.address').split('\n').length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
-            </div>
           </div>
           
           <div className="mt-12 pt-8 border-t border-sage-green/20 text-center">
