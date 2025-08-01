@@ -148,12 +148,12 @@ const Index = () => {
                  className={`font-playfair font-medium transform transition-all duration-500 relative overflow-hidden ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
-                 style={{ 
-                   animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                   background: contactButtonsVisible ? 'linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 193, 7, 0.4), rgba(255, 215, 0, 0.3))' : 'transparent',
-                   backgroundSize: '300% 100%',
-                   boxShadow: contactButtonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
-                 }}
+                  style={{ 
+                    animationDelay: contactButtonsVisible ? '0.1s' : '0s',
+                    background: contactButtonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
+                    backgroundSize: '300% 100%',
+                    boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
+                  }}
                >
                 {t('home.contact.appointment')}
               </Button>
