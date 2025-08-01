@@ -27,14 +27,6 @@ const HeroSection = () => {
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
       
-      {/* Logo Imperium Hortis en haut à gauche */}
-      <div className="absolute top-8 left-8 z-30">
-        <img 
-          src="/lovable-uploads/fe4099f2-7464-40e9-aecb-0e0792444553.png"
-          alt="Imperium Hortis Logo"
-          className="w-20 h-20 object-contain filter drop-shadow-lg"
-        />
-      </div>
       
       
       {/* Language Selector */}
