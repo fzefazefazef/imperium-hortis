@@ -4,6 +4,7 @@ import { Button3DWrapper } from "@/components/Button3DWrapper";
 import { Logo3D } from "@/components/Logo3D";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
@@ -139,7 +140,9 @@ const HeroSection = () => {
                 boxShadow: buttonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
               }}
             >
-              {t('hero.btn.services')}
+              <TextShimmer duration={2} className="font-playfair">
+                {t('hero.btn.services')}
+              </TextShimmer>
             </Button>
           </Button3DWrapper>
           
@@ -161,7 +164,9 @@ const HeroSection = () => {
                 boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
               }}
             >
-              {t('hero.btn.consultation')}
+              <TextShimmer duration={2.2} className="font-cinzel">
+                {t('hero.btn.consultation')}
+              </TextShimmer>
             </Button>
           </Button3DWrapper>
         </div>

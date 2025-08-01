@@ -4,6 +4,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Logo3D } from "@/components/Logo3D";
+import { TextShimmer } from "@/components/ui/text-shimmer";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -154,9 +155,11 @@ const Index = () => {
                    backgroundSize: '300% 100%',
                    boxShadow: contactButtonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
                  }}
-               >
-                {t('home.contact.appointment')}
-              </Button>
+                >
+                 <TextShimmer duration={2} className="font-playfair">
+                   {t('home.contact.appointment')}
+                 </TextShimmer>
+               </Button>
             </Button3DWrapper>
             
             <Button3DWrapper 
@@ -176,9 +179,11 @@ const Index = () => {
                    backgroundSize: '300% 100%',
                    boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                  }}
-               >
-                {t('home.contact.portfolio')}
-              </Button>
+                >
+                 <TextShimmer duration={2.2} className="font-cinzel">
+                   {t('home.contact.portfolio')}
+                 </TextShimmer>
+               </Button>
             </Button3DWrapper>
           </div>
         </div>
