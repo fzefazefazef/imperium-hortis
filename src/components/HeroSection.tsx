@@ -94,10 +94,19 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel-decorative text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-whisper-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              className="font-cinzel-decorative text-sm font-medium text-white transition-all duration-300 hover:scale-105 tracking-wider hover:text-shadow-glow"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                transition: 'all 0.3s ease',
                 animationDelay: `${index * 0.1}s`
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#FFc107';
+                e.currentTarget.style.textShadow = '0 0 20px rgba(255, 193, 7, 0.8), 0 0 40px rgba(255, 171, 64, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = 'white';
+                e.currentTarget.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)';
               }}
             >
               {item.name}
