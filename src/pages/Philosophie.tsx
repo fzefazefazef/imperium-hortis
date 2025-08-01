@@ -1,37 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LogoHeader from "@/components/LogoHeader";
+import Layout from "@/components/Layout";
 
 const Philosophie = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal text-foreground">
-      <LogoHeader />
-      {/* Navigation */}
-      <nav className="absolute top-8 right-8 z-30">
-        <div className="flex space-x-8">
-          {[
-            { name: t('nav.philosophie'), path: "/philosophie" },
-            { name: t('nav.services'), path: "/services" },
-            { name: t('nav.portfolio'), path: "/portfolio" },
-            { name: t('nav.contact'), path: "/contact" }
-          ].map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className="font-cinzel text-sm font-medium text-soft-white/90 hover:text-sage-green transition-all duration-300 hover:scale-105 tracking-wider"
-              style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      </nav>
-
-      {/* Content */}
-      <div className="pt-32 px-8 md:px-16 lg:px-24">
+    <Layout navTheme="default">
+      <div className="min-h-screen bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal text-foreground">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white mb-12 text-center">
             {t('philosophy.title').split(' ')[0]} <span className="text-sage-green">{t('philosophy.title').split(' ').slice(1).join(' ')}</span>
@@ -103,7 +80,7 @@ const Philosophie = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
