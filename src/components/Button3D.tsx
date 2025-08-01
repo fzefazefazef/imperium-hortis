@@ -38,11 +38,11 @@ export const Button3D = ({ children, isVisible, delay = 0 }: Button3DProps) => {
       <mesh ref={meshRef}>
         <boxGeometry args={[0.5, 0.2, 0.1]} />
         <meshStandardMaterial 
-          color={isVisible ? "#22c55e" : "#6b7280"}
-          emissive={isVisible ? "#22c55e" : "#000000"}
-          emissiveIntensity={isVisible ? 0.2 : 0}
-          metalness={0.8}
-          roughness={0.2}
+          color={isVisible ? "#D4A574" : "#B8860B"}
+          emissive={isVisible ? "#FFD700" : "#000000"}
+          emissiveIntensity={isVisible ? 0.3 : 0}
+          metalness={0.9}
+          roughness={0.1}
         />
       </mesh>
       <ambientLight intensity={0.5} />
