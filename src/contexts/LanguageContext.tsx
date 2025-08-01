@@ -142,7 +142,7 @@ const translations = {
     // Home Contact
     'home.contact.title': 'Créons ensemble votre jardin d\'éternité',
     'home.contact.desc': 'Chaque jardin raconte une histoire. Quelle sera la vôtre ? Découvrez comment nous pouvons transformer votre vision en réalité.',
-    'home.contact.appointment': 'Prendre rendez-vous',
+    'home.contact.appointment': 'Consultation privée',
     'home.contact.portfolio': 'Portfolio complet',
     
     // Footer
@@ -283,7 +283,7 @@ const translations = {
     // Home Contact
     'home.contact.title': 'Let\'s create your eternal garden together',
     'home.contact.desc': 'Each garden tells a story. What will yours be? Discover how we can transform your vision into reality.',
-    'home.contact.appointment': 'Book appointment',
+    'home.contact.appointment': 'Private consultation',
     'home.contact.portfolio': 'Full portfolio',
     
     // Footer
@@ -424,7 +424,7 @@ const translations = {
     // Home Contact
     'home.contact.title': 'Creiamo insieme il vostro giardino dell\'eternità',
     'home.contact.desc': 'Ogni giardino racconta una storia. Quale sarà la vostra? Scoprite come possiamo trasformare la vostra visione in realtà.',
-    'home.contact.appointment': 'Prenota appuntamento',
+    'home.contact.appointment': 'Consulenza privata',
     'home.contact.portfolio': 'Portfolio completo',
     
     // Footer
