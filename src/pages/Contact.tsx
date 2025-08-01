@@ -173,7 +173,7 @@ const Contact = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     "Cannes", "Monaco", "Nice", "Antibes",
-                    "Saint Paul de Vence", "Menton", "Grasse", "Mougins"
+                    "Saint Paul de Vence", "Menton", "Grasse", "Saint Jean Cap-Ferrat"
                   ].map((city) => (
                     <div key={city} className="flex items-center space-x-2">
                       <span className="text-sage-green">•</span>
