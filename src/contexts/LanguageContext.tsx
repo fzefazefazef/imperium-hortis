@@ -137,7 +137,7 @@ const translations = {
     'home.services.terraces.title': 'Terrasses panoramiques',
     'home.services.terraces.desc': 'Aménagement de terrasses avec vue sur la Méditerranée',
     'home.services.art.title': 'Entretien paysager',
-    'home.services.art.desc': 'Maintenance experte et soins personnalisés pour jardins de prestige',
+    'home.services.art.desc': 'Sculptures végétales et créations artistiques pour jardins d\'exception',
     
     // Home Contact
     'home.contact.title': 'Créons ensemble votre jardin d\'éternité',
@@ -277,8 +277,8 @@ const translations = {
     'home.services.gardens.desc': 'Design and creation of custom gardens for prestigious villas',
     'home.services.terraces.title': 'Panoramic terraces',
     'home.services.terraces.desc': 'Terrace landscaping with Mediterranean views',
-    'home.services.art.title': 'Landscape art',
-    'home.services.art.desc': 'Plant sculptures and unique artistic installations',
+    'home.services.art.title': 'Plant sculptures',
+    'home.services.art.desc': 'Plant sculptures and unique artistic installations for exceptional gardens',
     
     // Home Contact
     'home.contact.title': 'Let\'s create your eternal garden together',
