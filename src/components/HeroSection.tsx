@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
 import { Logo3D } from "@/components/Logo3D";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import FluidButtonBackground from "@/components/FluidButtonBackground";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
   const { setLanguage, t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
@@ -155,6 +156,10 @@ const HeroSection = () => {
              <Button 
                variant="hero-luxury" 
                size="xl"
+               onClick={() => {
+                 navigate('/services');
+                 window.scrollTo(0, 0);
+               }}
                className={`relative overflow-hidden font-cinzel font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                  buttonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                }`}
