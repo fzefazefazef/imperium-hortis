@@ -161,7 +161,7 @@ const HeroSection = () => {
                variant="hero-luxury" 
                size="xl"
                onClick={() => {
-                 navigate('/services');
+                 navigate('/contact');
                  window.scrollTo(0, 0);
                }}
                className={`relative overflow-hidden font-cinzel font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
