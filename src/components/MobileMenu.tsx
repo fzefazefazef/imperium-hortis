@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X, Globe } from "lucide-react";
 
-const MobileMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface MobileMenuProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
   const [showLanguages, setShowLanguages] = useState(false);
   const { setLanguage, t } = useLanguage();
   const navigate = useNavigate();

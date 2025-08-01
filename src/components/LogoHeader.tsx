@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 
-const LogoHeader = () => {
+interface LogoHeaderProps {
+  isVisible?: boolean;
+}
+
+const LogoHeader: React.FC<LogoHeaderProps> = ({ isVisible = true }) => {
   return (
-    <div className="absolute top-4 left-4 z-50">
+    <div className={`absolute top-4 left-4 z-50 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <Link to="/" className="block">
         <img 
           src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 

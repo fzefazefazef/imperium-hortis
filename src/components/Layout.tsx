@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LogoHeader from "@/components/LogoHeader";
 import MobileMenu from "@/components/MobileMenu";
 import { Link } from "react-router-dom";
@@ -16,6 +16,7 @@ const Layout: React.FC<LayoutProps> = ({
   navTheme = 'default' 
 }) => {
   const { t } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const getNavLinkClasses = () => {
     const baseClasses = "font-cinzel-decorative text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left text-right sm:text-left";
@@ -29,8 +30,8 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <div className="min-h-screen">
-      <LogoHeader />
-      <MobileMenu />
+      <LogoHeader isVisible={!isMenuOpen} />
+      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
       {/* Desktop Navigation */}
       {showDesktopNav && (

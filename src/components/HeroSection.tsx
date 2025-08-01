@@ -34,8 +34,7 @@ const HeroSection = () => {
       
       
       
-      {/* Mobile Menu */}
-      <MobileMenu />
+      {/* Mobile Menu handled by Layout */}
 
       {/* Language Selector - Desktop Only */}
       <div className="absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-30 hidden sm:block">
