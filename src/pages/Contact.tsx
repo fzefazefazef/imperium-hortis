@@ -144,16 +144,6 @@ const Contact = () => {
                 </h3>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="text-sage-green text-xl">📍</div>
-                    <div>
-                      <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.showroom')}</h4>
-                      <p className="font-inter text-soft-white/70">
-                        123 Boulevard de la Croisette<br />
-                        06400 Cannes, France
-                      </p>
-                    </div>
-                  </div>
 
                   <div className="flex items-start space-x-4">
                     <div className="text-sage-green text-xl">📞</div>
