@@ -66,30 +66,34 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Couleurs Empire Romain
+				// Couleurs Empire Romain Lumineux
 				'imperial-gold': 'hsl(var(--imperial-gold))',
 				'roman-amber': 'hsl(var(--roman-amber))',
-				'bronze-deep': 'hsl(var(--bronze-deep))',
-				'copper-warm': 'hsl(var(--copper-warm))',
-				'purple-imperial': 'hsl(var(--purple-imperial))',
-				'ivory-marble': 'hsl(var(--ivory-marble))',
-				'charcoal-stone': 'hsl(var(--charcoal-stone))',
-				'antique-brass': 'hsl(var(--antique-brass))',
+				'bronze-light': 'hsl(var(--bronze-light))',
+				'copper-bright': 'hsl(var(--copper-bright))',
+				'gold-pale': 'hsl(var(--gold-pale))',
+				'amber-cream': 'hsl(var(--amber-cream))',
+				'ivory-warm': 'hsl(var(--ivory-warm))',
+				'brass-bright': 'hsl(var(--brass-bright))',
 				
-				// Couleurs secondaires raffinées
-				'deep-charcoal': 'hsl(var(--deep-charcoal))',
-				'midnight-blue': 'hsl(var(--midnight-blue))',
-				'soft-white': 'hsl(var(--soft-white))',
+				// Couleurs complémentaires lumineuses
+				'marble-white': 'hsl(var(--marble-white))',
+				'cream-gold': 'hsl(var(--cream-gold))',
+				'champagne': 'hsl(var(--champagne))',
 				
 				// Compatibilité (anciens noms)
 				'whisper-gold': 'hsl(var(--imperial-gold))',
-				'sage-green': 'hsl(var(--imperial-gold))'
+				'sage-green': 'hsl(var(--imperial-gold))',
+				'soft-white': 'hsl(var(--ivory-warm))',
+				'deep-charcoal': 'hsl(var(--cream-gold))',
+				'midnight-blue': 'hsl(var(--champagne))'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-imperial': 'var(--gradient-imperial)',
 				'gradient-gold': 'var(--gradient-gold)',
 				'gradient-bronze': 'var(--gradient-bronze)',
+				'gradient-royal': 'var(--gradient-royal)',
 				// Compatibilité
 				'gradient-accent': 'var(--gradient-imperial)',
 				'gradient-luxury': 'var(--gradient-gold)'

@@ -18,13 +18,14 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Variantes Empire Romain
-        imperial: "bg-gradient-to-r from-imperial-gold/20 to-roman-amber/15 border border-imperial-gold/40 text-imperial-gold hover:bg-gradient-to-r hover:from-imperial-gold/30 hover:to-roman-amber/25 hover:border-imperial-gold/60 hover:shadow-imperial backdrop-blur-sm transition-all duration-700",
-        bronze: "bg-gradient-to-r from-bronze-deep/25 to-copper-warm/20 border border-bronze-deep/50 text-antique-brass hover:bg-gradient-to-r hover:from-bronze-deep/35 hover:to-copper-warm/30 hover:border-copper-warm/70 hover:shadow-bronze backdrop-blur-sm transition-all duration-700",
-        luxury: "bg-transparent border border-ivory-marble/30 text-ivory-marble hover:bg-imperial-gold/10 hover:border-imperial-gold/50 backdrop-blur-sm transition-all duration-500",
-        minimal: "bg-imperial-gold/20 text-ivory-marble border border-imperial-gold/40 hover:bg-imperial-gold/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
-        "hero-imperial": "bg-transparent border border-imperial-gold/40 text-imperial-gold hover:bg-imperial-gold/15 hover:border-imperial-gold/70 hover:shadow-glow backdrop-blur-sm transition-imperial duration-700",
-        "hero-bronze": "bg-bronze-deep/20 text-antique-brass border border-bronze-deep/50 hover:bg-bronze-deep/30 hover:shadow-bronze transition-imperial duration-700 backdrop-blur-sm",
+        // Variantes Empire Romain Lumineux
+        imperial: "bg-gradient-to-r from-imperial-gold/60 to-roman-amber/50 border-2 border-imperial-gold/80 text-primary-foreground hover:from-imperial-gold/80 hover:to-roman-amber/70 hover:border-imperial-gold hover:shadow-glow backdrop-blur-sm transition-imperial duration-700 font-bold tracking-wide",
+        bronze: "bg-gradient-to-r from-bronze-light/50 to-copper-bright/40 border-2 border-bronze-light/70 text-primary-foreground hover:from-bronze-light/70 hover:to-copper-bright/60 hover:border-copper-bright hover:shadow-bronze backdrop-blur-sm transition-imperial duration-700 font-semibold",
+        royal: "bg-gradient-to-r from-imperial-gold/40 to-brass-bright/35 border-2 border-brass-bright/60 text-primary-foreground hover:from-imperial-gold/60 hover:to-brass-bright/55 hover:border-imperial-gold/80 hover:shadow-imperial backdrop-blur-sm transition-imperial duration-700",
+        luxury: "bg-gradient-to-r from-gold-pale/80 to-amber-cream/60 border border-imperial-gold/50 text-primary-foreground hover:from-imperial-gold/50 hover:to-roman-amber/40 hover:border-imperial-gold/70 backdrop-blur-sm transition-imperial duration-500",
+        minimal: "bg-imperial-gold/30 text-primary-foreground border border-imperial-gold/60 hover:bg-imperial-gold/50 hover:shadow-glow transition-imperial duration-500 backdrop-blur-sm",
+        "hero-imperial": "bg-gradient-to-r from-imperial-gold/50 to-roman-amber/40 border-2 border-imperial-gold/70 text-primary-foreground hover:from-imperial-gold/70 hover:to-roman-amber/60 hover:border-imperial-gold hover:shadow-glow backdrop-blur-sm transition-imperial duration-700 font-bold text-lg",
+        "hero-bronze": "bg-gradient-to-r from-bronze-light/40 to-copper-bright/30 border-2 border-bronze-light/60 text-primary-foreground hover:from-bronze-light/60 hover:to-copper-bright/50 hover:border-copper-bright hover:shadow-bronze transition-imperial duration-700 backdrop-blur-sm font-semibold text-lg",
       },
       size: {
         default: "h-10 px-4 py-2",
