@@ -24,16 +24,18 @@ export default function FluidButtonBackground() {
       "#FFA500",
       "#FF8C00",
       "#FFC200",
+      "#FFE135",
+      "#FFAB00",
     ];
 
-    const circles = Array.from({ length: 12 }, () => ({
+    const circles = Array.from({ length: 18 }, () => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
-      radius: 20 + Math.random() * 30,
-      dx: (Math.random() - 0.5) * 0.6,
-      dy: (Math.random() - 0.5) * 0.6,
+      radius: 25 + Math.random() * 40,
+      dx: (Math.random() - 0.5) * 0.8,
+      dy: (Math.random() - 0.5) * 0.8,
       color: goldPalette[Math.floor(Math.random() * goldPalette.length)],
-      alpha: 0.2 + Math.random() * 0.3,
+      alpha: 0.4 + Math.random() * 0.5,
     }));
 
     let animationId: number;
