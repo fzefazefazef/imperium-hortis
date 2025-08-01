@@ -8,12 +8,14 @@ interface LayoutProps {
   children: React.ReactNode;
   showDesktopNav?: boolean;
   navTheme?: 'default' | 'gold';
+  showLogo?: boolean;
 }
 
 const Layout: React.FC<LayoutProps> = ({ 
   children, 
   showDesktopNav = true, 
-  navTheme = 'default' 
+  navTheme = 'default',
+  showLogo = true
 }) => {
   const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <div className="min-h-screen">
-      
+      {showLogo && <LogoHeader isVisible={!isMenuOpen} />}
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
       {/* Desktop Navigation */}
