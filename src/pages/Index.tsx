@@ -5,18 +5,22 @@ import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper"
 import { useLanguage } from "@/contexts/LanguageContext";
 import FluidButtonBackground from "@/components/FluidButtonBackground";
 import LogoHeader from "@/components/LogoHeader";
+import MobileMenu from "@/components/MobileMenu";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Index = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { ref: servicesRef, isIntersecting: servicesVisible } = useIntersectionObserver();
   const { ref: titleRef, isIntersecting: titleVisible } = useIntersectionObserver();
   const { ref: contactButtonsRef, isIntersecting: contactButtonsVisible } = useIntersectionObserver();
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <LogoHeader />
+      <LogoHeader isVisible={!isMenuOpen} />
+      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
       {/* Hero Section */}
       <HeroSection />
