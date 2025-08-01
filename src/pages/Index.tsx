@@ -204,7 +204,7 @@ const Index = () => {
               <div className="mx-4 text-whisper-gold/70">◆</div>
               <div className="w-8 h-px bg-whisper-gold/60"></div>
             </div>
-            <p className="font-cinzel text-xl text-whisper-gold/80 max-w-2xl mx-auto leading-relaxed italic tracking-wider">
+            <p className="font-cinzel text-xl text-whisper-gold max-w-2xl mx-auto leading-relaxed italic tracking-wider">
               "Là où les jardins murmurent la grandeur"
             </p>
           </div>
