@@ -20,7 +20,7 @@ const HeroSection = () => {
       
       {/* Hero Background Video - Lazy loaded */}
       <video 
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-[5]"
         autoPlay
         muted
         loop
