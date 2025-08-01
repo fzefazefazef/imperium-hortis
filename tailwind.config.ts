@@ -22,7 +22,6 @@ export default {
 				'cormorant': ['Cormorant Garamond', 'serif'],
 				'source': ['Source Sans Pro', 'sans-serif'],
 				'playfair': ['Playfair Display', 'serif'],
-				'italiana': ['Italiana', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
