@@ -68,7 +68,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 right-4 z-50 p-2 bg-black/20 hover:bg-black/40 backdrop-blur-sm border border-white/20"
+        className="fixed top-8 right-8 z-50 p-2 bg-black/20 hover:bg-black/40 backdrop-blur-sm border border-white/20"
       >
         {isOpen ? (
           <X className="h-6 w-6 text-white" />

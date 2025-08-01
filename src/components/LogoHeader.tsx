@@ -6,12 +6,12 @@ interface LogoHeaderProps {
 
 const LogoHeader: React.FC<LogoHeaderProps> = ({ isVisible = true }) => {
   return (
-    <div className={`absolute top-4 left-4 z-50 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`absolute top-8 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <Link to="/" className="block">
         <img 
           src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
           alt="Imperium Hortis"
-          className="w-16 h-16 sm:w-20 sm:h-20 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:scale-105 transform transition-transform"
+          className="w-32 h-32 sm:w-40 sm:h-40 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:scale-105 transform transition-transform"
           loading="eager"
           decoding="sync"
           fetchPriority="high"
