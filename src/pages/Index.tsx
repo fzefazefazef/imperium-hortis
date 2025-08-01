@@ -142,19 +142,19 @@ const Index = () => {
               delay={0.1}
               className="w-full sm:w-auto"
             >
-              <Button 
-                variant="minimal" 
-                size="xl" 
-                className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
-                  contactButtonsVisible ? 'animate-fade-in' : ''
-                }`}
-                style={{ 
-                  animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                  background: contactButtonsVisible ? 'linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.4) 50%, rgba(255, 215, 0, 0.1) 100%)' : 'transparent',
-                  backgroundSize: '300% 100%',
-                  animation: contactButtonsVisible ? 'light-sweep 4s ease-in-out infinite' : 'none'
-                }}
-              >
+               <Button 
+                 variant="hero-minimal" 
+                 size="xl" 
+                 className={`font-playfair font-medium transform transition-all duration-500 relative overflow-hidden ${
+                   contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
+                 }`}
+                 style={{ 
+                   animationDelay: contactButtonsVisible ? '0.1s' : '0s',
+                   background: contactButtonsVisible ? 'linear-gradient(135deg, hsl(40 25% 85% / 0.3), hsl(210 10% 90% / 0.2), hsl(40 25% 85% / 0.3))' : 'transparent',
+                   backgroundSize: '300% 100%',
+                   boxShadow: contactButtonsVisible ? '0 0 35px hsl(40 25% 85% / 0.4), inset 0 0 20px hsl(40 25% 85% / 0.2)' : 'none'
+                 }}
+               >
                 {t('home.contact.appointment')}
               </Button>
             </Button3DWrapper>
@@ -164,19 +164,19 @@ const Index = () => {
               delay={0.3}
               className="w-full sm:w-auto"
             >
-              <Button 
-                variant="minimal" 
-                size="xl" 
-                className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
-                  contactButtonsVisible ? 'animate-fade-in' : ''
-                }`}
-                style={{ 
-                  animationDelay: contactButtonsVisible ? '0.3s' : '0s',
-                  background: contactButtonsVisible ? 'linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.4) 50%, rgba(255, 215, 0, 0.1) 100%)' : 'transparent',
-                  backgroundSize: '300% 100%',
-                  animation: contactButtonsVisible ? 'light-sweep 4s ease-in-out infinite 2s' : 'none'
-                }}
-              >
+               <Button 
+                 variant="hero-luxury" 
+                 size="xl" 
+                 className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
+                   contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
+                 }`}
+                 style={{ 
+                   animationDelay: contactButtonsVisible ? '0.3s' : '0s',
+                   background: contactButtonsVisible ? 'linear-gradient(135deg, hsl(40 25% 85% / 0.35), hsl(210 10% 90% / 0.25), hsl(40 25% 85% / 0.35))' : 'transparent',
+                   backgroundSize: '300% 100%',
+                   boxShadow: contactButtonsVisible ? '0 0 35px hsl(40 25% 85% / 0.45), inset 0 0 25px hsl(40 25% 85% / 0.25)' : 'none'
+                 }}
+               >
                 {t('home.contact.portfolio')}
               </Button>
             </Button3DWrapper>
