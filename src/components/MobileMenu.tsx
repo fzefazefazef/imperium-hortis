@@ -129,15 +129,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                   </div>
                 )}
               </div>
-
-              {/* Logo */}
-              <div className="flex-1 flex items-end justify-center pb-8">
-                <img 
-                  src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
-                  alt="Imperium Hortis"
-                  className="w-16 h-16 object-contain opacity-60"
-                />
-              </div>
             </div>
           </div>
         </div>
