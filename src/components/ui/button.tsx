@@ -18,10 +18,13 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        luxury: "bg-transparent border border-soft-white/30 text-soft-white hover:bg-soft-white/10 hover:border-whisper-gold/50 backdrop-blur-sm transition-all duration-500",
-        minimal: "bg-whisper-gold/20 text-soft-white border border-whisper-gold/40 hover:bg-whisper-gold/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
-        "hero-luxury": "bg-transparent border border-white/30 text-white hover:bg-white/10 hover:border-whisper-gold/50 backdrop-blur-sm transition-all duration-500",
-        "hero-minimal": "bg-whisper-gold/20 text-white border border-whisper-gold/40 hover:bg-whisper-gold/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
+        // Variantes Empire Romain
+        imperial: "bg-gradient-to-r from-imperial-gold/20 to-roman-amber/15 border border-imperial-gold/40 text-imperial-gold hover:bg-gradient-to-r hover:from-imperial-gold/30 hover:to-roman-amber/25 hover:border-imperial-gold/60 hover:shadow-imperial backdrop-blur-sm transition-all duration-700",
+        bronze: "bg-gradient-to-r from-bronze-deep/25 to-copper-warm/20 border border-bronze-deep/50 text-antique-brass hover:bg-gradient-to-r hover:from-bronze-deep/35 hover:to-copper-warm/30 hover:border-copper-warm/70 hover:shadow-bronze backdrop-blur-sm transition-all duration-700",
+        luxury: "bg-transparent border border-ivory-marble/30 text-ivory-marble hover:bg-imperial-gold/10 hover:border-imperial-gold/50 backdrop-blur-sm transition-all duration-500",
+        minimal: "bg-imperial-gold/20 text-ivory-marble border border-imperial-gold/40 hover:bg-imperial-gold/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
+        "hero-imperial": "bg-transparent border border-imperial-gold/40 text-imperial-gold hover:bg-imperial-gold/15 hover:border-imperial-gold/70 hover:shadow-glow backdrop-blur-sm transition-imperial duration-700",
+        "hero-bronze": "bg-bronze-deep/20 text-antique-brass border border-bronze-deep/50 hover:bg-bronze-deep/30 hover:shadow-bronze transition-imperial duration-700 backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",

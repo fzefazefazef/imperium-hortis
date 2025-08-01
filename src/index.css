@@ -8,124 +8,151 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Ultra-Premium Design System */
-    --background: 0 0% 99%;
-    --foreground: 210 15% 20%;
+    /* Empire Romain - Design System Doré/Ambré */
+    --background: 20 15% 8%;
+    --foreground: 45 60% 88%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 210 15% 25%;
+    --card: 20 20% 12%;
+    --card-foreground: 45 50% 85%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 210 15% 25%;
+    --popover: 20 25% 10%;
+    --popover-foreground: 45 55% 90%;
 
-    --primary: 210 15% 25%;
-    --primary-foreground: 0 0% 99%;
+    --primary: 45 65% 70%;
+    --primary-foreground: 20 25% 15%;
 
-    --secondary: 210 10% 90%;
-    --secondary-foreground: 210 15% 30%;
+    --secondary: 35 45% 25%;
+    --secondary-foreground: 45 70% 85%;
 
-    --muted: 210 8% 94%;
-    --muted-foreground: 210 12% 55%;
+    --muted: 25 20% 18%;
+    --muted-foreground: 40 40% 65%;
 
-    --accent: 40 15% 80%;
-    --accent-foreground: 210 15% 25%;
+    --accent: 50 80% 75%;
+    --accent-foreground: 20 30% 20%;
 
-    --destructive: 0 40% 55%;
-    --destructive-foreground: 0 0% 99%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 45 80% 95%;
 
-    --border: 210 12% 88%;
-    --input: 210 12% 90%;
-    --ring: 210 15% 25%;
+    --border: 35 25% 25%;
+    --input: 30 20% 20%;
+    --ring: 45 70% 65%;
 
     --radius: 0.875rem;
 
-    /* Refined Luxury Colors */
-    --pearl-white: 0 0% 99%;
-    --warm-ivory: 40 20% 96%;
-    --soft-graphite: 210 15% 25%;
-    --whisper-gold: 40 25% 85%;
-    --muted-sage: 120 8% 80%;
-    --charcoal-navy: 210 20% 18%;
-    --pure-alabaster: 35 30% 98%;
+    /* Couleurs Empire Romain */
+    --imperial-gold: 45 85% 65%;        /* Or impérial principal */
+    --roman-amber: 40 75% 60%;          /* Ambre romain */
+    --bronze-deep: 30 50% 35%;          /* Bronze profond */
+    --copper-warm: 25 65% 45%;          /* Cuivre chaleureux */
+    --purple-imperial: 280 60% 45%;     /* Pourpre impérial */
+    --ivory-marble: 50 25% 95%;         /* Ivoire marbre */
+    --charcoal-stone: 20 15% 15%;       /* Pierre de charbon */
+    --antique-brass: 45 40% 50%;        /* Laiton antique */
+    
+    /* Couleurs secondaires raffinées */
+    --deep-charcoal: 20 20% 8%;         /* Charbon profond */
+    --midnight-blue: 220 25% 12%;       /* Bleu nuit */
+    --soft-white: 50 15% 96%;           /* Blanc doux */
 
-    /* Subtle Premium Gradients */
+    /* Gradients Empire Romain */
     --gradient-hero: linear-gradient(135deg, 
-      hsl(0 0% 99%) 0%, 
-      hsl(40 20% 97%) 30%,
-      hsl(210 10% 96%) 70%,
-      hsl(40 15% 94%) 100%);
-    --gradient-accent: linear-gradient(90deg, 
-      hsl(40 25% 85% / 0.08) 0%, 
-      hsl(120 8% 80% / 0.05) 100%);
-    --gradient-luxury: linear-gradient(45deg,
-      hsl(40 25% 85% / 0.15) 0%,
-      hsl(210 10% 90% / 0.08) 50%,
-      hsl(0 0% 95% / 0.05) 100%);
+      hsl(20 20% 8%) 0%, 
+      hsl(25 25% 12%) 25%,
+      hsl(30 30% 18%) 50%,
+      hsl(35 25% 15%) 75%,
+      hsl(20 20% 10%) 100%);
+    --gradient-imperial: linear-gradient(90deg, 
+      hsl(45 85% 65% / 0.15) 0%, 
+      hsl(40 75% 60% / 0.12) 50%,
+      hsl(35 65% 55% / 0.08) 100%);
+    --gradient-gold: linear-gradient(45deg,
+      hsl(45 85% 65% / 0.25) 0%,
+      hsl(40 75% 60% / 0.18) 30%,
+      hsl(35 65% 55% / 0.12) 60%,
+      hsl(30 55% 50% / 0.08) 100%);
+    --gradient-bronze: linear-gradient(180deg,
+      hsl(30 50% 35% / 0.2) 0%,
+      hsl(25 45% 30% / 0.15) 50%,
+      hsl(20 40% 25% / 0.1) 100%);
 
-    /* Exquisite Shadows */
-    --shadow-luxury: 0 25px 50px -15px hsl(210 15% 25% / 0.04), 
-                     0 15px 30px -10px hsl(210 15% 25% / 0.03),
-                     0 5px 15px -5px hsl(210 15% 25% / 0.02);
-    --shadow-glow: 0 0 60px hsl(40 25% 85% / 0.4),
-                   0 0 30px hsl(40 25% 85% / 0.3),
-                   0 0 15px hsl(40 25% 85% / 0.2);
-    --shadow-elegant: 0 12px 24px -6px hsl(210 15% 25% / 0.06),
-                      0 6px 12px -3px hsl(210 15% 25% / 0.04);
-    --shadow-whisper: 0 6px 12px -4px hsl(210 15% 25% / 0.03),
-                      0 3px 6px -2px hsl(210 15% 25% / 0.02);
+    /* Ombres Majestueuses */
+    --shadow-luxury: 0 25px 50px -15px hsl(20 30% 5% / 0.6), 
+                     0 15px 30px -10px hsl(45 50% 30% / 0.3),
+                     0 8px 20px -5px hsl(40 60% 50% / 0.2);
+    --shadow-glow: 0 0 80px hsl(45 85% 65% / 0.6),
+                   0 0 40px hsl(40 75% 60% / 0.4),
+                   0 0 20px hsl(35 65% 55% / 0.3);
+    --shadow-imperial: 0 20px 40px -10px hsl(20 25% 8% / 0.8),
+                       0 10px 25px -5px hsl(45 60% 40% / 0.4),
+                       0 5px 15px -2px hsl(40 70% 55% / 0.25);
+    --shadow-bronze: 0 15px 30px -8px hsl(30 50% 35% / 0.5),
+                     0 8px 18px -4px hsl(25 45% 30% / 0.3),
+                     0 4px 10px -2px hsl(20 40% 25% / 0.2);
 
-    /* Refined Transitions */
-    --transition-smooth: all 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
-    --transition-cinematic: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    --transition-elegant: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-whisper: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Transitions Cinématiques */
+    --transition-smooth: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-cinematic: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    --transition-elegant: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-imperial: all 1.0s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-    --sidebar-background: 0 0% 99%;
-    --sidebar-foreground: 210 15% 25%;
-    --sidebar-primary: 210 15% 25%;
-    --sidebar-primary-foreground: 0 0% 99%;
-    --sidebar-accent: 210 8% 94%;
-    --sidebar-accent-foreground: 210 15% 30%;
-    --sidebar-border: 210 12% 88%;
-    --sidebar-ring: 210 15% 25%;
+    --sidebar-background: 20 20% 10%;
+    --sidebar-foreground: 45 60% 85%;
+    --sidebar-primary: 45 80% 70%;
+    --sidebar-primary-foreground: 20 25% 15%;
+    --sidebar-accent: 30 35% 20%;
+    --sidebar-accent-foreground: 45 65% 80%;
+    --sidebar-border: 35 30% 25%;
+    --sidebar-ring: 45 75% 65%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Mode Sombre Empire - Plus doré encore */
+    --background: 15 20% 5%;
+    --foreground: 50 80% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 18 25% 8%;
+    --card-foreground: 50 75% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 15 30% 6%;
+    --popover-foreground: 50 85% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 50 90% 75%;
+    --primary-foreground: 15 30% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 35 55% 30%;
+    --secondary-foreground: 50 80% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 20 25% 12%;
+    --muted-foreground: 45 50% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 55 85% 80%;
+    --accent-foreground: 15 35% 15%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 50 90% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 30 30% 20%;
+    --input: 25 25% 15%;
+    --ring: 50 85% 70%;
+
+    /* Couleurs renforcées pour le mode sombre */
+    --imperial-gold: 50 90% 70%;
+    --roman-amber: 45 80% 65%;
+    --bronze-deep: 35 60% 40%;
+    --copper-warm: 30 70% 50%;
+    --purple-imperial: 280 70% 50%;
+    --ivory-marble: 55 30% 98%;
+    --charcoal-stone: 15 20% 10%;
+    --antique-brass: 50 50% 55%;
+
+    --sidebar-background: 15 25% 8%;
+    --sidebar-foreground: 50 75% 88%;
+    --sidebar-primary: 50 85% 75%;
+    --sidebar-primary-foreground: 15 30% 12%;
+    --sidebar-accent: 30 40% 18%;
+    --sidebar-accent-foreground: 50 70% 85%;
+    --sidebar-border: 35 35% 22%;
+    --sidebar-ring: 50 80% 70%;
   }
 }
 

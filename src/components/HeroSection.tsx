@@ -13,8 +13,8 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
       {/* Luxury Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 z-10"></div>
-      <div className="absolute top-20 right-20 w-96 h-96 bg-whisper-gold/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-32 left-32 w-64 h-64 bg-whisper-gold/3 rounded-full blur-2xl"></div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-imperial-gold/12 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-32 w-64 h-64 bg-imperial-gold/8 rounded-full blur-2xl"></div>
       
       {/* Hero Background Video */}
       <video 
@@ -90,7 +90,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
+              className="font-cinzel text-sm font-medium text-white hover:text-imperial-gold transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`
@@ -106,7 +106,7 @@ const HeroSection = () => {
       <div className="absolute left-0 top-[40%] z-20 pl-4 md:pl-6 lg:pl-8 max-w-2xl animate-fade-in-slow">
         <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Imperium
-          <span className="block text-whisper-gold">Hortis</span>
+          <span className="block text-imperial-gold">Hortis</span>
         </h1>
         
         <p className="font-inter text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">
@@ -127,15 +127,15 @@ const HeroSection = () => {
             className="w-full sm:w-auto"
           >
             <Button 
-              variant="hero-minimal" 
+              variant="hero-bronze" 
               size="xl"
               className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full mt-75 ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.2s' : '0s',
-                background: buttonsVisible ? 'hsl(40 25% 85% / 0.25)' : 'transparent',
-                boxShadow: buttonsVisible ? '0 0 30px hsl(40 25% 85% / 0.3)' : 'none'
+                background: buttonsVisible ? 'hsl(45 85% 65% / 0.15)' : 'transparent',
+                boxShadow: buttonsVisible ? '0 0 40px hsl(45 85% 65% / 0.4)' : 'none'
               }}
             >
               {t('hero.btn.services')}
@@ -148,15 +148,15 @@ const HeroSection = () => {
             className="w-full sm:w-auto"
           >
             <Button 
-              variant="hero-luxury" 
+              variant="hero-imperial" 
               size="xl"
               className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.4s' : '0s',
-                background: buttonsVisible ? 'hsl(40 25% 85% / 0.2)' : 'transparent',
-                boxShadow: buttonsVisible ? '0 0 25px hsl(40 25% 85% / 0.25)' : 'none'
+                background: buttonsVisible ? 'hsl(30 50% 35% / 0.2)' : 'transparent',
+                boxShadow: buttonsVisible ? '0 0 30px hsl(30 50% 35% / 0.3)' : 'none'
               }}
             >
               {t('hero.btn.consultation')}
