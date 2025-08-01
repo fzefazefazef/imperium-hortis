@@ -261,7 +261,7 @@ const Contact = () => {
                     <div className="text-sage-green text-xl">✉️</div>
                     <div>
                       <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.email')}</h4>
-                      <p className="font-inter text-soft-white/70">contact@imperium-hortis.fr</p>
+                      <p className="font-inter text-soft-white/70">contact@imperiumhortis.com</p>
                     </div>
                   </div>
 
