@@ -175,15 +175,16 @@ export default {
 					'100%': { 
 						backgroundPosition: '0% 50%',
 						filter: 'hue-rotate(0deg) brightness(1)'
-					},
-					'light-sweep': {
-						'0%': { 
-							backgroundPosition: '-100% 50%'
-						},
-						'100%': { 
-							backgroundPosition: '200% 50%'
-						}
 					}
+				},
+				'light-sweep': {
+					'0%': { 
+						backgroundPosition: '-100% 50%'
+					},
+					'100%': { 
+						backgroundPosition: '200% 50%'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
