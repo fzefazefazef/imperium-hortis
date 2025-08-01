@@ -19,7 +19,7 @@ const Index = () => {
         <img 
           src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
           alt="Imperium Hortis"
-          className="w-20 h-20 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+          className="w-32 h-32 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
       
