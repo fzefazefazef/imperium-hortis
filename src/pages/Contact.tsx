@@ -148,24 +148,28 @@ const Contact = () => {
 
                   <div className="flex items-start space-x-4">
                     <div className="text-sage-green text-xl">📞</div>
-                    <div>
+                    <div className="flex-1">
                       <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.phone')}</h4>
+                      <p className="font-inter text-soft-white/70 mb-3">+33 6 58 40 41 91</p>
+                      
                       <div className="flex items-center space-x-3">
-                        <p className="font-inter text-soft-white/70">+33 6 58 40 41 91</p>
                         <a 
                           href="https://wa.me/33658404191" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="hover:scale-110 transition-transform duration-200"
+                          className="flex items-center space-x-2 px-3 py-2 bg-green-600/20 hover:bg-green-600/30 rounded-lg border border-green-500/30 hover:border-green-500/50 transition-all duration-200 group"
                           title="Contacter via WhatsApp"
                         >
                           <img 
                             src={whatsappIcon}
                             alt="WhatsApp" 
-                            width="20" 
-                            height="20" 
-                            className="hover:opacity-80"
+                            width="18" 
+                            height="18" 
+                            className="group-hover:scale-110 transition-transform duration-200"
                           />
+                          <span className="font-inter text-sm text-green-400 group-hover:text-green-300">
+                            Contactez-nous
+                          </span>
                         </a>
                       </div>
                     </div>
