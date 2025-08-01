@@ -146,13 +146,13 @@ const Index = () => {
                 variant="minimal" 
                 size="xl" 
                 className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
-                  contactButtonsVisible ? 'animate-fade-in animate-golden-wave' : ''
+                  contactButtonsVisible ? 'animate-fade-in' : ''
                 }`}
                 style={{ 
                   animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                  background: contactButtonsVisible ? 'linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 193, 7, 0.4), rgba(255, 215, 0, 0.3))' : 'transparent',
-                  backgroundSize: '200% 200%',
-                  boxShadow: contactButtonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
+                  background: contactButtonsVisible ? 'linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.4) 50%, rgba(255, 215, 0, 0.1) 100%)' : 'transparent',
+                  backgroundSize: '300% 100%',
+                  animation: contactButtonsVisible ? 'light-sweep 4s ease-in-out infinite' : 'none'
                 }}
               >
                 {t('home.contact.appointment')}
@@ -168,13 +168,13 @@ const Index = () => {
                 variant="minimal" 
                 size="xl" 
                 className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
-                  contactButtonsVisible ? 'animate-fade-in animate-golden-wave' : ''
+                  contactButtonsVisible ? 'animate-fade-in' : ''
                 }`}
                 style={{ 
                   animationDelay: contactButtonsVisible ? '0.3s' : '0s',
-                  background: contactButtonsVisible ? 'linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 193, 7, 0.4), rgba(255, 215, 0, 0.3))' : 'transparent',
-                  backgroundSize: '200% 200%',
-                  boxShadow: contactButtonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
+                  background: contactButtonsVisible ? 'linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.4) 50%, rgba(255, 215, 0, 0.1) 100%)' : 'transparent',
+                  backgroundSize: '300% 100%',
+                  animation: contactButtonsVisible ? 'light-sweep 4s ease-in-out infinite 2s' : 'none'
                 }}
               >
                 {t('home.contact.portfolio')}
