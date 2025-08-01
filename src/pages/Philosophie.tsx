@@ -13,7 +13,6 @@ const Philosophie = () => {
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
           {[
-            { name: t('nav.home'), path: "/" },
             { name: t('nav.services'), path: "/services" },
             { name: t('nav.portfolio'), path: "/portfolio" },
             { name: t('nav.contact'), path: "/contact" }
