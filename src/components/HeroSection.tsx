@@ -34,16 +34,16 @@ const HeroSection = () => {
       
       
       {/* Language Selector */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-30">
-        <div className="flex space-x-6">
+      <div className="absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-30">
+        <div className="flex space-x-2 sm:space-x-6">
           <Button 
             variant="ghost" 
-            size="xl" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
+            size="sm" 
+            className="p-1 sm:p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="Français"
             onClick={() => setLanguage('fr')}
           >
-            <svg width="384" height="256" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="32" height="24" viewBox="0 0 24 16" className="w-6 h-4 sm:w-8 sm:h-6 border border-gray-400">
               <rect width="8" height="16" fill="#0055A4"/>
               <rect x="8" width="8" height="16" fill="#FFFFFF"/>
               <rect x="16" width="8" height="16" fill="#EF4135"/>
@@ -51,12 +51,12 @@ const HeroSection = () => {
           </Button>
           <Button 
             variant="ghost" 
-            size="xl" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
+            size="sm" 
+            className="p-1 sm:p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="English"
             onClick={() => setLanguage('en')}
           >
-            <svg width="384" height="256" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="32" height="24" viewBox="0 0 24 16" className="w-6 h-4 sm:w-8 sm:h-6 border border-gray-400">
               <rect width="24" height="16" fill="#012169"/>
               <path d="M0,0 L24,16 M24,0 L0,16" stroke="#FFFFFF" strokeWidth="2"/>
               <path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" strokeWidth="1"/>
@@ -68,12 +68,12 @@ const HeroSection = () => {
           </Button>
           <Button 
             variant="ghost" 
-            size="xl" 
-            className="p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
+            size="sm" 
+            className="p-1 sm:p-2 h-auto hover:bg-soft-white/10 transition-all duration-300 -mt-1"
             title="Italiano"
             onClick={() => setLanguage('it')}
           >
-            <svg width="384" height="256" viewBox="0 0 24 16" className="border border-gray-400">
+            <svg width="32" height="24" viewBox="0 0 24 16" className="w-6 h-4 sm:w-8 sm:h-6 border border-gray-400">
               <rect width="8" height="16" fill="#009246"/>
               <rect x="8" width="8" height="16" fill="#FFFFFF"/>
               <rect x="16" width="8" height="16" fill="#CE2B37"/>
@@ -83,8 +83,8 @@ const HeroSection = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="absolute top-8 right-8 z-30">
-        <div className="flex space-x-8">
+      <nav className="absolute top-16 sm:top-8 right-2 sm:right-8 z-30">
+        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
           {[
             { name: t('nav.philosophie'), path: "/philosophie" },
             { name: t('nav.services'), path: "/services" },
@@ -94,7 +94,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel-decorative text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-whisper-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              className="font-cinzel-decorative text-xs sm:text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-whisper-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left text-right sm:text-left"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`
@@ -107,13 +107,13 @@ const HeroSection = () => {
       </nav>
       
       {/* Hero Content - Left Center Positioned */}
-      <div className="absolute left-0 top-[40%] z-20 pl-4 md:pl-6 lg:pl-8 max-w-2xl animate-fade-in-slow">
-        <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+      <div className="absolute left-0 top-[30%] sm:top-[40%] z-20 pl-4 md:pl-6 lg:pl-8 max-w-full sm:max-w-2xl animate-fade-in-slow">
+        <h1 className="font-cinzel text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4 sm:px-0">
           Imperium
           <span className="block text-whisper-gold">Hortis</span>
         </h1>
         
-        <p className="font-cinzel text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">
+        <p className="font-cinzel text-base sm:text-lg md:text-xl text-white mb-6 sm:mb-8 leading-relaxed max-w-xs sm:max-w-lg px-4 sm:px-0">
           {t('hero.subtitle')}
         </p>
         
