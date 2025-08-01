@@ -5,9 +5,11 @@ import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper"
 import { useLanguage } from "@/contexts/LanguageContext";
 import FluidButtonBackground from "@/components/FluidButtonBackground";
 import LogoHeader from "@/components/LogoHeader";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const { ref: servicesRef, isIntersecting: servicesVisible } = useIntersectionObserver();
   const { ref: titleRef, isIntersecting: titleVisible } = useIntersectionObserver();
   const { ref: contactButtonsRef, isIntersecting: contactButtonsVisible } = useIntersectionObserver();
@@ -107,9 +109,20 @@ const Index = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+           </div>
+           
+           <div className="text-center mt-16">
+             <Button 
+               variant="hero-luxury"
+               size="xl"
+               onClick={() => navigate('/services')}
+               className="font-cinzel font-medium hover:shadow-luxury hover:scale-110 transition-all duration-500"
+             >
+               Découvrir nos savoir-faires
+             </Button>
+           </div>
+         </div>
+       </section>
 
       {/* Contact Section */}
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
