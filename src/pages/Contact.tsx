@@ -109,19 +109,6 @@ const Contact = () => {
 
                 <div>
                   <label className="font-inter text-soft-white/80 text-sm mb-2 block">
-                    {t('contact.form.budget')}
-                  </label>
-                  <select className="w-full p-3 bg-background/50 border border-sage-green/30 rounded-md text-soft-white">
-                    <option value="">{t('contact.form.budget')}</option>
-                    <option value="20-50k">20 000 - 50 000 €</option>
-                    <option value="50-100k">50 000 - 100 000 €</option>
-                    <option value="100-250k">100 000 - 250 000 €</option>
-                    <option value="250k+">Plus de 250 000 €</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="font-inter text-soft-white/80 text-sm mb-2 block">
                     {t('contact.form.description')} *
                   </label>
                   <Textarea 
