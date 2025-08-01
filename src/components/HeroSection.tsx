@@ -134,9 +134,9 @@ const HeroSection = () => {
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.2s' : '0s',
-                background: buttonsVisible ? 'linear-gradient(135deg, hsl(40 25% 85% / 0.3), hsl(210 10% 90% / 0.2), hsl(40 25% 85% / 0.3))' : 'transparent',
+                background: buttonsVisible ? 'linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 193, 7, 0.4), rgba(255, 215, 0, 0.3))' : 'transparent',
                 backgroundSize: '300% 100%',
-                boxShadow: buttonsVisible ? '0 0 35px hsl(40 25% 85% / 0.4), inset 0 0 20px hsl(40 25% 85% / 0.2)' : 'none'
+                boxShadow: buttonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
               }}
             >
               {t('hero.btn.services')}
@@ -156,9 +156,9 @@ const HeroSection = () => {
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.4s' : '0s',
-                background: buttonsVisible ? 'linear-gradient(135deg, hsl(40 25% 85% / 0.35), hsl(210 10% 90% / 0.25), hsl(40 25% 85% / 0.35))' : 'transparent',
+                background: buttonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
                 backgroundSize: '300% 100%',
-                boxShadow: buttonsVisible ? '0 0 35px hsl(40 25% 85% / 0.45), inset 0 0 25px hsl(40 25% 85% / 0.25)' : 'none'
+                boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
               }}
             >
               {t('hero.btn.consultation')}
