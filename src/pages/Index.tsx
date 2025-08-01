@@ -146,7 +146,7 @@ const Index = () => {
                <Button 
                  variant="hero-luxury"
                  size="xl" 
-                 className={`relative overflow-hidden font-playfair font-medium transform transition-all duration-500 ${
+                 className={`relative overflow-hidden font-playfair font-medium hover-scale transform transition-all duration-500 w-full ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
                  style={{ 
@@ -169,7 +169,7 @@ const Index = () => {
                <Button 
                  variant="hero-luxury" 
                  size="xl" 
-                 className={`relative overflow-hidden font-cinzel font-medium transform transition-all duration-500 ${
+                 className={`relative overflow-hidden font-cinzel font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
                  style={{ 
