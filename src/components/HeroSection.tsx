@@ -109,7 +109,7 @@ const HeroSection = () => {
           <span className="block text-sage-green">Hortis</span>
         </h1>
         
-        <p className="font-inter text-lg md:text-xl text-soft-white/90 mb-8 leading-relaxed max-w-lg">
+        <p className="font-inter text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">
           {t('hero.subtitle')}
         </p>
         
