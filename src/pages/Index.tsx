@@ -16,7 +16,6 @@ const Index = () => {
       {/* Logo 3D en haut à gauche */}
       <div className="fixed top-4 left-4 z-50">
         <Logo3D 
-          modelPath="/logo-3d.glb"
           width="w-24"
           height="h-24"
           scale={0.5}
