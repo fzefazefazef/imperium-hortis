@@ -20,6 +20,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         luxury: "bg-transparent border border-soft-white/30 text-soft-white hover:bg-soft-white/10 hover:border-sage-green/50 backdrop-blur-sm transition-all duration-500",
         minimal: "bg-sage-green/20 text-soft-white border border-sage-green/40 hover:bg-sage-green/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
+        "hero-luxury": "bg-transparent border border-white/30 text-white hover:bg-white/10 hover:border-sage-green/50 backdrop-blur-sm transition-all duration-500",
+        "hero-minimal": "bg-sage-green/20 text-white border border-sage-green/40 hover:bg-sage-green/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -127,8 +127,8 @@ const HeroSection = () => {
             className="w-full sm:w-auto"
           >
             <Button 
-              variant="minimal" 
-              size="xl" 
+              variant="hero-minimal" 
+              size="xl"
               className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full mt-75 ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
@@ -147,8 +147,8 @@ const HeroSection = () => {
             className="w-full sm:w-auto"
           >
             <Button 
-              variant="luxury" 
-              size="xl" 
+              variant="hero-luxury" 
+              size="xl"
               className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
