@@ -186,10 +186,10 @@ const Index = () => {
           {/* Main Footer Content */}
           <div className="text-center mb-12">
             <h3 className="font-cinzel text-3xl font-bold text-soft-white mb-6 bg-gradient-to-r from-sage-green to-soft-white bg-clip-text text-transparent">
-              {t('footer.company')}
+              Imperium Hortis
             </h3>
             <p className="font-inter text-lg text-soft-white/70 max-w-2xl mx-auto leading-relaxed">
-              {t('footer.tagline')}
+              Là où les jardins murmurent la grandeur
             </p>
           </div>
           
