@@ -66,8 +66,9 @@ All colors MUST be HSL.
     --shadow-luxury: 0 25px 50px -15px hsl(210 15% 25% / 0.04), 
                      0 15px 30px -10px hsl(210 15% 25% / 0.03),
                      0 5px 15px -5px hsl(210 15% 25% / 0.02);
-    --shadow-glow: 0 0 40px hsl(40 25% 85% / 0.2),
-                   0 0 20px hsl(40 25% 85% / 0.1);
+    --shadow-glow: 0 0 60px hsl(40 25% 85% / 0.4),
+                   0 0 30px hsl(40 25% 85% / 0.3),
+                   0 0 15px hsl(40 25% 85% / 0.2);
     --shadow-elegant: 0 12px 24px -6px hsl(210 15% 25% / 0.06),
                       0 6px 12px -3px hsl(210 15% 25% / 0.04);
     --shadow-whisper: 0 6px 12px -4px hsl(210 15% 25% / 0.03),

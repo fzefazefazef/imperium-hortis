@@ -134,7 +134,8 @@ const HeroSection = () => {
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.2s' : '0s',
-                background: buttonsVisible ? 'hsl(40 25% 85% / 0.1)' : 'transparent'
+                background: buttonsVisible ? 'hsl(40 25% 85% / 0.25)' : 'transparent',
+                boxShadow: buttonsVisible ? '0 0 30px hsl(40 25% 85% / 0.3)' : 'none'
               }}
             >
               {t('hero.btn.services')}
@@ -154,7 +155,8 @@ const HeroSection = () => {
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.4s' : '0s',
-                background: buttonsVisible ? 'hsl(40 25% 85% / 0.05)' : 'transparent'
+                background: buttonsVisible ? 'hsl(40 25% 85% / 0.2)' : 'transparent',
+                boxShadow: buttonsVisible ? '0 0 25px hsl(40 25% 85% / 0.25)' : 'none'
               }}
             >
               {t('hero.btn.consultation')}
