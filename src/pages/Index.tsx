@@ -111,16 +111,6 @@ const Index = () => {
             ))}
            </div>
            
-           <div className="text-center mt-16">
-             <Button 
-               variant="hero-luxury"
-               size="xl"
-               onClick={() => navigate('/services')}
-               className="font-cinzel font-medium hover:shadow-luxury hover:scale-110 transition-all duration-500"
-             >
-               Découvrir nos savoir-faires
-             </Button>
-           </div>
          </div>
        </section>
 
