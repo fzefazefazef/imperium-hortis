@@ -26,16 +26,18 @@ export default function FluidButtonBackground() {
       "#FFC200",
       "#FFE135",
       "#FFAB00",
+      "#FF6B35",
+      "#FF9500",
     ];
 
-    const circles = Array.from({ length: 18 }, () => ({
+    const circles = Array.from({ length: 25 }, () => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
-      radius: 25 + Math.random() * 40,
-      dx: (Math.random() - 0.5) * 0.8,
-      dy: (Math.random() - 0.5) * 0.8,
+      radius: 30 + Math.random() * 50,
+      dx: (Math.random() - 0.5) * 1.2,
+      dy: (Math.random() - 0.5) * 1.2,
       color: goldPalette[Math.floor(Math.random() * goldPalette.length)],
-      alpha: 0.4 + Math.random() * 0.5,
+      alpha: 0.6 + Math.random() * 0.4,
     }));
 
     let animationId: number;
@@ -52,6 +54,7 @@ export default function FluidButtonBackground() {
 
         const gradient = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, c.radius);
         gradient.addColorStop(0, `${c.color}${Math.floor(c.alpha * 255).toString(16).padStart(2, '0')}`);
+        gradient.addColorStop(0.5, `${c.color}${Math.floor((c.alpha * 0.7) * 255).toString(16).padStart(2, '0')}`);
         gradient.addColorStop(1, `${c.color}00`);
 
         ctx.beginPath();
@@ -76,7 +79,7 @@ export default function FluidButtonBackground() {
     <canvas
       ref={canvasRef}
       className="absolute top-0 left-0 w-full h-full rounded-xl z-0 pointer-events-none"
-      style={{ mixBlendMode: "screen" }}
+      style={{ mixBlendMode: "multiply" }}
     />
   );
 }
