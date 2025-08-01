@@ -4,7 +4,7 @@ import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper"
 import { Logo3D } from "@/components/Logo3D";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import FluidButtonBackground from "@/components/FluidButtonBackground";
+import StaticGoldEffect from "@/components/StaticGoldEffect";
 
 const HeroSection = () => {
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
@@ -142,7 +142,7 @@ const HeroSection = () => {
                  boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                }}
              >
-               <FluidButtonBackground />
+                <StaticGoldEffect />
                <span className="relative z-10">{t('hero.btn.services')}</span>
              </Button>
            </OptimizedButton3DWrapper>
@@ -165,7 +165,7 @@ const HeroSection = () => {
                  boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                }}
              >
-               <FluidButtonBackground />
+               <StaticGoldEffect />
                <span className="relative z-10">{t('hero.btn.consultation')}</span>
              </Button>
           </OptimizedButton3DWrapper>
