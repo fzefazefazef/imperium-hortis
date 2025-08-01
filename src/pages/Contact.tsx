@@ -97,14 +97,10 @@ const Contact = () => {
                   <label className="font-inter text-soft-white/80 text-sm mb-2 block">
                     {t('contact.form.project')}
                   </label>
-                  <select className="w-full p-3 bg-background/50 border border-sage-green/30 rounded-md text-soft-white">
-                    <option value="">{t('contact.form.project')}</option>
-                    <option value="jardin-prive">Jardin privé</option>
-                    <option value="terrasse">Terrasse et patio</option>
-                    <option value="commercial">Espace commercial</option>
-                    <option value="maintenance">Maintenance</option>
-                    <option value="autre">Autre</option>
-                  </select>
+                  <Input 
+                    placeholder="Décrivez votre type de projet..."
+                    className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                  />
                 </div>
 
                 <div>
