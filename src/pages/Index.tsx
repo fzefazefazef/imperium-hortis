@@ -32,7 +32,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
+              <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
                 {t('about.title')}
               </h2>
               <p className="font-cinzel text-lg text-soft-white/80 mb-6 leading-relaxed">
@@ -107,7 +107,7 @@ const Index = () => {
                 }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
                   {service.icon}
                 </div>
-                <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4 group-hover:text-whisper-gold transition-colors duration-300">
+                <h3 className="font-cinzel-decorative text-xl font-semibold text-soft-white mb-4 group-hover:text-whisper-gold transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="font-cinzel text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
@@ -122,7 +122,7 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
+          <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
             {t('home.contact.title')}
           </h2>
           <p className="font-cinzel text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
