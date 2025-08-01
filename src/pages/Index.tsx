@@ -143,7 +143,7 @@ const Index = () => {
               className="w-full sm:w-auto"
             >
                <Button 
-                 variant="hero-luxury" 
+                 variant="hero-luxury"
                  size="xl" 
                  className={`font-playfair font-medium transform transition-all duration-500 relative overflow-hidden ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
