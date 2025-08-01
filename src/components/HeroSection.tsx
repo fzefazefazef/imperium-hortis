@@ -90,7 +90,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel text-sm font-medium text-white hover:text-sage-green transition-all duration-300 hover:scale-105 tracking-wider"
+              className="font-cinzel text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`
@@ -106,7 +106,7 @@ const HeroSection = () => {
       <div className="absolute left-0 top-[40%] z-20 pl-4 md:pl-6 lg:pl-8 max-w-2xl animate-fade-in-slow">
         <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Imperium
-          <span className="block text-sage-green">Hortis</span>
+          <span className="block text-whisper-gold">Hortis</span>
         </h1>
         
         <p className="font-inter text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">

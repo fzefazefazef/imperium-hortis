@@ -44,12 +44,12 @@ const Index = () => {
             </div>
             
             <div className="relative animate-fade-in">
-              <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-sage-green/20 flex items-center justify-center">
+              <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-whisper-gold/20 flex items-center justify-center">
                 <p className="font-inter text-soft-white/60 text-center px-8">
                   [{t('about.gallery')}]
                 </p>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sage-green/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-whisper-gold/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ const Index = () => {
             ].map((service, index) => (
               <div
                 key={index}
-                className={`group p-8 rounded-2xl bg-card border border-sage-green/20 hover:border-sage-green/40 transition-all duration-700 hover:shadow-glow hover:scale-105 transform ${
+                className={`group p-8 rounded-2xl bg-card border border-whisper-gold/20 hover:border-whisper-gold/40 transition-all duration-700 hover:shadow-glow hover:scale-105 transform ${
                   servicesVisible 
                     ? 'opacity-100 translate-y-0 animate-fade-in' 
                     : 'opacity-0 translate-y-16'
@@ -107,7 +107,7 @@ const Index = () => {
                 }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
                   {service.icon}
                 </div>
-                <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4 group-hover:text-sage-green transition-colors duration-300">
+                <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4 group-hover:text-whisper-gold transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="font-inter text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
@@ -150,7 +150,7 @@ const Index = () => {
                 }`}
                 style={{ 
                   animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                  background: contactButtonsVisible ? 'rgba(34, 197, 94, 0.1)' : 'transparent'
+                  background: contactButtonsVisible ? 'hsl(40 25% 85% / 0.1)' : 'transparent'
                 }}
               >
                 {t('home.contact.appointment')}
@@ -170,7 +170,7 @@ const Index = () => {
                 }`}
                 style={{ 
                   animationDelay: contactButtonsVisible ? '0.3s' : '0s',
-                  background: contactButtonsVisible ? 'rgba(34, 197, 94, 0.05)' : 'transparent'
+                  background: contactButtonsVisible ? 'hsl(40 25% 85% / 0.05)' : 'transparent'
                 }}
               >
                 {t('home.contact.portfolio')}
@@ -181,13 +181,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-20 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal via-midnight-blue/30 to-deep-charcoal border-t border-sage-green/40">
+      <footer className="py-20 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal via-midnight-blue/30 to-deep-charcoal border-t border-whisper-gold/40">
         <div className="max-w-4xl mx-auto">
           {/* Ornamental Top Border */}
           <div className="flex items-center justify-center mb-12">
-            <div className="h-px bg-gradient-to-r from-transparent via-sage-green/50 to-transparent flex-1"></div>
-            <div className="mx-6 text-sage-green/70 text-xl">⚜</div>
-            <div className="h-px bg-gradient-to-r from-transparent via-sage-green/50 to-transparent flex-1"></div>
+            <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1"></div>
+            <div className="mx-6 text-whisper-gold/70 text-xl">⚜</div>
+            <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1"></div>
           </div>
           
           {/* Main Footer Content */}
@@ -196,40 +196,40 @@ const Index = () => {
               IMPERIUM HORTIS
             </h3>
             <div className="flex items-center justify-center mb-6">
-              <div className="w-8 h-px bg-sage-green/60"></div>
-              <div className="mx-4 text-sage-green/70">◆</div>
-              <div className="w-8 h-px bg-sage-green/60"></div>
+              <div className="w-8 h-px bg-whisper-gold/60"></div>
+              <div className="mx-4 text-whisper-gold/70">◆</div>
+              <div className="w-8 h-px bg-whisper-gold/60"></div>
             </div>
-            <p className="font-cinzel text-xl text-sage-green/80 max-w-2xl mx-auto leading-relaxed italic tracking-wider">
+            <p className="font-cinzel text-xl text-whisper-gold/80 max-w-2xl mx-auto leading-relaxed italic tracking-wider">
               "Là où les jardins murmurent la grandeur"
             </p>
           </div>
           
           {/* Contact Information with Refined Style */}
-          <div className="bg-gradient-to-r from-sage-green/5 via-sage-green/8 to-sage-green/5 backdrop-blur-sm border border-sage-green/20 p-10 mb-16 relative">
+          <div className="bg-gradient-to-r from-whisper-gold/5 via-whisper-gold/8 to-whisper-gold/5 backdrop-blur-sm border border-whisper-gold/20 p-10 mb-16 relative">
             {/* Subtle Corner Ornaments */}
-            <div className="absolute top-2 left-2 text-sage-green/40 text-sm">◢</div>
-            <div className="absolute top-2 right-2 text-sage-green/40 text-sm">◣</div>
-            <div className="absolute bottom-2 left-2 text-sage-green/40 text-sm">◥</div>
-            <div className="absolute bottom-2 right-2 text-sage-green/40 text-sm">◤</div>
+            <div className="absolute top-2 left-2 text-whisper-gold/40 text-sm">◢</div>
+            <div className="absolute top-2 right-2 text-whisper-gold/40 text-sm">◣</div>
+            <div className="absolute bottom-2 left-2 text-whisper-gold/40 text-sm">◥</div>
+            <div className="absolute bottom-2 right-2 text-whisper-gold/40 text-sm">◤</div>
             
-            <h4 className="font-cinzel text-2xl font-semibold text-sage-green mb-8 text-center tracking-wide">
+            <h4 className="font-cinzel text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
               Contact
             </h4>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-16">
               <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 rounded-full bg-sage-green/10 flex items-center justify-center border border-sage-green/30">
-                  <span className="text-sage-green text-lg">☎</span>
+                <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
+                  <span className="text-whisper-gold text-lg">☎</span>
                 </div>
-                <p className="font-cinzel text-soft-white/90 group-hover:text-sage-green transition-colors duration-300 tracking-wide">
+                <p className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide">
                   +33 6 58 40 41 91
                 </p>
               </div>
               <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 rounded-full bg-sage-green/10 flex items-center justify-center border border-sage-green/30">
-                  <span className="text-sage-green text-lg">✉</span>
+                <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
+                  <span className="text-whisper-gold text-lg">✉</span>
                 </div>
-                <p className="font-cinzel text-soft-white/90 group-hover:text-sage-green transition-colors duration-300 tracking-wide">
+                <p className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide">
                   contact@imperiumhortis.com
                 </p>
               </div>
@@ -239,14 +239,14 @@ const Index = () => {
           {/* Refined Copyright */}
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
-              <div className="h-px bg-gradient-to-r from-transparent via-sage-green/30 to-transparent flex-1"></div>
-              <div className="mx-6 text-sage-green/50 text-sm">❦</div>
-              <div className="h-px bg-gradient-to-r from-transparent via-sage-green/30 to-transparent flex-1"></div>
+              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/30 to-transparent flex-1"></div>
+              <div className="mx-6 text-whisper-gold/50 text-sm">❦</div>
+              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/30 to-transparent flex-1"></div>
             </div>
             <p className="font-cinzel text-soft-white/60 text-sm tracking-widest">
               {t('footer.rights')}
             </p>
-            <div className="mt-4 text-sage-green/40 text-xs font-cinzel tracking-widest">
+            <div className="mt-4 text-whisper-gold/40 text-xs font-cinzel tracking-widest">
               MMXXIV
             </div>
           </div>

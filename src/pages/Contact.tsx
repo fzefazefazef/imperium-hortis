@@ -93,7 +93,7 @@ const Contact = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel text-sm font-medium text-soft-white/90 hover:text-sage-green transition-all duration-300 hover:scale-105 tracking-wider"
+              className="font-cinzel text-sm font-medium text-soft-white/90 hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
             >
               {item.name}
@@ -106,7 +106,7 @@ const Contact = () => {
       <div className="pt-32 px-8 md:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white mb-8 text-center">
-            <span className="text-sage-green">{t('contact.title')}</span>
+            <span className="text-whisper-gold">{t('contact.title')}</span>
           </h1>
           
           <p className="font-inter text-xl text-soft-white/80 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
@@ -115,8 +115,8 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-sage-green/20">
-              <h2 className="font-cinzel text-2xl font-semibold text-sage-green mb-8">
+            <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-whisper-gold/20">
+              <h2 className="font-cinzel text-2xl font-semibold text-whisper-gold mb-8">
                 {t('contact.form.title')}
               </h2>
               
@@ -131,7 +131,7 @@ const Contact = () => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       placeholder={t('contact.form.firstname')}
-                      className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                      className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                       required
                     />
                   </div>
@@ -144,7 +144,7 @@ const Contact = () => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       placeholder={t('contact.form.lastname')}
-                      className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                      className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                       required
                     />
                   </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="exemple@email.com"
-                    className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                    className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                     required
                   />
                 </div>
@@ -175,7 +175,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleInputChange}
                     placeholder="+33 6 42 86 78 90"
-                    className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                    className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                   />
                 </div>
 
@@ -188,7 +188,7 @@ const Contact = () => {
                     value={formData.projectType}
                     onChange={handleInputChange}
                     placeholder="Décrivez votre type de projet..."
-                    className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                    className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                   />
                 </div>
 
@@ -201,7 +201,7 @@ const Contact = () => {
                     value={formData.description}
                     onChange={handleInputChange}
                     placeholder={t('contact.form.description')}
-                    className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50 min-h-[120px]"
+                    className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50 min-h-[120px]"
                     required
                   />
                 </div>
@@ -221,15 +221,15 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Contact Details */}
-              <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-sage-green/20">
-                <h3 className="font-cinzel text-xl font-semibold text-sage-green mb-6">
+              <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-whisper-gold/20">
+                <h3 className="font-cinzel text-xl font-semibold text-whisper-gold mb-6">
                   {t('contact.info.title')}
                 </h3>
                 
                 <div className="space-y-6">
 
                   <div className="flex items-start space-x-4">
-                    <div className="text-sage-green text-xl">📞</div>
+                    <div className="text-whisper-gold text-xl">📞</div>
                     <div className="flex-1">
                       <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.phone')}</h4>
                       <p className="font-inter text-soft-white/70 mb-3">+33 6 58 40 41 91</p>
@@ -258,7 +258,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="text-sage-green text-xl">✉️</div>
+                    <div className="text-whisper-gold text-xl">✉️</div>
                     <div>
                       <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.email')}</h4>
                       <p className="font-inter text-soft-white/70">contact@imperiumhortis.com</p>
@@ -269,8 +269,8 @@ const Contact = () => {
               </div>
 
               {/* Service Areas */}
-              <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-sage-green/20">
-                <h3 className="font-cinzel text-xl font-semibold text-sage-green mb-6">
+              <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-whisper-gold/20">
+                <h3 className="font-cinzel text-xl font-semibold text-whisper-gold mb-6">
                   {t('contact.areas.title')}
                 </h3>
                 
@@ -280,7 +280,7 @@ const Contact = () => {
                     "Saint Paul de Vence", "Menton", "Grasse", "Saint Jean Cap-Ferrat"
                   ].map((city) => (
                     <div key={city} className="flex items-center space-x-2">
-                      <span className="text-sage-green">•</span>
+                      <span className="text-whisper-gold">•</span>
                       <span className="font-inter text-soft-white/80">{city}</span>
                     </div>
                   ))}
