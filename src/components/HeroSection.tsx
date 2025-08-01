@@ -13,8 +13,8 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
       {/* Luxury Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 z-10"></div>
-      <div className="absolute top-20 right-20 w-96 h-96 bg-sage-green/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-32 left-32 w-64 h-64 bg-sage-green/3 rounded-full blur-2xl"></div>
+      <div className="absolute top-20 right-20 w-96 h-96 bg-whisper-gold/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-32 left-32 w-64 h-64 bg-whisper-gold/3 rounded-full blur-2xl"></div>
       
       {/* Hero Background Video */}
       <video 
@@ -134,7 +134,7 @@ const HeroSection = () => {
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.2s' : '0s',
-                background: buttonsVisible ? 'rgba(34, 197, 94, 0.1)' : 'transparent'
+                background: buttonsVisible ? 'hsl(40 25% 85% / 0.1)' : 'transparent'
               }}
             >
               {t('hero.btn.services')}
@@ -154,7 +154,7 @@ const HeroSection = () => {
               }`}
               style={{ 
                 animationDelay: buttonsVisible ? '0.4s' : '0s',
-                background: buttonsVisible ? 'rgba(34, 197, 94, 0.05)' : 'transparent'
+                background: buttonsVisible ? 'hsl(40 25% 85% / 0.05)' : 'transparent'
               }}
             >
               {t('hero.btn.consultation')}
