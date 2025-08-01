@@ -150,6 +150,7 @@ const Index = () => {
                <Button 
                  variant="hero-luxury"
                  size="xl" 
+                 onClick={() => navigate('/contact')}
                  className={`relative overflow-hidden font-playfair font-medium hover-scale transform transition-all duration-500 w-full ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
@@ -173,6 +174,7 @@ const Index = () => {
                <Button 
                  variant="hero-luxury" 
                  size="xl" 
+                 onClick={() => navigate('/contact')}
                  className={`relative overflow-hidden font-cinzel font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
