@@ -61,10 +61,10 @@ export default function FluidButtonBackground() {
         ctx.fill();
       });
 
-      // Limiter les FPS à 30 pour économiser les ressources
+      // Animation à 60 FPS
       setTimeout(() => {
         animationId = requestAnimationFrame(draw);
-      }, 1000 / 30);
+      }, 1000 / 60);
     }
 
     draw();
