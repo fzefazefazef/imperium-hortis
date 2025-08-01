@@ -181,28 +181,43 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-8 md:px-16 lg:px-24 bg-deep-charcoal border-t border-sage-green/20">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
-            <div>
-              <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4">
-                {t('footer.company')}
-              </h3>
-              <p className="font-inter text-soft-white/60">
-                {t('footer.tagline')}
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-inter font-medium text-soft-white mb-4">{t('footer.contact')}</h4>
-              <p className="font-inter text-soft-white/60 mb-2">+33 6 58 40 41 91</p>
-              <p className="font-inter text-soft-white/60">contact@imperiumhortis.com</p>
-            </div>
-            
+      <footer className="py-16 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal via-midnight-blue/50 to-deep-charcoal border-t border-sage-green/30">
+        <div className="max-w-4xl mx-auto">
+          {/* Main Footer Content */}
+          <div className="text-center mb-12">
+            <h3 className="font-cinzel text-3xl font-bold text-soft-white mb-6 bg-gradient-to-r from-sage-green to-soft-white bg-clip-text text-transparent">
+              {t('footer.company')}
+            </h3>
+            <p className="font-inter text-lg text-soft-white/70 max-w-2xl mx-auto leading-relaxed">
+              {t('footer.tagline')}
+            </p>
           </div>
           
-          <div className="mt-12 pt-8 border-t border-sage-green/20 text-center">
-            <p className="font-inter text-soft-white/40">
+          {/* Contact Information */}
+          <div className="bg-card/10 backdrop-blur-sm rounded-2xl border border-sage-green/20 p-8 mb-12">
+            <h4 className="font-cinzel text-xl font-semibold text-sage-green mb-6 text-center">
+              {t('footer.contact')}
+            </h4>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
+              <div className="flex items-center space-x-3 group">
+                <div className="text-sage-green text-xl">📞</div>
+                <p className="font-inter text-soft-white/80 group-hover:text-soft-white transition-colors duration-200">
+                  +33 6 58 40 41 91
+                </p>
+              </div>
+              <div className="flex items-center space-x-3 group">
+                <div className="text-sage-green text-xl">✉️</div>
+                <p className="font-inter text-soft-white/80 group-hover:text-soft-white transition-colors duration-200">
+                  contact@imperiumhortis.com
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Copyright */}
+          <div className="text-center">
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-sage-green to-transparent mx-auto mb-4"></div>
+            <p className="font-inter text-soft-white/50 text-sm">
               {t('footer.rights')}
             </p>
           </div>
