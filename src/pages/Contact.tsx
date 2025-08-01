@@ -149,7 +149,18 @@ const Contact = () => {
                     <div className="text-sage-green text-xl">📞</div>
                     <div>
                       <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.phone')}</h4>
-                      <p className="font-inter text-soft-white/70">+33 6 58 40 41 91</p>
+                      <div className="flex items-center space-x-3">
+                        <p className="font-inter text-soft-white/70">+33 6 58 40 41 91</p>
+                        <a 
+                          href="https://wa.me/33658404191" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-xl hover:scale-110 transition-transform duration-200"
+                          title="Contacter via WhatsApp"
+                        >
+                          💬
+                        </a>
+                      </div>
                     </div>
                   </div>
 
