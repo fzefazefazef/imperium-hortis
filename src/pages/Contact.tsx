@@ -171,17 +171,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="text-sage-green text-xl">🕒</div>
-                    <div>
-                      <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.hours')}</h4>
-                      <p className="font-inter text-soft-white/70">
-                        Lun - Ven: 9h00 - 18h00<br />
-                        Sam: 9h00 - 17h00<br />
-                        Dim: Sur rendez-vous
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
 
