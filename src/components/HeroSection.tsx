@@ -90,7 +90,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-cinzel text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
+              className="font-cinzel-decorative text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`

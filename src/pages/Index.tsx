@@ -60,7 +60,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             ref={titleRef}
-            className={`font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
+            className={`font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
               titleVisible 
                 ? 'opacity-100 translate-y-0 animate-fade-in' 
                 : 'opacity-0 translate-y-12'
@@ -217,7 +217,7 @@ const Index = () => {
             <div className="absolute bottom-2 left-2 text-whisper-gold/40 text-sm">◥</div>
             <div className="absolute bottom-2 right-2 text-whisper-gold/40 text-sm">◤</div>
             
-            <h4 className="font-cinzel text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
+            <h4 className="font-cinzel-decorative text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
               Contact
             </h4>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-16">
