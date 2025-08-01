@@ -20,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'cinzel-decorative': ['Cinzel Decorative', 'serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
