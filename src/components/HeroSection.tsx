@@ -129,7 +129,7 @@ const HeroSection = () => {
             <Button 
               variant="hero-minimal" 
               size="xl"
-              className={`font-cinzel-decorative font-medium hover-scale transform transition-all duration-500 w-full mt-75 relative overflow-hidden ${
+              className={`font-playfair font-medium hover-scale transform transition-all duration-500 w-full mt-75 relative overflow-hidden ${
                 buttonsVisible ? 'animate-fade-in animate-golden-wave' : ''
               }`}
               style={{ 
