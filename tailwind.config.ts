@@ -19,8 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'cinzel': ['Cinzel', 'serif'],
-				'source': ['Source Sans Pro', 'sans-serif'],
+				'cinzel-decorative': ['Cinzel Decorative', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
