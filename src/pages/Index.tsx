@@ -32,7 +32,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-8">
+              <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
                 {t('about.title')}
               </h2>
               <p className="font-inter text-lg text-white mb-6 leading-relaxed">
