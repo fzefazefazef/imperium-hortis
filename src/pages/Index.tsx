@@ -107,7 +107,7 @@ const Index = () => {
                 }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
                   {service.icon}
                 </div>
-                <h3 className="font-cinzel text-xl font-semibold text-foreground mb-4 group-hover:text-sage-green transition-colors duration-300">
+                <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4 group-hover:text-sage-green transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="font-inter text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
