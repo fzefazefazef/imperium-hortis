@@ -143,16 +143,16 @@ const Index = () => {
               className="w-full sm:w-auto"
             >
                <Button 
-                 variant="luxury" 
+                 variant="hero-minimal" 
                  size="xl" 
                  className={`font-playfair font-medium transform transition-all duration-500 relative overflow-hidden ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
                  style={{ 
                    animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                   background: contactButtonsVisible ? 'linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.4) 50%, rgba(255, 215, 0, 0.1) 100%)' : 'transparent',
+                   background: contactButtonsVisible ? 'linear-gradient(45deg, rgba(255, 215, 0, 0.3), rgba(255, 193, 7, 0.4), rgba(255, 215, 0, 0.3))' : 'transparent',
                    backgroundSize: '300% 100%',
-                   boxShadow: contactButtonsVisible ? '0 0 30px rgba(255, 215, 0, 0.3), inset 0 0 15px rgba(255, 215, 0, 0.1)' : 'none'
+                   boxShadow: contactButtonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
                  }}
                >
                 {t('home.contact.appointment')}
@@ -165,16 +165,16 @@ const Index = () => {
               className="w-full sm:w-auto"
             >
                <Button 
-                 variant="minimal" 
+                 variant="hero-luxury" 
                  size="xl" 
                  className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
                  style={{ 
                    animationDelay: contactButtonsVisible ? '0.3s' : '0s',
-                   background: contactButtonsVisible ? 'linear-gradient(90deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.4) 50%, rgba(255, 215, 0, 0.1) 100%)' : 'transparent',
+                   background: contactButtonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
                    backgroundSize: '300% 100%',
-                   boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.4), inset 0 0 20px rgba(255, 193, 7, 0.2)' : 'none'
+                   boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                  }}
                >
                 {t('home.contact.portfolio')}
