@@ -181,45 +181,74 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal via-midnight-blue/50 to-deep-charcoal border-t border-sage-green/30">
+      <footer className="py-20 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal via-midnight-blue/50 to-deep-charcoal border-t-4 border-amber-400/60">
         <div className="max-w-4xl mx-auto">
+          {/* Ornamental Top Border */}
+          <div className="flex items-center justify-center mb-12">
+            <div className="h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent flex-1"></div>
+            <div className="mx-6 text-amber-400/80 text-2xl">⚜</div>
+            <div className="h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent flex-1"></div>
+          </div>
+          
           {/* Main Footer Content */}
-          <div className="text-center mb-12">
-            <h3 className="font-cinzel text-3xl font-bold text-sage-green mb-6">
-              Imperium Hortis
+          <div className="text-center mb-16">
+            <h3 className="font-cinzel text-4xl font-bold text-amber-400 mb-4 tracking-widest uppercase">
+              IMPERIUM HORTIS
             </h3>
-            <p className="font-cinzel text-lg text-soft-white/70 max-w-2xl mx-auto leading-relaxed italic tracking-wide">
-              Là où les jardins murmurent la grandeur
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-8 h-px bg-amber-400/60"></div>
+              <div className="mx-4 text-amber-400/80">◆</div>
+              <div className="w-8 h-px bg-amber-400/60"></div>
+            </div>
+            <p className="font-cinzel text-xl text-soft-white/80 max-w-2xl mx-auto leading-relaxed italic tracking-wider">
+              "Là où les jardins murmurent la grandeur"
             </p>
           </div>
           
-          {/* Contact Information */}
-          <div className="bg-card/10 backdrop-blur-sm rounded-2xl border border-sage-green/20 p-8 mb-12">
-            <h4 className="font-cinzel text-xl font-semibold text-sage-green mb-6 text-center">
-              {t('footer.contact')}
+          {/* Contact Information with Roman Style */}
+          <div className="bg-gradient-to-r from-amber-400/5 via-amber-400/10 to-amber-400/5 backdrop-blur-sm rounded-none border-l-4 border-r-4 border-amber-400/40 p-10 mb-16 relative">
+            {/* Corner Ornaments */}
+            <div className="absolute top-0 left-0 text-amber-400/60 text-xl transform -translate-x-2 -translate-y-2">◢</div>
+            <div className="absolute top-0 right-0 text-amber-400/60 text-xl transform translate-x-2 -translate-y-2">◣</div>
+            <div className="absolute bottom-0 left-0 text-amber-400/60 text-xl transform -translate-x-2 translate-y-2">◥</div>
+            <div className="absolute bottom-0 right-0 text-amber-400/60 text-xl transform translate-x-2 translate-y-2">◤</div>
+            
+            <h4 className="font-cinzel text-2xl font-bold text-amber-400 mb-8 text-center tracking-wider uppercase">
+              Contactus
             </h4>
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
-              <div className="flex items-center space-x-3 group">
-                <div className="text-sage-green text-xl">📞</div>
-                <p className="font-inter text-soft-white/80 group-hover:text-soft-white transition-colors duration-200">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-16">
+              <div className="flex items-center space-x-4 group">
+                <div className="w-10 h-10 rounded-full bg-amber-400/20 flex items-center justify-center border border-amber-400/40">
+                  <span className="text-amber-400 text-lg">☎</span>
+                </div>
+                <p className="font-cinzel text-soft-white/90 group-hover:text-amber-400 transition-colors duration-300 tracking-wide">
                   +33 6 58 40 41 91
                 </p>
               </div>
-              <div className="flex items-center space-x-3 group">
-                <div className="text-sage-green text-xl">✉️</div>
-                <p className="font-inter text-soft-white/80 group-hover:text-soft-white transition-colors duration-200">
+              <div className="flex items-center space-x-4 group">
+                <div className="w-10 h-10 rounded-full bg-amber-400/20 flex items-center justify-center border border-amber-400/40">
+                  <span className="text-amber-400 text-lg">✉</span>
+                </div>
+                <p className="font-cinzel text-soft-white/90 group-hover:text-amber-400 transition-colors duration-300 tracking-wide">
                   contact@imperiumhortis.com
                 </p>
               </div>
             </div>
           </div>
           
-          {/* Copyright */}
+          {/* Roman Style Copyright */}
           <div className="text-center">
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-sage-green to-transparent mx-auto mb-4"></div>
-            <p className="font-inter text-soft-white/50 text-sm">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent flex-1"></div>
+              <div className="mx-6 text-amber-400/60 text-lg">❦</div>
+              <div className="h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent flex-1"></div>
+            </div>
+            <p className="font-cinzel text-soft-white/60 text-sm tracking-widest uppercase">
               {t('footer.rights')}
             </p>
+            <div className="mt-4 text-amber-400/40 text-xs font-cinzel tracking-widest">
+              MMXXIV
+            </div>
           </div>
         </div>
       </footer>
