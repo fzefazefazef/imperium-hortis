@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Logo3D } from "@/components/Logo3D";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -12,6 +13,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* Logo 3D en haut à gauche */}
+      <div className="fixed top-4 left-4 z-50">
+        <Logo3D 
+          modelPath="/logo-3d.glb"
+          width="w-24"
+          height="h-24"
+          scale={0.5}
+          enableControls={false}
+          autoRotate={true}
+        />
+      </div>
+      
       {/* Hero Section */}
       <HeroSection />
 
