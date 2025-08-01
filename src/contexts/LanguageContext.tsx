@@ -136,8 +136,8 @@ const translations = {
     'home.services.gardens.desc': 'Conception et réalisation de jardins sur-mesure pour villas de prestige',
     'home.services.terraces.title': 'Terrasses panoramiques',
     'home.services.terraces.desc': 'Aménagement de terrasses avec vue sur la Méditerranée',
-    'home.services.art.title': 'Art paysager',
-    'home.services.art.desc': 'Sculptures végétales et installations artistiques uniques',
+    'home.services.art.title': 'Entretien paysager',
+    'home.services.art.desc': 'Maintenance experte et soins personnalisés pour jardins de prestige',
     
     // Home Contact
     'home.contact.title': 'Créons ensemble votre jardin d\'éternité',

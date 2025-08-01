@@ -87,7 +87,7 @@ const Index = () => {
               {
                 title: t('home.services.art.title'),
                 description: t('home.services.art.desc'),
-                icon: "🎨"
+                icon: "🔧"
               }
             ].map((service, index) => (
               <div
