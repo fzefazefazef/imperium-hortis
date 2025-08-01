@@ -188,7 +188,7 @@ const Index = () => {
             <h3 className="font-cinzel text-3xl font-bold text-sage-green mb-6">
               Imperium Hortis
             </h3>
-            <p className="font-inter text-lg text-soft-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="font-cinzel text-lg text-soft-white/70 max-w-2xl mx-auto leading-relaxed italic tracking-wide">
               Là où les jardins murmurent la grandeur
             </p>
           </div>
