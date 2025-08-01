@@ -153,6 +153,46 @@ export default {
 						transform: 'scale(1.02)'
 					}
 				},
+				'golden-wave': {
+					'0%': { 
+						background: 'linear-gradient(45deg, hsl(45 95% 65% / 0.3), hsl(40 85% 70% / 0.25))',
+						boxShadow: '0 0 30px hsl(45 95% 65% / 0.4)'
+					},
+					'25%': { 
+						background: 'linear-gradient(90deg, hsl(40 85% 70% / 0.4), hsl(35 80% 75% / 0.35))',
+						boxShadow: '0 0 50px hsl(40 85% 70% / 0.6)'
+					},
+					'50%': { 
+						background: 'linear-gradient(135deg, hsl(35 80% 75% / 0.5), hsl(45 95% 65% / 0.4))',
+						boxShadow: '0 0 70px hsl(35 80% 75% / 0.8)'
+					},
+					'75%': { 
+						background: 'linear-gradient(180deg, hsl(50 100% 60% / 0.4), hsl(40 85% 70% / 0.35))',
+						boxShadow: '0 0 50px hsl(50 100% 60% / 0.6)'
+					},
+					'100%': { 
+						background: 'linear-gradient(45deg, hsl(45 95% 65% / 0.3), hsl(40 85% 70% / 0.25))',
+						boxShadow: '0 0 30px hsl(45 95% 65% / 0.4)'
+					}
+				},
+				'amber-flow': {
+					'0%': { 
+						background: 'linear-gradient(315deg, hsl(35 75% 65% / 0.35), hsl(30 70% 70% / 0.3))',
+						boxShadow: '0 0 40px hsl(35 75% 65% / 0.5)'
+					},
+					'33%': { 
+						background: 'linear-gradient(0deg, hsl(30 70% 70% / 0.45), hsl(25 65% 75% / 0.4))',
+						boxShadow: '0 0 60px hsl(30 70% 70% / 0.7)'
+					},
+					'66%': { 
+						background: 'linear-gradient(45deg, hsl(40 80% 68% / 0.5), hsl(35 75% 65% / 0.45))',
+						boxShadow: '0 0 80px hsl(40 80% 68% / 0.6)'
+					},
+					'100%': { 
+						background: 'linear-gradient(315deg, hsl(35 75% 65% / 0.35), hsl(30 70% 70% / 0.3))',
+						boxShadow: '0 0 40px hsl(35 75% 65% / 0.5)'
+					}
+				},
 				'whisper-float': {
 					'0%, 100%': { 
 						transform: 'translateY(0px) scale(1)',
@@ -186,7 +226,9 @@ export default {
 				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
 				'imperial-glow': 'imperial-glow 6s ease-in-out infinite',
 				'whisper-float': 'whisper-float 8s ease-in-out infinite',
-				'subtle-shimmer': 'subtle-shimmer 4s ease-in-out infinite'
+				'subtle-shimmer': 'subtle-shimmer 4s ease-in-out infinite',
+				'golden-wave': 'golden-wave 3s ease-in-out infinite',
+				'amber-flow': 'amber-flow 4s ease-in-out infinite'
 			}
 		}
 	},

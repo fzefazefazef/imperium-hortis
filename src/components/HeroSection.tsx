@@ -130,13 +130,11 @@ const HeroSection = () => {
             <Button 
               variant="hero-bronze" 
               size="xl"
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:animate-glow-pulse w-full mt-75 ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 w-full animate-golden-wave ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
-                animationDelay: buttonsVisible ? '0.2s' : '0s',
-                background: buttonsVisible ? 'hsl(45 95% 65% / 0.4)' : 'transparent',
-                boxShadow: buttonsVisible ? '0 0 60px hsl(45 95% 65% / 0.6), 0 0 30px hsl(40 85% 70% / 0.4)' : 'none'
+                animationDelay: buttonsVisible ? '0.2s' : '0s'
               }}
             >
               {t('hero.btn.services')}
@@ -151,13 +149,11 @@ const HeroSection = () => {
             <Button 
               variant="hero-imperial" 
               size="xl"
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
+              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:scale-110 w-full animate-amber-flow ${
                 buttonsVisible ? 'animate-fade-in' : ''
               }`}
               style={{ 
-                animationDelay: buttonsVisible ? '0.4s' : '0s',
-                background: buttonsVisible ? 'hsl(35 75% 65% / 0.35)' : 'transparent',
-                boxShadow: buttonsVisible ? '0 0 50px hsl(35 75% 65% / 0.5), 0 0 25px hsl(30 70% 70% / 0.3)' : 'none'
+                animationDelay: buttonsVisible ? '0.4s' : '0s'
               }}
             >
               {t('hero.btn.consultation')}
