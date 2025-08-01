@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { Button3DWrapper } from "@/components/Button3DWrapper";
+import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
 import { useLanguage } from "@/contexts/LanguageContext";
 import FluidButtonBackground from "@/components/FluidButtonBackground";
 import LogoHeader from "@/components/LogoHeader";
@@ -129,7 +129,7 @@ const Index = () => {
                 : 'opacity-0 translate-y-8'
             }`}
           >
-            <Button3DWrapper 
+            <OptimizedButton3DWrapper 
               isVisible={contactButtonsVisible} 
               delay={0.1}
               className="w-full sm:w-auto"
@@ -149,10 +149,10 @@ const Index = () => {
                >
                  <FluidButtonBackground />
                  <span className="relative z-10">{t('home.contact.appointment')}</span>
-               </Button>
-            </Button3DWrapper>
+                </Button>
+             </OptimizedButton3DWrapper>
             
-            <Button3DWrapper 
+            <OptimizedButton3DWrapper 
               isVisible={contactButtonsVisible} 
               delay={0.3}
               className="w-full sm:w-auto"
@@ -172,8 +172,8 @@ const Index = () => {
                >
                  <FluidButtonBackground />
                  <span className="relative z-10">{t('home.contact.portfolio')}</span>
-               </Button>
-            </Button3DWrapper>
+                </Button>
+             </OptimizedButton3DWrapper>
           </div>
         </div>
       </section>

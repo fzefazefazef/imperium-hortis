@@ -28,12 +28,12 @@ export default function FluidButtonBackground() {
       "#FFAB00",
     ];
 
-    const circles = Array.from({ length: 30 }, () => ({
+    const circles = Array.from({ length: 12 }, () => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
-      radius: 35 + Math.random() * 60,
-      dx: (Math.random() - 0.5) * 1.8,
-      dy: (Math.random() - 0.5) * 1.8,
+      radius: 40 + Math.random() * 50,
+      dx: (Math.random() - 0.5) * 1.2,
+      dy: (Math.random() - 0.5) * 1.2,
       color: goldPalette[Math.floor(Math.random() * goldPalette.length)],
       alpha: 0.5 + Math.random() * 0.5,
     }));
@@ -61,7 +61,10 @@ export default function FluidButtonBackground() {
         ctx.fill();
       });
 
-      animationId = requestAnimationFrame(draw);
+      // Limiter les FPS à 30 pour économiser les ressources
+      setTimeout(() => {
+        animationId = requestAnimationFrame(draw);
+      }, 1000 / 30);
     }
 
     draw();

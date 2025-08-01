@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { Button3DWrapper } from "@/components/Button3DWrapper";
+import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
 import { Logo3D } from "@/components/Logo3D";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -17,13 +17,15 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-96 h-96 bg-whisper-gold/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-32 w-64 h-64 bg-whisper-gold/3 rounded-full blur-2xl"></div>
       
-      {/* Hero Background Video */}
+      {/* Hero Background Video - Lazy loaded */}
       <video 
         className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
         muted
         loop
         playsInline
+        preload="metadata"
+        poster="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png"
       >
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
@@ -122,7 +124,7 @@ const HeroSection = () => {
               : 'opacity-0 translate-y-8'
           }`}
         >
-          <Button3DWrapper 
+          <OptimizedButton3DWrapper 
             isVisible={buttonsVisible} 
             delay={0.2}
             className="w-full sm:w-auto"
@@ -143,9 +145,9 @@ const HeroSection = () => {
                <FluidButtonBackground />
                <span className="relative z-10">{t('hero.btn.services')}</span>
              </Button>
-          </Button3DWrapper>
+           </OptimizedButton3DWrapper>
           
-          <Button3DWrapper 
+          <OptimizedButton3DWrapper 
             isVisible={buttonsVisible} 
             delay={0.4}
             className="w-full sm:w-auto"
@@ -166,7 +168,7 @@ const HeroSection = () => {
                <FluidButtonBackground />
                <span className="relative z-10">{t('hero.btn.consultation')}</span>
              </Button>
-          </Button3DWrapper>
+          </OptimizedButton3DWrapper>
         </div>
       </div>
     </section>
