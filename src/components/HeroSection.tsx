@@ -140,7 +140,7 @@ const HeroSection = () => {
                 boxShadow: buttonsVisible ? '0 0 40px rgba(255, 215, 0, 0.5), inset 0 0 20px rgba(255, 215, 0, 0.2)' : 'none'
               }}
             >
-              <TextShimmer duration={2} className="font-playfair">
+              <TextShimmer duration={4} className="font-playfair">
                 {t('hero.btn.services')}
               </TextShimmer>
             </Button>
@@ -164,7 +164,7 @@ const HeroSection = () => {
                 boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
               }}
             >
-              <TextShimmer duration={2.2} className="font-cinzel">
+              <TextShimmer duration={4.5} className="font-cinzel">
                 {t('hero.btn.consultation')}
               </TextShimmer>
             </Button>

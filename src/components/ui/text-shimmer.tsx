@@ -31,7 +31,7 @@ export const TextShimmer: FC<TextShimmerProps> = ({
         style={{
           ...style,
           "--base-color": "currentColor",
-          "--base-gradient-color": "rgba(255, 255, 255, 0.8)",
+          "--base-gradient-color": "rgba(255, 255, 255, 0.9)",
           animation: `shimmer ${duration}s ease-in-out infinite`,
         } as CSSProperties}
       >
