@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({
       
       {/* Desktop Navigation */}
       {showDesktopNav && (
-        <nav className="absolute top-16 sm:top-8 right-2 sm:right-8 z-30 hidden sm:block">
+        <nav className="absolute top-16 lg:top-8 right-2 lg:right-8 z-30 hidden lg:block">
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
             {[
               { name: t('nav.philosophie'), path: "/philosophie" },
