@@ -88,7 +88,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     type="tel"
-                    placeholder="+33 1 42 86 78 90"
+                    placeholder="+33 6 42 86 78 90"
                     className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
                   />
                 </div>
