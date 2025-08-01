@@ -4,6 +4,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Logo3D } from "@/components/Logo3D";
+import FluidButtonBackground from "@/components/FluidButtonBackground";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -145,18 +146,19 @@ const Index = () => {
                <Button 
                  variant="hero-luxury"
                  size="xl" 
-                 className={`font-playfair font-medium transform transition-all duration-500 relative overflow-hidden ${
+                 className={`relative overflow-hidden font-playfair font-medium transform transition-all duration-500 ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
-                  style={{ 
-                    animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                    background: contactButtonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
-                    backgroundSize: '300% 100%',
-                    boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
-                  }}
+                 style={{ 
+                   animationDelay: contactButtonsVisible ? '0.1s' : '0s',
+                   background: contactButtonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
+                   backgroundSize: '300% 100%',
+                   boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
+                 }}
                >
-                {t('home.contact.appointment')}
-              </Button>
+                 <FluidButtonBackground />
+                 <span className="relative z-10">{t('home.contact.appointment')}</span>
+               </Button>
             </Button3DWrapper>
             
             <Button3DWrapper 
@@ -167,7 +169,7 @@ const Index = () => {
                <Button 
                  variant="hero-luxury" 
                  size="xl" 
-                 className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
+                 className={`relative overflow-hidden font-cinzel font-medium transform transition-all duration-500 ${
                    contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
                  }`}
                  style={{ 
@@ -177,8 +179,9 @@ const Index = () => {
                    boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                  }}
                >
-                {t('home.contact.portfolio')}
-              </Button>
+                 <FluidButtonBackground />
+                 <span className="relative z-10">{t('home.contact.portfolio')}</span>
+               </Button>
             </Button3DWrapper>
           </div>
         </div>
