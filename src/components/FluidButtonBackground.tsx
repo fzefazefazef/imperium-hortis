@@ -28,7 +28,7 @@ export default function FluidButtonBackground() {
       "#FFAB00",
     ];
 
-    const circles = Array.from({ length: 10 }, () => ({
+    const circles = Array.from({ length: 12 }, () => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
       radius: 40 + Math.random() * 50,

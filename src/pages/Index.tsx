@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
 import { useLanguage } from "@/contexts/LanguageContext";
-import StaticGoldEffect from "@/components/StaticGoldEffect";
+import FluidButtonBackground from "@/components/FluidButtonBackground";
 import LogoHeader from "@/components/LogoHeader";
 
 const Index = () => {
@@ -147,7 +147,7 @@ const Index = () => {
                    boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                  }}
                >
-                  <StaticGoldEffect />
+                 <FluidButtonBackground />
                  <span className="relative z-10">{t('home.contact.appointment')}</span>
                 </Button>
              </OptimizedButton3DWrapper>
@@ -170,7 +170,7 @@ const Index = () => {
                    boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
                  }}
                >
-                 <StaticGoldEffect />
+                 <FluidButtonBackground />
                  <span className="relative z-10">{t('home.contact.portfolio')}</span>
                 </Button>
              </OptimizedButton3DWrapper>
