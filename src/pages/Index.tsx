@@ -14,14 +14,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Logo 3D en haut à gauche */}
-      <div className="fixed top-4 left-4 z-50">
-        <Logo3D 
-          width="w-24"
-          height="h-24"
-          scale={0.5}
-          enableControls={false}
-          autoRotate={true}
+      {/* Logo Imperium Hortis en haut à gauche */}
+      <div className="fixed top-6 left-6 z-50">
+        <img 
+          src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
+          alt="Imperium Hortis"
+          className="w-20 h-20 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
       
