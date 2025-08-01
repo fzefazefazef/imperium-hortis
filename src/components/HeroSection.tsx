@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="absolute top-20 right-20 w-96 h-96 bg-whisper-gold/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-32 left-32 w-64 h-64 bg-whisper-gold/3 rounded-full blur-2xl"></div>
       
-      {/* Hero Background Video - 60 FPS */}
+      {/* Hero Background Video - Lazy loaded */}
       <video 
         className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
@@ -27,9 +27,8 @@ const HeroSection = () => {
         playsInline
         preload="metadata"
         poster="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png"
-        style={{ filter: 'brightness(0.8)' }}
       >
-        <source src="/Professional_Mode_make_the_wind_naturaly_go_very_s.mp4" type="video/mp4" />
+        <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
       
       
