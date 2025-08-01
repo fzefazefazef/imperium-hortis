@@ -26,18 +26,16 @@ export default function FluidButtonBackground() {
       "#FFC200",
       "#FFE135",
       "#FFAB00",
-      "#FF6B35",
-      "#FF9500",
     ];
 
-    const circles = Array.from({ length: 25 }, () => ({
+    const circles = Array.from({ length: 30 }, () => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
-      radius: 30 + Math.random() * 50,
-      dx: (Math.random() - 0.5) * 1.2,
-      dy: (Math.random() - 0.5) * 1.2,
+      radius: 35 + Math.random() * 60,
+      dx: (Math.random() - 0.5) * 1.8,
+      dy: (Math.random() - 0.5) * 1.8,
       color: goldPalette[Math.floor(Math.random() * goldPalette.length)],
-      alpha: 0.6 + Math.random() * 0.4,
+      alpha: 0.5 + Math.random() * 0.5,
     }));
 
     let animationId: number;
@@ -79,7 +77,7 @@ export default function FluidButtonBackground() {
     <canvas
       ref={canvasRef}
       className="absolute top-0 left-0 w-full h-full rounded-xl z-0 pointer-events-none"
-      style={{ mixBlendMode: "multiply" }}
+      style={{ mixBlendMode: "screen" }}
     />
   );
 }
