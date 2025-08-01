@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Logo Imperium Hortis en haut à gauche */}
-      <div className="fixed top-4 left-8 z-50">
+      <div className="fixed top-4 left-12 z-50">
         <img 
           src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
           alt="Imperium Hortis"
