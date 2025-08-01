@@ -144,6 +144,38 @@ export default {
 						opacity: '0.8',
 						transform: 'scale(1)'
 					}
+				},
+				'golden-wave': {
+					'0%': { 
+						backgroundPosition: '200% 50%',
+						boxShadow: '0 0 30px rgba(255, 215, 0, 0.3)'
+					},
+					'50%': {
+						backgroundPosition: '0% 50%',
+						boxShadow: '0 0 50px rgba(255, 215, 0, 0.6)'
+					},
+					'100%': { 
+						backgroundPosition: '-200% 50%',
+						boxShadow: '0 0 30px rgba(255, 215, 0, 0.3)'
+					}
+				},
+				'amber-flow': {
+					'0%': { 
+						backgroundPosition: '0% 50%',
+						filter: 'hue-rotate(0deg) brightness(1)'
+					},
+					'33%': {
+						backgroundPosition: '100% 0%',
+						filter: 'hue-rotate(15deg) brightness(1.1)'
+					},
+					'66%': {
+						backgroundPosition: '100% 100%',
+						filter: 'hue-rotate(30deg) brightness(1.2)'
+					},
+					'100%': { 
+						backgroundPosition: '0% 50%',
+						filter: 'hue-rotate(0deg) brightness(1)'
+					}
 				}
 			},
 			animation: {
@@ -153,7 +185,9 @@ export default {
 				'fade-in-slow': 'fade-in-slow 1.5s cubic-bezier(0.25, 0.1, 0.25, 1)',
 				'glow-pulse': 'glow-pulse 5s ease-in-out infinite',
 				'whisper-float': 'whisper-float 8s ease-in-out infinite',
-				'subtle-shimmer': 'subtle-shimmer 4s ease-in-out infinite'
+				'subtle-shimmer': 'subtle-shimmer 4s ease-in-out infinite',
+				'golden-wave': 'golden-wave 3s ease-in-out infinite',
+				'amber-flow': 'amber-flow 4s ease-in-out infinite'
 			}
 		}
 	},
