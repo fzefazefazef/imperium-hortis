@@ -3,8 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { Button3DWrapper } from "@/components/Button3DWrapper";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Logo3D } from "@/components/Logo3D";
 import FluidButtonBackground from "@/components/FluidButtonBackground";
+import LogoHeader from "@/components/LogoHeader";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -14,16 +14,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Logo Imperium Hortis en haut à gauche */}
-      <div className="fixed top-4 left-12 z-50">
-        <a href="/" className="block">
-          <img 
-            src="/lovable-uploads/6696fecd-a03f-41e2-9652-937af241728a.png" 
-            alt="Imperium Hortis"
-            className="w-36 h-36 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 cursor-pointer hover:scale-105 transform transition-transform"
-          />
-        </a>
-      </div>
+      <LogoHeader />
       
       {/* Hero Section */}
       <HeroSection />

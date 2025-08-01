@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LogoHeader from "@/components/LogoHeader";
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -52,6 +53,7 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal text-foreground">
+      <LogoHeader />
       {/* Navigation */}
       <nav className="absolute top-8 right-8 z-30">
         <div className="flex space-x-8">
