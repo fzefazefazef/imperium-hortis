@@ -52,7 +52,7 @@ const Services = () => {
         <div className="pt-32 px-8 md:px-16 lg:px-24">
           <div className="max-w-6xl mx-auto">
             <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white lg:text-black mb-8 text-center">
-              {t('services.title').split(' ')[0]} <span className="text-sage-green">{t('services.title').split(' ').slice(1).join(' ')}</span>
+              <span className="lg:text-black">{t('services.title').split(' ')[0]}</span> <span className="text-sage-green lg:text-black">{t('services.title').split(' ').slice(1).join(' ')}</span>
             </h1>
             
             <p className="font-inter text-xl text-soft-white/80 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
