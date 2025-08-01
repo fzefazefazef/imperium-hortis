@@ -3,10 +3,81 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    projectType: '',
+    description: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.description) {
+      toast({
+        title: "Erreur",
+        description: "Veuillez remplir tous les champs obligatoires.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await (supabase as any)
+        .from('contact_requests')
+        .insert({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone || null,
+          project_type: formData.projectType,
+          description: formData.description
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message envoyé !",
+        description: "Votre demande a été envoyée avec succès. Nous vous recontacterons rapidement.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        projectType: '',
+        description: ''
+      });
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal text-foreground">
@@ -49,15 +120,19 @@ const Contact = () => {
                 {t('contact.form.title')}
               </h2>
               
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="font-inter text-soft-white/80 text-sm mb-2 block">
                       {t('contact.form.firstname')} *
                     </label>
                     <Input 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       placeholder={t('contact.form.firstname')}
                       className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                      required
                     />
                   </div>
                   <div>
@@ -65,8 +140,12 @@ const Contact = () => {
                       {t('contact.form.lastname')} *
                     </label>
                     <Input 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       placeholder={t('contact.form.lastname')}
                       className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                      required
                     />
                   </div>
                 </div>
@@ -76,9 +155,13 @@ const Contact = () => {
                     {t('contact.form.email')} *
                   </label>
                   <Input 
+                    name="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="exemple@email.com"
                     className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
+                    required
                   />
                 </div>
 
@@ -87,7 +170,10 @@ const Contact = () => {
                     {t('contact.form.phone')}
                   </label>
                   <Input 
+                    name="phone"
                     type="tel"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     placeholder="+33 6 42 86 78 90"
                     className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
                   />
@@ -98,6 +184,9 @@ const Contact = () => {
                     {t('contact.form.project')}
                   </label>
                   <Input 
+                    name="projectType"
+                    value={formData.projectType}
+                    onChange={handleInputChange}
                     placeholder="Décrivez votre type de projet..."
                     className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
                   />
@@ -108,13 +197,23 @@ const Contact = () => {
                     {t('contact.form.description')} *
                   </label>
                   <Textarea 
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
                     placeholder={t('contact.form.description')}
                     className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50 min-h-[120px]"
+                    required
                   />
                 </div>
 
-                <Button variant="luxury" size="xl" className="w-full font-inter font-medium">
-                  {t('contact.form.submit')}
+                <Button 
+                  type="submit" 
+                  variant="luxury" 
+                  size="xl" 
+                  className="w-full font-inter font-medium"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Envoi en cours..." : t('contact.form.submit')}
                 </Button>
               </form>
             </div>
