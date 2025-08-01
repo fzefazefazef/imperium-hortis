@@ -87,7 +87,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     type="tel"
-                    placeholder="+33 6 XX XX XX XX"
+                    placeholder="+33 6 58 40 41 91"
                     className="bg-background/50 border-sage-green/30 text-soft-white placeholder:text-soft-white/50"
                   />
                 </div>
@@ -159,7 +159,7 @@ const Contact = () => {
                     <div className="text-sage-green text-xl">📞</div>
                     <div>
                       <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.phone')}</h4>
-                      <p className="font-inter text-soft-white/70">+33 4 93 XX XX XX</p>
+                      <p className="font-inter text-soft-white/70">+33 6 58 40 41 91</p>
                     </div>
                   </div>
 
@@ -217,7 +217,7 @@ const Contact = () => {
                   {t('contact.emergency.desc')}
                 </p>
                 <p className="font-inter text-sage-green font-medium">
-                  📱 +33 6 XX XX XX XX (24h/24)
+                  📱 +33 6 58 40 41 91 (24h/24)
                 </p>
               </div>
             </div>

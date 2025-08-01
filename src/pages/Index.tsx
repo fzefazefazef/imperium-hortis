@@ -183,7 +183,7 @@ const Index = () => {
             
             <div>
               <h4 className="font-inter font-medium text-soft-white mb-4">{t('footer.contact')}</h4>
-              <p className="font-inter text-soft-white/60 mb-2">+33 4 93 xx xx xx</p>
+              <p className="font-inter text-soft-white/60 mb-2">+33 6 58 40 41 91</p>
               <p className="font-inter text-soft-white/60">contact@jardins-cotedazur.fr</p>
             </div>
             
