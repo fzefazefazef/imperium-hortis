@@ -90,7 +90,7 @@ const HeroSection = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-playfair text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
+              className="font-cinzel text-sm font-medium text-white hover:text-whisper-gold transition-all duration-300 hover:scale-105 tracking-wider"
               style={{ 
                 textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
                 animationDelay: `${index * 0.1}s`
@@ -104,12 +104,12 @@ const HeroSection = () => {
       
       {/* Hero Content - Left Center Positioned */}
       <div className="absolute left-0 top-[40%] z-20 pl-4 md:pl-6 lg:pl-8 max-w-2xl animate-fade-in-slow">
-        <h1 className="font-playfair text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+        <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
           Imperium
           <span className="block text-whisper-gold">Hortis</span>
         </h1>
         
-        <p className="font-inter text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">
+        <p className="font-cinzel text-lg md:text-xl text-white mb-8 leading-relaxed max-w-lg">
           {t('hero.subtitle')}
         </p>
         
@@ -129,7 +129,7 @@ const HeroSection = () => {
             <Button 
               variant="hero-minimal" 
               size="xl"
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 w-full mt-75 relative overflow-hidden ${
+              className={`font-cinzel font-medium hover-scale transform transition-all duration-500 w-full mt-75 relative overflow-hidden ${
                 buttonsVisible ? 'animate-fade-in animate-golden-wave' : ''
               }`}
               style={{ 
@@ -151,7 +151,7 @@ const HeroSection = () => {
             <Button 
               variant="hero-luxury" 
               size="xl"
-              className={`font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full relative overflow-hidden ${
+              className={`font-cinzel font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full relative overflow-hidden ${
                 buttonsVisible ? 'animate-fade-in animate-amber-flow' : ''
               }`}
               style={{ 

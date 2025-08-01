@@ -32,20 +32,20 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
+              <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
                 {t('about.title')}
               </h2>
-              <p className="font-inter text-lg text-soft-white/80 mb-6 leading-relaxed">
+              <p className="font-cinzel text-lg text-soft-white/80 mb-6 leading-relaxed">
                 {t('about.intro.text1')}
               </p>
-              <p className="font-inter text-lg text-soft-white/80 leading-relaxed">
+              <p className="font-cinzel text-lg text-soft-white/80 leading-relaxed">
                 {t('about.intro.text2')}
               </p>
             </div>
             
             <div className="relative animate-fade-in">
               <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-whisper-gold/20 flex items-center justify-center">
-                <p className="font-inter text-soft-white/60 text-center px-8">
+                <p className="font-cinzel text-soft-white/60 text-center px-8">
                   [{t('about.gallery')}]
                 </p>
               </div>
@@ -60,7 +60,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             ref={titleRef}
-            className={`font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
+            className={`font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
               titleVisible 
                 ? 'opacity-100 translate-y-0 animate-fade-in' 
                 : 'opacity-0 translate-y-12'
@@ -107,10 +107,10 @@ const Index = () => {
                 }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
                   {service.icon}
                 </div>
-                <h3 className="font-playfair text-xl font-semibold text-soft-white mb-4 group-hover:text-whisper-gold transition-colors duration-300">
+                <h3 className="font-cinzel text-xl font-semibold text-soft-white mb-4 group-hover:text-whisper-gold transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="font-inter text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                <p className="font-cinzel text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   {service.description}
                 </p>
               </div>
@@ -122,10 +122,10 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
+          <h2 className="font-cinzel text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
             {t('home.contact.title')}
           </h2>
-          <p className="font-inter text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="font-cinzel text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t('home.contact.desc')}
           </p>
           
@@ -145,7 +145,7 @@ const Index = () => {
               <Button 
                 variant="minimal" 
                 size="xl" 
-                className={`font-inter font-medium transform transition-all duration-500 relative overflow-hidden ${
+                className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
                   contactButtonsVisible ? 'animate-fade-in animate-golden-wave' : ''
                 }`}
                 style={{ 
@@ -167,7 +167,7 @@ const Index = () => {
               <Button 
                 variant="luxury" 
                 size="xl" 
-                className={`font-inter font-medium transform transition-all duration-500 relative overflow-hidden ${
+                className={`font-cinzel font-medium transform transition-all duration-500 relative overflow-hidden ${
                   contactButtonsVisible ? 'animate-fade-in animate-amber-flow' : ''
                 }`}
                 style={{ 
@@ -196,7 +196,7 @@ const Index = () => {
           
           {/* Main Footer Content */}
           <div className="text-center mb-16">
-            <h3 className="font-playfair text-4xl font-bold text-soft-white mb-4 tracking-widest uppercase">
+            <h3 className="font-cinzel text-4xl font-bold text-soft-white mb-4 tracking-widest uppercase">
               IMPERIUM HORTIS
             </h3>
             <div className="flex items-center justify-center mb-6">
@@ -204,7 +204,7 @@ const Index = () => {
               <div className="mx-4 text-whisper-gold/70">◆</div>
               <div className="w-8 h-px bg-whisper-gold/60"></div>
             </div>
-            <p className="font-playfair text-xl text-soft-graphite max-w-2xl mx-auto leading-relaxed italic tracking-wider">
+            <p className="font-cinzel text-xl text-soft-graphite max-w-2xl mx-auto leading-relaxed italic tracking-wider">
               "Là où les jardins murmurent la grandeur"
             </p>
           </div>
@@ -217,7 +217,7 @@ const Index = () => {
             <div className="absolute bottom-2 left-2 text-whisper-gold/40 text-sm">◥</div>
             <div className="absolute bottom-2 right-2 text-whisper-gold/40 text-sm">◤</div>
             
-            <h4 className="font-playfair text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
+            <h4 className="font-cinzel text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
               Contact
             </h4>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-16">

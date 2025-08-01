@@ -19,9 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'cormorant': ['Cormorant Garamond', 'serif'],
+				'cinzel': ['Cinzel', 'serif'],
 				'source': ['Source Sans Pro', 'sans-serif'],
-				'playfair': ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
