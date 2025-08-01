@@ -27,6 +27,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
   };
 
   const navigationItems = [
+    { name: t('nav.home'), path: "/" },
     { name: t('nav.philosophie'), path: "/philosophie" },
     { name: t('nav.services'), path: "/services" },
     { name: t('nav.portfolio'), path: "/portfolio" },

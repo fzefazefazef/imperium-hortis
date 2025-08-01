@@ -30,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <div className="min-h-screen">
-      <LogoHeader isVisible={!isMenuOpen} />
+      
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
       {/* Desktop Navigation */}
