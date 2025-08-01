@@ -208,18 +208,6 @@ const Contact = () => {
                 </p>
               </div>
 
-              {/* Emergency Contact */}
-              <div className="bg-card/20 backdrop-blur-sm p-8 rounded-2xl border border-sage-green/20">
-                <h3 className="font-cinzel text-xl font-semibold text-sage-green mb-4">
-                  {t('contact.emergency.title')}
-                </h3>
-                <p className="font-inter text-soft-white/80 mb-4">
-                  {t('contact.emergency.desc')}
-                </p>
-                <p className="font-inter text-sage-green font-medium">
-                  📱 +33 6 58 40 41 91 (24h/24)
-                </p>
-              </div>
             </div>
           </div>
 
