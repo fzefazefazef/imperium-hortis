@@ -209,7 +209,7 @@ const Index = () => {
           {/* Ornamental Top Border */}
           <div className="flex items-center justify-center mb-12">
             <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1"></div>
-            <div className="mx-6 text-whisper-gold/70 text-xl">⚜</div>
+            <div className="mx-6 text-whisper-gold/70 text-xl">❦</div>
             <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1"></div>
           </div>
           
