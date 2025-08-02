@@ -239,22 +239,24 @@ const Index = () => {
             <h4 className="font-cinzel-decorative text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
               Contact
             </h4>
-            <div className="flex flex-col md:grid md:grid-cols-2 md:gap-16 space-y-6 md:space-y-0 max-w-2xl mx-auto">
-              <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
-                  <span className="text-whisper-gold text-lg">☎</span>
+            <div className="w-full max-w-4xl mx-auto">
+              <div className="flex flex-col space-y-6">
+                <div className="flex items-center space-x-4 group">
+                  <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
+                    <span className="text-whisper-gold text-lg">☎</span>
+                  </div>
+                  <a href="tel:+33658404191" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
+                    +33 6 58 40 41 91
+                  </a>
                 </div>
-                <a href="tel:+33658404191" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
-                  +33 6 58 40 41 91
-                </a>
-              </div>
-              <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
-                  <span className="text-whisper-gold text-lg">✉</span>
+                <div className="flex items-center space-x-4 group">
+                  <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
+                    <span className="text-whisper-gold text-lg">✉</span>
+                  </div>
+                  <p className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide">
+                    contact@imperiumhortis.com
+                  </p>
                 </div>
-                <p className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide">
-                  contact@imperiumhortis.com
-                </p>
               </div>
             </div>
           </div>
