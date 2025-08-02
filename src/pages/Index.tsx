@@ -252,9 +252,9 @@ const Index = () => {
                 <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
                   <span className="text-whisper-gold text-lg">✉</span>
                 </div>
-                <p className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide">
+                <a href="mailto:contact@imperiumhortis.com" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
                   contact@imperiumhortis.com
-                </p>
+                </a>
               </div>
             </div>
           </div>
