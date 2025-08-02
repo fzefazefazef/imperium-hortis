@@ -244,9 +244,9 @@ const Index = () => {
                 <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
                   <span className="text-whisper-gold text-lg">☎</span>
                 </div>
-                <p className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide font-mono">
+                <a href="tel:+33658404191" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide font-mono hover:underline cursor-pointer">
                   +33 6 58 40 41 91
-                </p>
+                </a>
               </div>
               <div className="flex items-center space-x-4 group">
                 <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
