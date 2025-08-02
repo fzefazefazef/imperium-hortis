@@ -30,7 +30,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
-              <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
+              <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:text-white mb-8">
                 {t('about.title')}
               </h2>
               <p className="font-cinzel text-lg text-soft-white/80 mb-6 leading-relaxed">
@@ -58,7 +58,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <h2 
             ref={titleRef}
-            className={`font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white text-center mb-16 transition-all duration-1000 ${
+            className={`font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:text-white text-center mb-16 transition-all duration-1000 ${
               titleVisible 
                 ? 'opacity-100 translate-y-0 animate-fade-in' 
                 : 'opacity-0 translate-y-12'
@@ -131,7 +131,7 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white mb-8">
+          <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:text-white mb-8">
             {t('home.contact.title')}
           </h2>
           <p className="font-cinzel text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -215,7 +215,7 @@ const Index = () => {
           
           {/* Main Footer Content */}
           <div className="text-center mb-16">
-            <h3 className="font-cinzel text-4xl font-bold text-soft-white mb-4 tracking-widest uppercase">
+            <h3 className="font-cinzel text-4xl font-bold text-soft-white lg:text-white mb-4 tracking-widest uppercase">
               IMPERIUM HORTIS
             </h3>
             <div className="flex items-center justify-center mb-6">
