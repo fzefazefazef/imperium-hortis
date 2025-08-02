@@ -240,7 +240,7 @@ const Index = () => {
               Contact
             </h4>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-16">
-              <div className="flex items-center space-x-4 group -ml-2">
+              <div className="flex items-center space-x-4 group md:-ml-6">
                 <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
                   <span className="text-whisper-gold text-lg">☎</span>
                 </div>
