@@ -229,7 +229,7 @@ const Index = () => {
           </div>
           
           {/* Contact Information with Refined Style */}
-          <div className="bg-gradient-to-r from-whisper-gold/5 via-whisper-gold/8 to-whisper-gold/5 backdrop-blur-sm border border-whisper-gold/20 p-10 mb-16 relative">
+          <div className="bg-gradient-to-r from-whisper-gold/5 via-whisper-gold/8 to-whisper-gold/5 backdrop-blur-sm border border-whisper-gold/20 p-6 px-4 md:p-10 mb-16 relative overflow-hidden">
             {/* Subtle Corner Ornaments */}
             <div className="absolute top-2 left-2 text-whisper-gold/40 text-sm">◢</div>
             <div className="absolute top-2 right-2 text-whisper-gold/40 text-sm">◣</div>
