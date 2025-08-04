@@ -10,22 +10,22 @@ const Portfolio = () => {
     {
       title: t('portfolio.inspiration1.title'),
       description: t('portfolio.inspiration1.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=80"
     },
     {
       title: t('portfolio.inspiration2.title'),
       description: t('portfolio.inspiration2.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=600&fit=crop&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&q=80"
     },
     {
       title: t('portfolio.inspiration3.title'),
       description: t('portfolio.inspiration3.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1523309375637-b3f4f2347f2d?w=800&h=600&fit=crop&q=80"
     },
     {
       title: t('portfolio.inspiration4.title'),
       description: t('portfolio.inspiration4.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1502780402662-acc3917949e5?w=800&h=600&fit=crop&q=80"
     }
   ];
 
