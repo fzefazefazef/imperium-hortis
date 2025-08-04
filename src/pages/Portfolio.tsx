@@ -2,9 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
+import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
+import FluidButtonBackground from "@/components/FluidButtonBackground";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const Portfolio = () => {
   const { t } = useLanguage();
+  const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
 
   const inspirations = [
     {
@@ -81,22 +85,65 @@ const Portfolio = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="bg-card/20 backdrop-blur-sm p-12 rounded-2xl border border-sage-green/20 text-center">
+            <div ref={buttonsRef} className="bg-card/20 backdrop-blur-sm p-12 rounded-2xl border border-sage-green/20 text-center">
               <h2 className="font-cinzel text-3xl font-semibold text-sage-green mb-6">
                 {t('portfolio.cta.title')}
               </h2>
               <p className="font-inter text-lg text-soft-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
                 {t('portfolio.cta.desc')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button variant="luxury" size="xl" className="font-inter font-medium">
-                    {t('portfolio.cta.btn1')}
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 ${
+                buttonsVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}>
+                <OptimizedButton3DWrapper 
+                  isVisible={buttonsVisible} 
+                  delay={0.2}
+                  className="w-full sm:w-auto"
+                >
+                  <Link to="/contact">
+                    <Button 
+                      variant="hero-luxury" 
+                      size="xl" 
+                      className={`relative overflow-hidden font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
+                        buttonsVisible ? 'animate-fade-in animate-light-sweep' : ''
+                      }`}
+                      style={{ 
+                        animationDelay: buttonsVisible ? '0.2s' : '0s',
+                        background: buttonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
+                        backgroundSize: '300% 100%',
+                        boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
+                      }}
+                    >
+                      <FluidButtonBackground />
+                      <span className="relative z-10">{t('portfolio.cta.btn1')}</span>
+                    </Button>
+                  </Link>
+                </OptimizedButton3DWrapper>
+                
+                <OptimizedButton3DWrapper 
+                  isVisible={buttonsVisible} 
+                  delay={0.4}
+                  className="w-full sm:w-auto"
+                >
+                  <Button 
+                    variant="hero-luxury" 
+                    size="xl" 
+                    className={`relative overflow-hidden font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
+                      buttonsVisible ? 'animate-fade-in animate-light-sweep' : ''
+                    }`}
+                    style={{ 
+                      animationDelay: buttonsVisible ? '0.4s' : '0s',
+                      background: buttonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
+                      backgroundSize: '300% 100%',
+                      boxShadow: buttonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
+                    }}
+                  >
+                    <FluidButtonBackground />
+                    <span className="relative z-10">{t('portfolio.cta.btn2')}</span>
                   </Button>
-                </Link>
-                <Button variant="minimal" size="xl" className="font-inter font-medium">
-                  {t('portfolio.cta.btn2')}
-                </Button>
+                </OptimizedButton3DWrapper>
               </div>
             </div>
 
