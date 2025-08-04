@@ -6,48 +6,26 @@ import Layout from "@/components/Layout";
 const Portfolio = () => {
   const { t } = useLanguage();
 
-  const projects = [
+  const inspirations = [
     {
-      title: "Villa Azzurra",
-      location: "Cap d'Antibes",
-      year: "2024",
-      description: t('projects.villa.azzurra'),
-      category: t('category.residence')
+      title: t('portfolio.inspiration1.title'),
+      description: t('portfolio.inspiration1.desc'),
+      imageUrl: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=600&fit=crop"
     },
     {
-      title: "Château de Lumière",
-      location: "Saint-Paul-de-Vence",
-      year: "2023",
-      description: t('projects.chateau.lumiere'),
-      category: t('category.heritage')
+      title: t('portfolio.inspiration2.title'),
+      description: t('portfolio.inspiration2.desc'),
+      imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop"
     },
     {
-      title: "Penthouse Croisette",
-      location: "Cannes",
-      year: "2024",
-      description: t('projects.penthouse.croisette'),
-      category: t('category.terrace')
+      title: t('portfolio.inspiration3.title'),
+      description: t('portfolio.inspiration3.desc'),
+      imageUrl: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=600&fit=crop"
     },
     {
-      title: "Villa del Mare",
-      location: "Monaco",
-      year: "2023",
-      description: t('projects.villa.del.mare'),
-      category: t('category.innovation')
-    },
-    {
-      title: "Domaine des Oliviers",
-      location: "Mougins",
-      year: "2022",
-      description: t('projects.domaine.oliviers'),
-      category: t('category.domain')
-    },
-    {
-      title: "Spa Impérial",
-      location: "Juan-les-Pins",
-      year: "2024",
-      description: t('projects.spa.imperial'),
-      category: t('category.commercial')
+      title: t('portfolio.inspiration4.title'),
+      description: t('portfolio.inspiration4.desc'),
+      imageUrl: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop"
     }
   ];
 
@@ -65,62 +43,41 @@ const Portfolio = () => {
               {t('portfolio.subtitle')}
             </p>
 
-            {/* Stats */}
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
-              {[
-                { number: "150+", label: t('portfolio.stats.projects') },
-                { number: "25", label: t('portfolio.stats.years') },
-                { number: "3", label: t('portfolio.stats.generations') },
-                { number: "100%", label: t('portfolio.stats.satisfaction') }
-              ].map((stat, index) => (
-                <div key={index} className="text-center bg-card/20 backdrop-blur-sm p-6 rounded-2xl border border-sage-green/20">
-                  <div className="font-cinzel text-3xl md:text-4xl font-bold text-sage-green mb-2">
-                    {stat.number}
+            {/* Inspirations Section */}
+            <h2 className="font-cinzel text-3xl font-semibold text-soft-white mb-12 text-center">
+              {t('portfolio.inspirations.title')}
+            </h2>
+
+            <div className="grid lg:grid-cols-2 gap-8 mb-16">
+              {inspirations.map((inspiration, index) => (
+                <div
+                  key={index}
+                  className="group bg-card/20 backdrop-blur-sm rounded-2xl border border-sage-green/20 hover:border-sage-green/40 transition-all duration-500 hover:scale-105 hover:shadow-glow overflow-hidden"
+                >
+                  <div className="aspect-video bg-gradient-accent rounded-t-2xl overflow-hidden border-b border-sage-green/20">
+                    <img 
+                      src={inspiration.imageUrl} 
+                      alt={inspiration.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
                   </div>
-                  <div className="font-inter text-soft-white/80 text-sm">
-                    {stat.label}
+                  <div className="p-8">
+                    <h3 className="font-cinzel text-xl font-semibold text-sage-green group-hover:text-soft-white transition-colors mb-4">
+                      {inspiration.title}
+                    </h3>
+                    <p className="font-inter text-soft-white/80 leading-relaxed">
+                      {inspiration.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Featured Projects */}
-            <h2 className="font-cinzel text-3xl font-semibold text-soft-white mb-12 text-center">
-              {t('portfolio.featured')}
-            </h2>
-
-            <div className="grid lg:grid-cols-2 gap-8 mb-16">
-              {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group bg-card/20 backdrop-blur-sm rounded-2xl border border-sage-green/20 hover:border-sage-green/40 transition-all duration-500 hover:scale-105 hover:shadow-glow overflow-hidden"
-                >
-                  <div className="aspect-video bg-gradient-accent rounded-t-2xl flex items-center justify-center border-b border-sage-green/20">
-                    <p className="font-inter text-soft-white/60 text-center px-8">
-                      [{t('common.image')} {project.title}]
-                    </p>
-                  </div>
-                  <div className="p-8">
-                    <div className="flex justify-between items-start mb-4">
-                      <h3 className="font-cinzel text-xl font-semibold text-sage-green group-hover:text-soft-white transition-colors">
-                        {project.title}
-                      </h3>
-                      <span className="font-inter text-sm text-soft-white/60 bg-sage-green/20 px-3 py-1 rounded-full">
-                        {project.year}
-                      </span>
-                    </div>
-                    <p className="font-inter text-soft-white/70 mb-2">
-                      📍 {project.location}
-                    </p>
-                    <p className="font-inter text-soft-white/60 text-sm mb-4">
-                      {project.category}
-                    </p>
-                    <p className="font-inter text-soft-white/80 leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            {/* Note */}
+            <div className="text-center mb-16">
+              <p className="font-inter text-soft-white/60 italic text-sm max-w-2xl mx-auto">
+                {t('portfolio.note')}
+              </p>
             </div>
 
             {/* Call to Action */}
