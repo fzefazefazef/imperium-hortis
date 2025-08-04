@@ -10,22 +10,22 @@ const Portfolio = () => {
     {
       title: t('portfolio.inspiration1.title'),
       description: t('portfolio.inspiration1.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=80"
+      imageUrl: "/lovable-uploads/7a082011-48b3-4306-80d8-ce1e622452d2.png"
     },
     {
       title: t('portfolio.inspiration2.title'),
       description: t('portfolio.inspiration2.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&q=80"
+      imageUrl: "/lovable-uploads/38da725e-39e9-45ef-a4e5-c5553b93a25e.png"
     },
     {
       title: t('portfolio.inspiration3.title'),
       description: t('portfolio.inspiration3.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1523309375637-b3f4f2347f2d?w=800&h=600&fit=crop&q=80"
+      imageUrl: "/lovable-uploads/64b79018-b45e-43d4-9bb6-84e10796b05f.png"
     },
     {
       title: t('portfolio.inspiration4.title'),
       description: t('portfolio.inspiration4.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1502780402662-acc3917949e5?w=800&h=600&fit=crop&q=80"
+      imageUrl: "/lovable-uploads/460c4834-1cf3-40f1-a24c-b50659ad31c2.png"
     }
   ];
 
