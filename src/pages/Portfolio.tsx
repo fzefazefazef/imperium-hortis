@@ -10,22 +10,22 @@ const Portfolio = () => {
     {
       title: t('portfolio.inspiration1.title'),
       description: t('portfolio.inspiration1.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=600&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop&q=80"
     },
     {
       title: t('portfolio.inspiration2.title'),
       description: t('portfolio.inspiration2.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&h=600&fit=crop&q=80"
     },
     {
       title: t('portfolio.inspiration3.title'),
       description: t('portfolio.inspiration3.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&h=600&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop&q=80"
     },
     {
       title: t('portfolio.inspiration4.title'),
       description: t('portfolio.inspiration4.desc'),
-      imageUrl: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop"
+      imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80"
     }
   ];
 
