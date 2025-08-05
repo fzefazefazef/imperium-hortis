@@ -66,7 +66,7 @@ const translations = {
     'category.innovation': 'Innovation paysagère',
     'category.domain': 'Grand domaine',
     'category.commercial': 'Espace commercial',
-    'portfolio.subtitle': 'Nous mettons actuellement en place nos premiers projets, réalisés avec soin et exigence. En attendant de pouvoir vous les présenter, voici un aperçu de notre vision du jardin haut de gamme.',
+    'portfolio.subtitle': 'Chaque jardin raconte une histoire.\nNotre vision s\'inspire des paysages méditerranéens, mêlant sobriété naturelle, lignes architecturées et élégance végétale. Cette sélection d\'ambiances reflète notre exigence esthétique, notre sens du détail et l\'art de créer des espaces extérieurs uniques, durables et profondément harmonieux.',
     'portfolio.inspirations.title': 'Nos Inspirations',
     'portfolio.inspiration1.title': 'Ambiance méditerranéenne chic',
     'portfolio.inspiration1.desc': 'Oliviers sculptés, pierres naturelles, terrasses lumineuses aux lignes douces.',

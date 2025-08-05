@@ -43,9 +43,14 @@ const Portfolio = () => {
               Portfolio
             </h1>
             
-            <p className="font-inter text-xl text-soft-white/80 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-              {t('portfolio.subtitle')}
-            </p>
+            <div className="text-center mb-16 max-w-4xl mx-auto">
+              <p className="font-cinzel text-2xl text-sage-green mb-6 italic">
+                Chaque jardin raconte une histoire.
+              </p>
+              <p className="font-inter text-lg text-soft-white/90 leading-relaxed">
+                Notre vision s'inspire des paysages méditerranéens, mêlant sobriété naturelle, lignes architecturées et élégance végétale. Cette sélection d'ambiances reflète notre exigence esthétique, notre sens du détail et l'art de créer des espaces extérieurs uniques, durables et profondément harmonieux.
+              </p>
+            </div>
 
             {/* Inspirations Section */}
             <h2 className="font-cinzel text-3xl font-semibold text-soft-white mb-12 text-center">
