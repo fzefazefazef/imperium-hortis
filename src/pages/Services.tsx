@@ -24,12 +24,6 @@ const Services = () => {
       icon: "🗿"
     },
     {
-      title: t('services.service1.title'),
-      description: t('services.service1.desc'),
-      features: t('services.service1.features').split(', '),
-      icon: "🌺"
-    },
-    {
       title: t('services.service2.title'),
       description: t('services.service2.desc'),
       features: t('services.service2.features').split(', '),
@@ -46,6 +40,12 @@ const Services = () => {
       description: t('services.service4.desc'),
       features: t('services.service4.features').split(', '),
       icon: "✨"
+    },
+    {
+      title: t('services.service1.title'),
+      description: t('services.service1.desc'),
+      features: t('services.service1.features').split(', '),
+      icon: "🌺"
     }
   ];
 
