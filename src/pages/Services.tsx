@@ -103,13 +103,13 @@ const Services = () => {
                 <OptimizedButton3DWrapper 
                   isVisible={buttonVisible} 
                   delay={0.2}
-                  className="w-full sm:w-auto"
+                  className="inline-block"
                 >
                   <Link to="/contact">
                     <Button 
                       variant="hero-luxury" 
                       size="xl" 
-                      className={`relative overflow-hidden font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
+                      className={`relative overflow-hidden font-inter font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 ${
                         buttonVisible ? 'animate-fade-in animate-light-sweep' : ''
                       }`}
                       style={{ 
