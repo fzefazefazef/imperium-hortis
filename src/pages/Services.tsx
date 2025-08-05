@@ -12,6 +12,18 @@ const Services = () => {
 
   const services = [
     {
+      title: t('services.service5.title'),
+      description: t('services.service5.desc'),
+      features: t('services.service5.features').split(', '),
+      icon: "💡"
+    },
+    {
+      title: t('services.service6.title'),
+      description: t('services.service6.desc'),
+      features: t('services.service6.features').split(', '),
+      icon: "🗿"
+    },
+    {
       title: t('services.service1.title'),
       description: t('services.service1.desc'),
       features: t('services.service1.features').split(', '),
@@ -34,18 +46,6 @@ const Services = () => {
       description: t('services.service4.desc'),
       features: t('services.service4.features').split(', '),
       icon: "✨"
-    },
-    {
-      title: t('services.service5.title'),
-      description: t('services.service5.desc'),
-      features: t('services.service5.features').split(', '),
-      icon: "💡"
-    },
-    {
-      title: t('services.service6.title'),
-      description: t('services.service6.desc'),
-      features: t('services.service6.features').split(', '),
-      icon: "🎨"
     }
   ];
 
