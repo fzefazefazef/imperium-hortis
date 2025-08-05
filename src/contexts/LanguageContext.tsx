@@ -67,7 +67,7 @@ const translations = {
     'category.domain': 'Grand domaine',
     'category.commercial': 'Espace commercial',
     'portfolio.subtitle': 'Chaque jardin raconte une histoire.\nNotre vision s\'inspire des paysages méditerranéens, mêlant sobriété naturelle, lignes architecturées et élégance végétale. Cette sélection d\'ambiances reflète notre exigence esthétique, notre sens du détail et l\'art de créer des espaces extérieurs uniques, durables et profondément harmonieux.',
-    'portfolio.inspirations.title': 'Nos Inspirations',
+    'portfolio.inspirations.title': 'Signatures Paysagères',
     'portfolio.inspiration1.title': 'Ambiance méditerranéenne chic',
     'portfolio.inspiration1.desc': 'Oliviers sculptés, pierres naturelles, terrasses lumineuses aux lignes douces.',
     'portfolio.inspiration2.title': 'Minimalisme végétal',
