@@ -45,7 +45,7 @@ const Services = () => {
       title: "Gestion Premium des Pelouses & Arrosage",
       description: "Suivi technique et esthétique de vos gazons : tonte soignée, fertilisation adaptée, traitement ciblé, contrôle des arrosages automatiques. Chaque surface herbacée est entretenue avec précision pour un rendu impeccable en toute saison.",
       features: ["Tonte soignée", "Fertilisation adaptée", "Traitement ciblé", "Contrôle arrosage automatique"],
-      icon: "🌱"
+      icon: "🌾"
     }
   ];
 
