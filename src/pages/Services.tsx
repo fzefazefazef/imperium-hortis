@@ -12,10 +12,10 @@ const Services = () => {
 
   const services = [
     {
-      title: t('services.service5.title'),
-      description: t('services.service5.desc'),
-      features: t('services.service5.features').split(', '),
-      icon: "💡"
+      title: "Mise en Scène Végétale Saisonnière",
+      description: "Création de décors floraux sur-mesure selon les saisons : compositions élégantes, jeux de textures et palettes végétales raffinées pour sublimer vos extérieurs tout au long de l'année.",
+      features: ["Décors floraux sur-mesure", "Compositions saisonnières", "Palettes végétales raffinées", "Sublimation des extérieurs"],
+      icon: "🌸"
     },
     {
       title: t('services.service6.title'),
@@ -24,16 +24,16 @@ const Services = () => {
       icon: "🗿"
     },
     {
-      title: t('services.service2.title'),
-      description: t('services.service2.desc'),
-      features: t('services.service2.features').split(', '),
-      icon: "🏛️"
+      title: "Optimisation & Rafraîchissement de Jardins Existants",
+      description: "Revalorisation de jardins déjà aménagés : réorganisation des volumes, apports végétaux ciblés, amélioration de la lisibilité des espaces… Une nouvelle élégance sans tout reconstruire.",
+      features: ["Réorganisation des volumes", "Apports végétaux ciblés", "Amélioration de la lisibilité", "Nouvelle élégance"],
+      icon: "🏡"
     },
     {
-      title: t('services.service3.title'),
-      description: t('services.service3.desc'),
-      features: t('services.service3.features').split(', '),
-      icon: "⛲"
+      title: "Sélection & Fourniture de Plantes Haut de Gamme",
+      description: "Conseil personnalisé et sourcing de plantes d'exception : oliviers centenaires, agrumes rares, topiaires, vivaces méditerranéennes… Chaque sujet végétal est choisi avec soin et distinction.",
+      features: ["Oliviers centenaires", "Agrumes rares", "Topiaires sur-mesure", "Vivaces méditerranéennes"],
+      icon: "🌿"
     },
     {
       title: t('services.service4.title'),
@@ -42,10 +42,10 @@ const Services = () => {
       icon: "✨"
     },
     {
-      title: t('services.service1.title'),
-      description: t('services.service1.desc'),
-      features: t('services.service1.features').split(', '),
-      icon: "🌺"
+      title: "Gestion Premium des Pelouses & Arrosage",
+      description: "Suivi technique et esthétique de vos gazons : tonte soignée, fertilisation adaptée, traitement ciblé, contrôle des arrosages automatiques. Chaque surface herbacée est entretenue avec précision pour un rendu impeccable en toute saison.",
+      features: ["Tonte soignée", "Fertilisation adaptée", "Traitement ciblé", "Contrôle arrosage automatique"],
+      icon: "🌱"
     }
   ];
 
