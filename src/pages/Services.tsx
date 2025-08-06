@@ -31,8 +31,8 @@ const Services = () => {
     },
     {
       title: "Sélection & Fourniture de Plantes Haut de Gamme",
-      description: "Conseil personnalisé et sourcing de plantes d'exception : oliviers centenaires, agrumes rares, topiaires, vivaces méditerranéennes… Chaque sujet végétal est choisi avec soin et distinction.",
-      features: ["Oliviers centenaires", "Agrumes rares", "Topiaires sur-mesure", "Vivaces méditerranéennes"],
+      description: "Conseil personnalisé et sourcing de plantes d'exception : oliviers, agrumes rares, topiaires, vivaces méditerranéennes… Chaque sujet végétal est choisi avec soin et distinction.",
+      features: ["Oliviers", "Agrumes rares", "Topiaires sur-mesure", "Vivaces méditerranéennes"],
       icon: "🌿"
     },
     {
