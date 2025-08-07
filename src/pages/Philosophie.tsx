@@ -12,13 +12,13 @@ const Philosophie = () => {
         {/* Hero Section */}
         <div className="relative pt-40 pb-32">
           <div className="max-w-4xl mx-auto px-8 text-center">
-            <h1 className="font-cinzel text-5xl md:text-7xl font-light text-soft-white mb-8 tracking-wide">
+            <h1 className="font-cinzel text-4xl md:text-6xl font-light text-soft-white mb-4 tracking-wide">
               L'ART DU JARDINAGE
             </h1>
-            <div className="w-32 h-px bg-sage-green mx-auto mb-8"></div>
-            <h2 className="font-cinzel text-2xl md:text-3xl font-light text-sage-green tracking-wider">
+            <div className="w-32 h-px bg-sage-green mx-auto mb-6"></div>
+            <h1 className="font-cinzel text-4xl md:text-6xl font-light text-soft-white tracking-wide">
               IMPÉRIAL
-            </h2>
+            </h1>
           </div>
         </div>
 
@@ -26,12 +26,12 @@ const Philosophie = () => {
         <div className="max-w-5xl mx-auto px-8">
           
           {/* Introduction */}
-          <section className="mb-32">
+          <section className="mb-24">
             <div className="text-center max-w-4xl mx-auto">
-              <p className="font-playfair text-2xl md:text-3xl text-soft-white font-light leading-relaxed mb-12 italic">
+              <p className="font-playfair text-2xl md:text-3xl text-soft-white font-light leading-relaxed mb-10 italic">
                 "Chez Imperium Hortis, chaque jardin est une œuvre vivante."
               </p>
-              <div className="space-y-8 text-lg md:text-xl text-soft-white/85 font-light leading-loose">
+              <div className="space-y-6 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed">
                 <p>
                   Un théâtre naturel pensé pour durer, pour émouvoir et pour sublimer l'architecture qu'il entoure.
                   Notre philosophie puise dans la noblesse des paysages méditerranéens, dans l'héritage des jardins antiques et dans le raffinement des villas d'exception de la Riviera.
@@ -44,11 +44,11 @@ const Philosophie = () => {
           </section>
 
           {/* Separator */}
-          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-32"></div>
+          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-24"></div>
 
           {/* Héritage */}
-          <section className="mb-32">
-            <div className="max-w-4xl mx-auto space-y-12 text-lg md:text-xl text-soft-white/85 font-light leading-loose text-center">
+          <section className="mb-24">
+            <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed text-center">
               <p>
                 Imperium Hortis s'inscrit dans la continuité d'un savoir-faire transmis depuis plusieurs générations.
                 Formé à la fois par l'exigence familiale et les codes contemporains du paysage haut de gamme, Imperium Hortis est porté par une nouvelle génération passionnée, exigeante et déterminée à faire évoluer les standards du jardin haut de gamme.
@@ -64,16 +64,16 @@ const Philosophie = () => {
           </section>
 
           {/* Separator */}
-          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-32"></div>
+          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-24"></div>
 
           {/* Vision */}
-          <section className="mb-32">
-            <div className="text-center mb-20">
+          <section className="mb-24">
+            <div className="text-center mb-16">
               <h3 className="font-cinzel text-3xl md:text-4xl font-light text-sage-green tracking-wide">
                 Une vision construite avec exigence
               </h3>
             </div>
-            <div className="max-w-4xl mx-auto space-y-12 text-lg md:text-xl text-soft-white/85 font-light leading-loose text-center">
+            <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed text-center">
               <p>
                 Imperium Hortis porte une ambition claire : offrir, à terme, une maîtrise complète et harmonieuse de l'art des extérieurs — des jardins aux terrasses, de l'arrosage à la mise en lumière.
               </p>
@@ -91,16 +91,16 @@ const Philosophie = () => {
           </section>
 
           {/* Separator */}
-          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-32"></div>
+          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-24"></div>
 
           {/* Innovation */}
-          <section className="mb-32">
-            <div className="text-center mb-20">
+          <section className="mb-24">
+            <div className="text-center mb-16">
               <h3 className="font-cinzel text-3xl md:text-4xl font-light text-sage-green tracking-wide">
                 Innovation, tradition & excellence durable
               </h3>
             </div>
-            <div className="max-w-4xl mx-auto space-y-12 text-lg md:text-xl text-soft-white/85 font-light leading-loose text-center">
+            <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed text-center">
               <p className="text-2xl font-light italic text-sage-green/90">
                 "Chaque projet confié à Imperium Hortis est traité comme une pièce unique."
               </p>
@@ -114,11 +114,11 @@ const Philosophie = () => {
           </section>
 
           {/* Separator */}
-          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-32"></div>
+          <div className="w-24 h-px bg-sage-green/30 mx-auto mb-24"></div>
 
           {/* Piliers d'engagement */}
-          <section className="mb-40">
-            <div className="text-center mb-24">
+          <section className="mb-32">
+            <div className="text-center mb-20">
               <h3 className="font-cinzel text-3xl md:text-4xl font-light text-sage-green tracking-wide mb-6">
                 Nos piliers d'engagement
               </h3>
@@ -127,21 +127,21 @@ const Philosophie = () => {
               <div className="text-center group">
                 <div className="text-5xl mb-8 transform group-hover:scale-110 transition-transform duration-300">🌿</div>
                 <h4 className="font-cinzel text-xl font-light text-sage-green mb-6 tracking-wide">AUTHENTICITÉ</h4>
-                <p className="font-playfair text-soft-white/70 leading-relaxed font-light">
+                <p className="font-playfair text-soft-white/70 leading-normal font-light">
                   Essences locales et plantes nobles, choisies pour leur beauté et leur adaptation naturelle.
                 </p>
               </div>
               <div className="text-center group">
                 <div className="text-5xl mb-8 transform group-hover:scale-110 transition-transform duration-300">⚡</div>
                 <h4 className="font-cinzel text-xl font-light text-sage-green mb-6 tracking-wide">DURABILITÉ</h4>
-                <p className="font-playfair text-soft-white/70 leading-relaxed font-light">
+                <p className="font-playfair text-soft-white/70 leading-normal font-light">
                   Arrosages optimisés, écosystèmes équilibrés, pratiques respectueuses du climat méditerranéen.
                 </p>
               </div>
               <div className="text-center group">
                 <div className="text-5xl mb-8 transform group-hover:scale-110 transition-transform duration-300">👑</div>
                 <h4 className="font-cinzel text-xl font-light text-sage-green mb-6 tracking-wide">EXCELLENCE</h4>
-                <p className="font-playfair text-soft-white/70 leading-relaxed font-light">
+                <p className="font-playfair text-soft-white/70 leading-normal font-light">
                   Finitions d'exception, suivi minutieux, service à la hauteur des plus grandes exigences.
                 </p>
               </div>
