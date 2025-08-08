@@ -21,7 +21,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Imperium Hortis',
-    'hero.subtitle': "L'art du jardin méditerranéen depuis trois générations. Nous créons des espaces verts d'exception qui capturent l'essence éternelle de la Riviera française.",
+    'hero.subtitle': "Imperium Hortis – Création et Entretien de Jardins Méditerranéens de Prestige sur la Côte d'Azur",
     'hero.btn.services': 'Nos savoir-faire',
     'hero.btn.consultation': 'Consultation privée',
     
@@ -131,8 +131,8 @@ const translations = {
     // About
     'about.title': 'Une tradition d\'excellence',
     'about.text': 'Depuis 1923, notre maison perpétue l\'art du jardin méditerranéen avec une passion inégalée. Chaque création reflète notre engagement envers l\'excellence et notre respect profond pour la nature provençale.',
-    'about.intro.text1': 'Depuis 1952, notre maison façonne les jardins les plus prestigieux de la Côte d\'Azur. De Monaco à Saint-Tropez, nous créons des havres de paix qui transcendent les saisons.',
-    'about.intro.text2': 'Chaque projet est une œuvre unique, pensée en harmonie avec l\'architecture, le climat méditerranéen et la vision de nos clients.',
+    'about.intro.text1': 'Entretien et création d\'espaces extérieurs de prestige sur la Côte d\'Azur : un savoir-faire familial depuis trois générations\n\nDepuis trois générations, Imperium Hortis façonne et entretient des espaces extérieurs prestigieux sur la Côte d\'Azur.',
+    'about.intro.text2': 'De Monaco à Saint-Tropez, nous créons et préservons des jardins d\'exception qui allient élégance méditerranéenne et raffinement intemporel.\nChaque projet, qu\'il s\'agisse de création ou d\'entretien, est une œuvre sur-mesure, conçue en parfaite harmonie avec l\'architecture locale, le climat unique de la Riviera et les exigences d\'une clientèle exigeante.',
     'about.gallery': 'Galerie de nos créations les plus emblématiques',
     
     // Home Services
