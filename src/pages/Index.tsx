@@ -94,7 +94,7 @@ const Index = () => {
               {
                 title: t('home.services.terraces.title'), 
                 description: t('home.services.terraces.desc'),
-                icon: "🏔️"
+                icon: "💡"
               },
               {
                 title: t('home.services.art.title'),

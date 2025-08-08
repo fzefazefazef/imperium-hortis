@@ -139,8 +139,8 @@ const translations = {
     'home.services.title': 'Nos savoir-faire',
     'home.services.gardens.title': 'Jardins d\'exception',
     'home.services.gardens.desc': 'Conception et réalisation de jardins sur-mesure pour villas de prestige',
-    'home.services.terraces.title': 'Terrasses panoramiques',
-    'home.services.terraces.desc': 'Aménagement de terrasses avec vue sur la Méditerranée',
+    'home.services.terraces.title': 'Éclairage paysager',
+    'home.services.terraces.desc': 'Mise en lumière artistique pour sublimer votre jardin la nuit',
     'home.services.art.title': 'Entretien paysager',
     'home.services.art.desc': 'Sculptures végétales et soins personnalisés pour jardins de prestige',
     
