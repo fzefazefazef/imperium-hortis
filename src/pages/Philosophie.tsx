@@ -34,7 +34,7 @@ const Philosophie = () => {
               <div className="space-y-6 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed">
                 <p>
                   Un théâtre naturel pensé pour durer, pour émouvoir et pour sublimer l'architecture qu'il entoure.
-                  Notre philosophie puise dans la noblesse des paysages méditerranéens, dans l'héritage des jardins antiques et dans le raffinement des villas d'exception de la Riviera.
+                  Notre philosophie puise dans la noblesse des paysages méditerranéens, dans l'héritage des jardins antiques et dans le raffinement des villas d'exception de la Côte d'Azur.
                 </p>
                 <p className="italic text-sage-green/90">
                   Nous ne composons pas des jardins : nous écrivons des poèmes végétaux, à travers des harmonies de textures, de parfums et de lumière, évoluant au fil des saisons.
@@ -75,7 +75,7 @@ const Philosophie = () => {
             </div>
             <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed text-center">
               <p>
-                Imperium Hortis porte une ambition claire : offrir, à terme, une maîtrise complète et harmonieuse de l'art des extérieurs — des jardins aux terrasses, de l'arrosage à la mise en lumière.
+                Imperium Hortis porte une ambition claire : offrir, à terme, une maîtrise complète et harmonieuse de l'art des extérieurs des jardins aux terrasses, de l'arrosage à la mise en lumière.
               </p>
               <p>
                 Cette vision s'inscrit dans une démarche réfléchie et pérenne, où chaque étape se déploie avec rigueur, un sens aigu du détail et la volonté de tisser une relation de confiance durable avec chaque client.

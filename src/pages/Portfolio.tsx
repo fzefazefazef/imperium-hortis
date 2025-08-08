@@ -84,7 +84,7 @@ const Portfolio = () => {
 
             {/* Note */}
             <div className="text-center mb-16">
-              <p className="font-inter text-soft-white/60 italic text-sm max-w-2xl mx-auto">
+              <p className="font-inter text-soft-white/40 italic text-xs max-w-2xl mx-auto opacity-70">
                 {t('portfolio.note')}
               </p>
             </div>
