@@ -27,42 +27,39 @@ const Index = () => {
 
       {/* Introduction Section */}
       <section className="py-32 px-8 md:px-16 lg:px-24 bg-gradient-to-b from-deep-charcoal to-midnight-blue">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center animate-fade-in">
-            <h2 className="font-cinzel text-2xl md:text-3xl lg:text-4xl font-light text-soft-white mb-12 tracking-wide">
-              {t('about.title')}
-            </h2>
-            
-            {/* Elegant Separator */}
-            <div className="flex items-center justify-center mb-16">
-              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1 max-w-32"></div>
-              <div className="mx-6 text-whisper-gold/70 text-lg">◆</div>
-              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1 max-w-32"></div>
-            </div>
-            
-            <div className="max-w-5xl mx-auto space-y-8">
-              <div className="font-cinzel text-xl md:text-2xl text-soft-white/90 leading-relaxed font-light">
-                {t('about.intro.text1').split('\n\n').map((paragraph, index) => (
-                  <p key={index} className={index === 0 ? "text-sage-green/90 italic mb-6" : "mb-6"}>
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in">
+              <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:!text-black mb-8">
+                {t('about.title')}
+              </h2>
               
-              <div className="font-cinzel text-lg md:text-xl text-soft-white/85 leading-relaxed font-light max-w-4xl mx-auto">
-                {t('about.intro.text2').split('\n').map((line, index) => (
-                  <p key={index} className="mb-4 last:mb-0">
-                    {line}
-                  </p>
-                ))}
+              <div className="space-y-6">
+                <div className="font-cinzel text-lg text-soft-white/90 leading-relaxed">
+                  {t('about.intro.text1').split('\n\n').map((paragraph, index) => (
+                    <p key={index} className={index === 0 ? "text-sage-green/90 italic mb-6 text-xl" : "mb-6"}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                
+                <div className="font-cinzel text-lg text-soft-white/85 leading-relaxed">
+                  {t('about.intro.text2').split('\n').map((line, index) => (
+                    <p key={index} className="mb-4 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
             
-            {/* Ornamental Bottom */}
-            <div className="flex items-center justify-center mt-20">
-              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/30 to-transparent flex-1 max-w-24"></div>
-              <div className="mx-4 text-whisper-gold/50 text-sm">❦</div>
-              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/30 to-transparent flex-1 max-w-24"></div>
+            <div className="relative animate-fade-in">
+              <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-whisper-gold/20 flex items-center justify-center">
+                <p className="font-cinzel text-soft-white/60 text-center px-8">
+                  [{t('about.gallery')}]
+                </p>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-whisper-gold/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>

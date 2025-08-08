@@ -21,7 +21,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Imperium Hortis',
-    'hero.subtitle': "Imperium Hortis – Création et Entretien de Jardins Méditerranéens de Prestige sur la Côte d'Azur",
+    'hero.subtitle': "Création et Entretien de Jardins Méditerranéens de Prestige sur la Côte d'Azur",
     'hero.btn.services': 'Nos savoir-faire',
     'hero.btn.consultation': 'Consultation privée',
     
