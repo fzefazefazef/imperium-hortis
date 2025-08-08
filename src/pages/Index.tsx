@@ -54,10 +54,12 @@ const Index = () => {
             </div>
             
             <div className="relative animate-fade-in">
-              <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-whisper-gold/20 flex items-center justify-center">
-                <p className="font-cinzel text-soft-white/60 text-center px-8">
-                  [{t('about.gallery')}]
-                </p>
+              <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-whisper-gold/20 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/ee27c698-a25c-4ad1-b54c-c46f6a762fff.png" 
+                  alt="Jardin méditerranéen avec lavandes et oliviers - Imperium Hortis"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-whisper-gold/20 rounded-full blur-xl"></div>
             </div>
