@@ -63,7 +63,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
   ];
 
   return (
-    <div className="sm:hidden">
+    <div className="xl:hidden">
       {/* Menu Toggle Button */}
       <Button
         variant="ghost"
