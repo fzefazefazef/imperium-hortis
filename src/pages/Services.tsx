@@ -128,7 +128,7 @@ const Services = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/">
+              <Link to="/#top">
                 <Button variant="minimal" size="xl" className="font-inter font-medium">
                   {t('services.back')}
                 </Button>

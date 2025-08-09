@@ -18,7 +18,7 @@ const Index = () => {
   const { ref: contactButtonsRef, isIntersecting: contactButtonsVisible } = useIntersectionObserver();
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div id="top" className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <LogoHeader isVisible={!isMenuOpen} />
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
@@ -258,8 +258,8 @@ const Index = () => {
                 <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
                   <span className="text-whisper-gold text-lg">☎</span>
                 </div>
-                <a href="tel:+33658404191" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
-                  +33 6 58 40 41 91
+                <a href="tel:+33763638357" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
+                  +33 7 63 63 83 57
                 </a>
               </div>
               <div className="flex items-center space-x-4 group">

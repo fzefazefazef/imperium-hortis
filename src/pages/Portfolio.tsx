@@ -153,11 +153,14 @@ const Portfolio = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/">
+              <Link to="/#top">
                 <Button variant="minimal" size="xl" className="font-inter font-medium">
                   {t('portfolio.back')}
                 </Button>
               </Link>
+              <p className="mt-2 font-inter text-[10px] leading-tight opacity-40">
+                {t('portfolio.note')}
+              </p>
             </div>
           </div>
         </div>

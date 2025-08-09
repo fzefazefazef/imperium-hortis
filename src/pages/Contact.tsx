@@ -213,11 +213,11 @@ const Contact = () => {
                       <div className="text-whisper-gold text-xl">📞</div>
                       <div className="flex-1">
                         <h4 className="font-inter font-medium text-soft-white mb-1">{t('contact.info.phone')}</h4>
-                        <p className="font-inter text-soft-white/70 mb-3">+33 6 58 40 41 91</p>
+                        <p className="font-inter text-soft-white/70 mb-3">+33 7 63 63 83 57</p>
                         
                         <div className="flex items-center space-x-3">
                           <a 
-                            href="https://wa.me/33658404191" 
+                            href="https://wa.me/33763638357" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="flex items-center space-x-2 px-3 py-2 bg-green-600/20 hover:bg-green-600/30 rounded-lg border border-green-500/30 hover:border-green-500/50 transition-all duration-200 group"
@@ -276,7 +276,7 @@ const Contact = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/">
+              <Link to="/#top">
                 <Button variant="minimal" size="xl" className="font-inter font-medium">
                   {t('contact.back')}
                 </Button>

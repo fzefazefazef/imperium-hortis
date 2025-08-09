@@ -108,7 +108,7 @@ const translations = {
     
     // Philosophy Page
     'philosophy.title': 'Notre Philosophie',
-    'philosophy.art.title': 'L\'Art du Jardinage Impérial',
+    'philosophy.art.title': 'L\'Art du Jardin Impérial',
     'philosophy.art.desc1': 'Chez Imperium Hortis, nous croyons que chaque jardin est une œuvre d\'art vivante, un testament à la beauté éternelle de la nature domestiquée par la main experte de l\'homme. Notre philosophie s\'enracine dans l\'excellence, la tradition et l\'innovation harmonieuse.',
     'philosophy.art.desc2': 'Nous ne créons pas simplement des jardins ; nous orchestrons des symphonies végétales qui évoluent avec les saisons, révélant de nouveaux mystères à chaque regard, à chaque promenade.',
     'philosophy.heritage.title': 'Excellence Héritée',

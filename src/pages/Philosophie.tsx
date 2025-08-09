@@ -12,12 +12,8 @@ const Philosophie = () => {
         {/* Hero Section */}
         <div className="relative pt-40 pb-32">
           <div className="max-w-4xl mx-auto px-8 text-center">
-            <h1 className="font-cinzel text-4xl md:text-6xl font-light text-soft-white mb-4 tracking-wide">
-              L'ART DU JARDINAGE
-            </h1>
-            <div className="w-32 h-px bg-sage-green mx-auto mb-6"></div>
-            <h1 className="font-cinzel text-4xl md:text-6xl font-light text-soft-white tracking-wide">
-              IMPÉRIAL
+            <h1 className="font-cinzel text-4xl md:text-6xl font-bold text-soft-white mb-8 text-center lg:!text-black">
+              {t('philosophy.art.title')}
             </h1>
           </div>
         </div>
@@ -150,7 +146,7 @@ const Philosophie = () => {
 
           {/* Call to Action */}
           <div className="text-center pb-32">
-            <Link to="/">
+            <Link to="/#top">
               <Button variant="outline" size="lg" className="font-cinzel font-light tracking-wider text-sage-green border-sage-green hover:bg-sage-green hover:text-deep-charcoal transition-all duration-300 px-12 py-4">
                 RETOUR À L'ACCUEIL
               </Button>
