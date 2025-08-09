@@ -50,10 +50,10 @@ const Layout: React.FC<LayoutProps> = ({
         <nav className="absolute top-16 lg:top-8 right-2 lg:right-8 z-30 hidden lg:block">
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
             {[
-              { name: t('nav.philosophie'), path: "/#top" },
-              { name: t('nav.services'), path: "/#top" },
-              { name: t('nav.portfolio'), path: "/#top" },
-              { name: t('nav.contact'), path: "/#top" }
+              { name: t('nav.philosophie'), path: "/philosophie" },
+              { name: t('nav.services'), path: "/services" },
+              { name: t('nav.portfolio'), path: "/portfolio" },
+              { name: t('nav.contact'), path: "/contact" }
             ].map((item, index) => (
               <Link
                 key={item.name}
