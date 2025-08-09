@@ -82,18 +82,8 @@ const Portfolio = () => {
               ))}
             </div>
 
-            {/* Note */}
-            <div className="text-center mb-16">
-              <p className="font-inter text-soft-white/40 italic text-xs max-w-2xl mx-auto opacity-70">
-                {t('portfolio.note')}
-              </p>
-            </div>
-
             {/* Call to Action */}
             <div ref={buttonsRef} className="bg-card/20 backdrop-blur-sm p-12 rounded-2xl border border-sage-green/20 text-center">
-              <h2 className="font-cinzel text-3xl font-semibold text-sage-green mb-6">
-                {t('portfolio.cta.title')}
-              </h2>
               <p className="font-inter text-lg text-soft-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
                 {t('portfolio.cta.desc')}
               </p>
