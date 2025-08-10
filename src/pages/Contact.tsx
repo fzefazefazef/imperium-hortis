@@ -32,8 +32,8 @@ const Contact = () => {
     
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.description) {
       toast({
-        title: "Erreur",
-        description: "Veuillez remplir tous les champs obligatoires.",
+        title: t('contact.error.title'),
+        description: t('contact.error.fields'),
         variant: "destructive",
       });
       return;
@@ -55,8 +55,8 @@ const Contact = () => {
       if (error) throw error;
 
       toast({
-        title: "Message envoyé !",
-        description: "Votre demande a été envoyée avec succès. Nous vous recontacterons rapidement.",
+        title: t('contact.success.title'),
+        description: t('contact.success.desc'),
       });
 
       // Reset form
@@ -72,8 +72,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+        title: t('contact.error.title'),
+        description: t('contact.error.send'),
         variant: "destructive",
       });
     } finally {
@@ -195,7 +195,7 @@ const Contact = () => {
                     className="w-full font-inter font-medium"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Envoi en cours..." : t('contact.form.submit')}
+                    {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                   </Button>
                 </form>
               </div>
@@ -222,17 +222,17 @@ const Contact = () => {
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="flex items-center space-x-2 px-3 py-2 bg-green-600/20 hover:bg-green-600/30 rounded-lg border border-green-500/30 hover:border-green-500/50 transition-all duration-200 group"
-                            title="Contacter via WhatsApp"
+                            title={t('contact.whatsapp')}
                           >
                             <img 
                               src={whatsappIcon}
-                              alt="WhatsApp" 
+                              alt={t('contact.whatsapp')} 
                               width="18" 
                               height="18" 
                               className="group-hover:scale-110 transition-transform duration-200"
                             />
-                            <span className="font-inter text-sm text-green-400 group-hover:text-green-300">
-                              Contactez-nous
+                             <span className="font-inter text-sm text-green-400 group-hover:text-green-300">
+                               {t('contact.whatsapp.button')}
                             </span>
                           </a>
                         </div>
@@ -256,11 +256,11 @@ const Contact = () => {
                     {t('contact.areas.title')}
                   </h3>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      "Cannes", "Monaco", "Nice", "Antibes",
-                      "Saint Paul de Vence", "Menton", "Grasse", "Saint Jean Cap-Ferrat"
-                    ].map((city) => (
+                   <div className="grid grid-cols-2 gap-4">
+                     {[
+                       t('cities.cannes'), t('cities.monaco'), t('cities.nice'), t('cities.antibes'),
+                       t('cities.saintpaul'), t('cities.menton'), t('cities.grasse'), t('cities.saintjean')
+                     ].map((city) => (
                       <div key={city} className="flex items-center space-x-2">
                         <span className="text-whisper-gold">•</span>
                         <span className="font-inter text-soft-white/80">{city}</span>

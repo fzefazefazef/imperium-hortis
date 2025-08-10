@@ -136,7 +136,7 @@ const Index = () => {
                onClick={() => navigate('/services')}
                className="font-cinzel font-medium hover:shadow-luxury hover:scale-110 transition-all duration-500"
              >
-               Découvrir nos savoir-faires
+               {t('services.button.discover')}
              </Button>
            </div>
          </div>
@@ -238,7 +238,7 @@ const Index = () => {
               <div className="w-8 h-px bg-whisper-gold/60"></div>
             </div>
             <p className="font-cinzel text-xl text-soft-graphite max-w-2xl mx-auto leading-relaxed italic tracking-wider">
-              "Là où les jardins murmurent la grandeur"
+              "{t('footer.tagline')}"
             </p>
           </div>
           

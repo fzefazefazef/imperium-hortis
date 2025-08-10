@@ -29,9 +29,11 @@ const Philosophie = () => {
                 "Chez Imperium Hortis, chaque jardin est une œuvre vivante."
               </p>
               <div className="space-y-6 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed">
-                <p>
-                  Un théâtre naturel pensé pour durer, pour émouvoir et pour sublimer l'architecture qu'il entoure.
-                  Notre philosophie puise dans la noblesse des paysages méditerranéens, dans l'héritage des jardins antiques et dans le raffinement des villas d'exception de la Côte d'Azur.
+                <p className="font-playfair text-xl text-sage-green/90 mb-6 leading-relaxed">
+                  {t('philosophy.intro1')}
+                </p>
+                <p className="font-playfair text-lg text-soft-white/90 leading-relaxed">
+                  {t('philosophy.intro2')}
                 </p>
                 <p className="italic text-sage-green/90">
                   Nous ne composons pas des jardins : nous écrivons des poèmes végétaux, à travers des harmonies de textures, de parfums et de lumière, évoluant au fil des saisons.
@@ -47,11 +49,11 @@ const Philosophie = () => {
           <section className="mb-24">
             <div className="max-w-4xl mx-auto space-y-8 text-lg md:text-xl text-soft-white/85 font-light leading-relaxed text-center">
               <p>
-                Imperium Hortis s'inscrit dans la continuité d'un savoir-faire transmis depuis plusieurs générations.
+                {t('philosophy.heritage')}
                 Formé à la fois par l'exigence familiale et les codes contemporains du paysage haut de gamme, Imperium Hortis est porté par une nouvelle génération passionnée, exigeante et déterminée à faire évoluer les standards du jardin haut de gamme.
               </p>
-              <p>
-                Chaque projet est le fruit d'une double exigence : respecter la tradition méditerranéenne tout en intégrant les besoins et les sensibilités d'aujourd'hui. 
+              <p className="font-playfair text-soft-white/80 leading-relaxed">
+                {t('philosophy.tradition')}
                 <span className="text-sage-green italic"> Ici, l'élégance naît de la rigueur.</span>
               </p>
               <p className="italic text-soft-white/70">
@@ -101,11 +103,11 @@ const Philosophie = () => {
               <p className="text-2xl font-light italic text-sage-green/90">
                 "Chaque projet confié à Imperium Hortis est traité comme une pièce unique."
               </p>
-              <p>
-                Nous unissons les techniques ancestrales aux solutions modernes, pour créer des écosystèmes respectueux, durables et esthétiquement puissants, s'inspirant délicatement de l'harmonie intemporelle des jardins méditerranéens antiques.
+              <p className="font-playfair text-sage-green/90 leading-normal font-light italic mb-6">
+                {t('philosophy.techniques')}
               </p>
               <p className="italic text-soft-white/70">
-                Le respect de la terre, l'élégance naturelle et la précision d'exécution guident chacun de nos gestes.
+                {t('philosophy.excellence')}
               </p>
             </div>
           </section>
@@ -156,7 +158,7 @@ const Philosophie = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              RETOUR À L'ACCUEIL
+              {t('philosophy.back')}
             </Button>
           </div>
         </div>
