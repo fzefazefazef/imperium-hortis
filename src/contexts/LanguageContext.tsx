@@ -135,56 +135,6 @@ const translations = {
     'about.intro.text2': 'De Monaco à Saint-Tropez, nous créons et préservons des jardins d\'exception qui allient élégance méditerranéenne et raffinement intemporel.\nChaque projet, qu\'il s\'agisse de création ou d\'entretien, est une œuvre sur-mesure, conçue en parfaite harmonie avec l\'architecture locale, le climat unique de la Riviera et les exigences d\'une clientèle exigeante.',
     'about.gallery': 'Galerie de nos créations les plus emblématiques',
     
-    // Footer tagline
-    'footer.tagline': '"Là où les jardins murmurent la grandeur"',
-    
-    // Contact form and messages
-    'contact.error.title': 'Erreur',
-    'contact.error.fields': 'Veuillez remplir tous les champs obligatoires.',
-    'contact.error.send': 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer.',
-    'contact.success.title': 'Message envoyé !',
-    'contact.success.desc': 'Votre demande a été envoyée avec succès. Nous vous recontacterons rapidement.',
-    'contact.form.sending': 'Envoi en cours...',
-    'contact.whatsapp': 'Contacter via WhatsApp',
-    'contact.whatsapp.button': 'Contactez-nous',
-    
-    // Philosophy page content
-    'philosophy.intro1': 'Un théâtre naturel pensé pour durer, pour émouvoir et pour sublimer l\'architecture qu\'il entoure.',
-    'philosophy.intro2': 'Notre philosophie puise dans la noblesse des paysages méditerranéens, dans l\'héritage des jardins antiques et dans le raffinement des villas d\'exception de la Côte d\'Azur.',
-    'philosophy.heritage': 'Imperium Hortis s\'inscrit dans la continuité d\'un savoir-faire transmis depuis plusieurs générations.',
-    'philosophy.tradition': 'Chaque projet est le fruit d\'une double exigence : respecter la tradition méditerranéenne tout en intégrant les besoins et les sensibilités d\'aujourd\'hui.',
-    'philosophy.techniques': 'Nous unissons les techniques ancestrales aux solutions modernes, pour créer des écosystèmes respectueux, durables et esthétiquement puissants, s\'inspirant délicatement de l\'harmonie intemporelle des jardins méditerranéens antiques.',
-    'philosophy.excellence': 'Le respect de la terre, l\'élégance naturelle et la précision d\'exécution guident chacun de nos gestes.',
-    
-    // Services page content  
-    'services.seasonal.title': 'Mise en Scène Végétale Saisonnière',
-    'services.seasonal.desc': 'Création de décors floraux sur-mesure selon les saisons : compositions élégantes, jeux de textures et palettes végétales raffinées pour sublimer vos extérieurs tout au long de l\'année.',
-    'services.seasonal.features': 'Décors floraux sur-mesure, Compositions saisonnières, Palettes végétales raffinées, Sublimation des extérieurs',
-    'services.optimization.title': 'Optimisation & Rafraîchissement de Jardins Existants',
-    'services.optimization.desc': 'Revalorisation de jardins déjà aménagés : réorganisation des volumes, apports végétaux ciblés, amélioration de la lisibilité des espaces… Une nouvelle élégance sans tout reconstruire.',
-    'services.optimization.features': 'Réorganisation des volumes, Apports végétaux ciblés, Amélioration de la lisibilité, Nouvelle élégance',
-    'services.plants.title': 'Sélection & Fourniture de Plantes Haut de Gamme',
-    'services.plants.desc': 'Conseil personnalisé et sourcing de plantes d\'exception : oliviers, agrumes rares, topiaires, vivaces méditerranéennes… Chaque sujet végétal est choisi avec soin et distinction.',
-    'services.plants.features': 'Oliviers, Agrumes rares, Topiaires sur-mesure, Vivaces méditerranéennes',
-    'services.lawn.title': 'Gestion Premium des Pelouses & Arrosage',
-    'services.lawn.desc': 'Suivi technique et esthétique de vos gazons : tonte soignée, fertilisation adaptée, traitement ciblé, contrôle des arrosages automatiques. Chaque surface herbacée est entretenue avec précision pour un rendu impeccable en toute saison.',
-    'services.lawn.features': 'Tonte soignée, Fertilisation adaptée, Traitement ciblé, Contrôle arrosage automatique',
-    'services.button.discover': 'Découvrir nos savoir-faires',
-    
-    // Cities for contact
-    'cities.cannes': 'Cannes',
-    'cities.monaco': 'Monaco', 
-    'cities.nice': 'Nice',
-    'cities.antibes': 'Antibes',
-    'cities.saintpaul': 'Saint Paul de Vence',
-    'cities.menton': 'Menton',
-    'cities.grasse': 'Grasse',
-    'cities.saintjean': 'Saint Jean Cap-Ferrat',
-    
-    // Portfolio content
-    'portfolio.intro.title': 'Chaque jardin raconte une histoire.',
-    'portfolio.intro.desc': 'Notre vision s\'inspire des paysages méditerranéens, mêlant sobriété naturelle, lignes architecturées et élégance végétale. Cette sélection d\'ambiances reflète notre exigence esthétique, notre sens du détail et l\'art de créer des espaces extérieurs uniques, durables et profondément harmonieux.',
-
     // Home Services
     'home.services.title': 'Nos savoir-faire',
     'home.services.gardens.title': 'Jardins d\'exception',
@@ -202,6 +152,7 @@ const translations = {
     
     // Footer
     'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'L\'excellence paysagère depuis 1952',
     'footer.contact': 'Contact',
     'footer.showroom': 'Showroom',
     'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
@@ -330,56 +281,6 @@ const translations = {
     'about.intro.text2': 'Each project is a unique work, designed in harmony with architecture, Mediterranean climate and our clients\' vision.',
     'about.gallery': 'Gallery of our most emblematic creations',
     
-    // Footer tagline
-    'footer.tagline': '"Where gardens whisper greatness"',
-    
-    // Contact form and messages
-    'contact.error.title': 'Error',
-    'contact.error.fields': 'Please fill in all required fields.',
-    'contact.error.send': 'An error occurred while sending. Please try again.',
-    'contact.success.title': 'Message sent!',
-    'contact.success.desc': 'Your request has been sent successfully. We will contact you soon.',
-    'contact.form.sending': 'Sending...',
-    'contact.whatsapp': 'Contact via WhatsApp',
-    'contact.whatsapp.button': 'Contact us',
-    
-    // Philosophy page content
-    'philosophy.intro1': 'A natural theater designed to last, to move and to enhance the architecture it surrounds.',
-    'philosophy.intro2': 'Our philosophy draws from the nobility of Mediterranean landscapes, from the heritage of ancient gardens and from the refinement of exceptional villas on the French Riviera.',
-    'philosophy.heritage': 'Imperium Hortis follows the continuity of know-how passed down through several generations.',
-    'philosophy.tradition': 'Each project is the result of a double requirement: respecting Mediterranean tradition while integrating today\'s needs and sensibilities.',
-    'philosophy.techniques': 'We unite ancestral techniques with modern solutions to create respectful, sustainable and aesthetically powerful ecosystems, delicately inspired by the timeless harmony of ancient Mediterranean gardens.',
-    'philosophy.excellence': 'Respect for the earth, natural elegance and precision of execution guide each of our gestures.',
-    
-    // Services page content
-    'services.seasonal.title': 'Seasonal Plant Staging',
-    'services.seasonal.desc': 'Creation of custom floral decorations according to the seasons: elegant compositions, texture games and refined plant palettes to enhance your exteriors throughout the year.',
-    'services.seasonal.features': 'Custom floral decorations, Seasonal compositions, Refined plant palettes, Exterior enhancement',
-    'services.optimization.title': 'Optimization & Refreshing of Existing Gardens',
-    'services.optimization.desc': 'Revaluation of already landscaped gardens: reorganization of volumes, targeted plant additions, improvement of space readability... A new elegance without rebuilding everything.',
-    'services.optimization.features': 'Volume reorganization, Targeted plant additions, Readability improvement, New elegance',
-    'services.plants.title': 'Selection & Supply of High-End Plants',
-    'services.plants.desc': 'Personalized advice and sourcing of exceptional plants: olive trees, rare citrus fruits, topiaries, Mediterranean perennials... Each plant subject is chosen with care and distinction.',
-    'services.plants.features': 'Olive trees, Rare citrus fruits, Custom topiaries, Mediterranean perennials',
-    'services.lawn.title': 'Premium Lawn & Irrigation Management',
-    'services.lawn.desc': 'Technical and aesthetic monitoring of your lawns: careful mowing, adapted fertilization, targeted treatment, automatic irrigation control. Each grassy surface is maintained with precision for an impeccable result in all seasons.',
-    'services.lawn.features': 'Careful mowing, Adapted fertilization, Targeted treatment, Automatic irrigation control',
-    'services.button.discover': 'Discover our expertise',
-    
-    // Cities for contact
-    'cities.cannes': 'Cannes',
-    'cities.monaco': 'Monaco',
-    'cities.nice': 'Nice', 
-    'cities.antibes': 'Antibes',
-    'cities.saintpaul': 'Saint Paul de Vence',
-    'cities.menton': 'Menton',
-    'cities.grasse': 'Grasse',
-    'cities.saintjean': 'Saint Jean Cap-Ferrat',
-    
-    // Portfolio content
-    'portfolio.intro.title': 'Each garden tells a story.',
-    'portfolio.intro.desc': 'Our vision is inspired by Mediterranean landscapes, mixing natural sobriety, architectural lines and plant elegance. This selection of atmospheres reflects our aesthetic requirements, our attention to detail and the art of creating unique, sustainable and deeply harmonious outdoor spaces.',
-
     // Home Services
     'home.services.title': 'Our expertise',
     'home.services.gardens.title': 'Exceptional gardens',
@@ -397,6 +298,7 @@ const translations = {
     
     // Footer
     'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'Landscape excellence since 1952',
     'footer.contact': 'Contact',
     'footer.showroom': 'Showroom',
     'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
@@ -525,56 +427,6 @@ const translations = {
     'about.intro.text2': 'Ogni progetto è un\'opera unica, pensata in armonia con l\'architettura, il clima mediterraneo e la visione dei nostri clienti.',
     'about.gallery': 'Galleria delle nostre creazioni più emblematiche',
     
-    // Footer tagline
-    'footer.tagline': '"Dove i giardini sussurrano grandezza"',
-    
-    // Contact form and messages
-    'contact.error.title': 'Errore',
-    'contact.error.fields': 'Si prega di compilare tutti i campi obbligatori.',
-    'contact.error.send': 'Si è verificato un errore durante l\'invio. Riprova.',
-    'contact.success.title': 'Messaggio inviato!',
-    'contact.success.desc': 'La vostra richiesta è stata inviata con successo. Vi ricontatteremo presto.',
-    'contact.form.sending': 'Invio in corso...',
-    'contact.whatsapp': 'Contatta via WhatsApp',
-    'contact.whatsapp.button': 'Contattaci',
-    
-    // Philosophy page content
-    'philosophy.intro1': 'Un teatro naturale pensato per durare, per emozionare e per sublimare l\'architettura che circonda.',
-    'philosophy.intro2': 'La nostra filosofia attinge dalla nobiltà dei paesaggi mediterranei, dall\'eredità dei giardini antichi e dalla raffinatezza delle ville d\'eccezione della Costa Azzurra.',
-    'philosophy.heritage': 'Imperium Hortis si inscrive nella continuità di un know-how trasmesso da diverse generazioni.',
-    'philosophy.tradition': 'Ogni progetto è il frutto di una doppia esigenza: rispettare la tradizione mediterranea integrando i bisogni e le sensibilità di oggi.',
-    'philosophy.techniques': 'Uniamo le tecniche ancestrali alle soluzioni moderne, per creare ecosistemi rispettosi, sostenibili ed esteticamente potenti, ispirandoci delicatamente all\'armonia senza tempo dei giardini mediterranei antichi.',
-    'philosophy.excellence': 'Il rispetto della terra, l\'eleganza naturale e la precisione di esecuzione guidano ognuno dei nostri gesti.',
-    
-    // Services page content
-    'services.seasonal.title': 'Scenografia Vegetale Stagionale',
-    'services.seasonal.desc': 'Creazione di decorazioni floreali su misura secondo le stagioni: composizioni eleganti, giochi di texture e palette vegetali raffinate per sublimare i vostri esterni durante tutto l\'anno.',
-    'services.seasonal.features': 'Decorazioni floreali su misura, Composizioni stagionali, Palette vegetali raffinate, Sublimazione degli esterni',
-    'services.optimization.title': 'Ottimizzazione e Rinnovamento di Giardini Esistenti',
-    'services.optimization.desc': 'Rivalutazione di giardini già paesaggistici: riorganizzazione dei volumi, apporti vegetali mirati, miglioramento della leggibilità degli spazi... Una nuova eleganza senza ricostruire tutto.',
-    'services.optimization.features': 'Riorganizzazione dei volumi, Apporti vegetali mirati, Miglioramento della leggibilità, Nuova eleganza',
-    'services.plants.title': 'Selezione e Fornitura di Piante di Alta Gamma',
-    'services.plants.desc': 'Consulenza personalizzata e sourcing di piante d\'eccezione: ulivi, agrumi rari, topiarie, perenni mediterranee... Ogni soggetto vegetale è scelto con cura e distinzione.',
-    'services.plants.features': 'Ulivi, Agrumi rari, Topiarie su misura, Perenni mediterranee',
-    'services.lawn.title': 'Gestione Premium dei Prati e Irrigazione',
-    'services.lawn.desc': 'Monitoraggio tecnico ed estetico dei vostri prati: taglio curato, fertilizzazione adattata, trattamento mirato, controllo degli irrigatori automatici. Ogni superficie erbosa è mantenuta con precisione per un risultato impeccabile in ogni stagione.',
-    'services.lawn.features': 'Taglio curato, Fertilizzazione adattata, Trattamento mirato, Controllo irrigazione automatica',
-    'services.button.discover': 'Scopri le nostre competenze',
-    
-    // Cities for contact
-    'cities.cannes': 'Cannes',
-    'cities.monaco': 'Monaco',
-    'cities.nice': 'Nizza',
-    'cities.antibes': 'Antibes',
-    'cities.saintpaul': 'Saint Paul de Vence',
-    'cities.menton': 'Mentone',
-    'cities.grasse': 'Grasse',
-    'cities.saintjean': 'Saint Jean Cap-Ferrat',
-    
-    // Portfolio content
-    'portfolio.intro.title': 'Ogni giardino racconta una storia.',
-    'portfolio.intro.desc': 'La nostra visione si ispira ai paesaggi mediterranei, mescolando sobrietà naturale, linee architettoniche ed eleganza vegetale. Questa selezione di atmosfere riflette la nostra esigenza estetica, il nostro senso del dettaglio e l\'arte di creare spazi esterni unici, sostenibili e profondamente armoniosi.',
-
     // Home Services
     'home.services.title': 'Le nostre competenze',
     'home.services.gardens.title': 'Giardini d\'eccezione',
@@ -592,6 +444,7 @@ const translations = {
     
     // Footer
     'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'Eccellenza paesaggistica dal 1952',
     'footer.contact': 'Contatto',
     'footer.showroom': 'Showroom',
     'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',

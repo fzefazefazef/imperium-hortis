@@ -13,9 +13,9 @@ const Services = () => {
 
   const services = [
     {
-      title: t('services.seasonal.title'),
-      description: t('services.seasonal.desc'),
-      features: t('services.seasonal.features').split(', '),
+      title: "Mise en Scène Végétale Saisonnière",
+      description: "Création de décors floraux sur-mesure selon les saisons : compositions élégantes, jeux de textures et palettes végétales raffinées pour sublimer vos extérieurs tout au long de l'année.",
+      features: ["Décors floraux sur-mesure", "Compositions saisonnières", "Palettes végétales raffinées", "Sublimation des extérieurs"],
       icon: "🌸"
     },
     {
@@ -25,15 +25,15 @@ const Services = () => {
       icon: "🗿"
     },
     {
-      title: t('services.optimization.title'),
-      description: t('services.optimization.desc'),
-      features: t('services.optimization.features').split(', '),
+      title: "Optimisation & Rafraîchissement de Jardins Existants",
+      description: "Revalorisation de jardins déjà aménagés : réorganisation des volumes, apports végétaux ciblés, amélioration de la lisibilité des espaces… Une nouvelle élégance sans tout reconstruire.",
+      features: ["Réorganisation des volumes", "Apports végétaux ciblés", "Amélioration de la lisibilité", "Nouvelle élégance"],
       icon: "🏡"
     },
     {
-      title: t('services.plants.title'),
-      description: t('services.plants.desc'),
-      features: t('services.plants.features').split(', '),
+      title: "Sélection & Fourniture de Plantes Haut de Gamme",
+      description: "Conseil personnalisé et sourcing de plantes d'exception : oliviers, agrumes rares, topiaires, vivaces méditerranéennes… Chaque sujet végétal est choisi avec soin et distinction.",
+      features: ["Oliviers", "Agrumes rares", "Topiaires sur-mesure", "Vivaces méditerranéennes"],
       icon: "🌿"
     },
     {
@@ -43,9 +43,9 @@ const Services = () => {
       icon: "✨"
     },
     {
-      title: t('services.lawn.title'),
-      description: t('services.lawn.desc'),
-      features: t('services.lawn.features').split(', '),
+      title: "Gestion Premium des Pelouses & Arrosage",
+      description: "Suivi technique et esthétique de vos gazons : tonte soignée, fertilisation adaptée, traitement ciblé, contrôle des arrosages automatiques. Chaque surface herbacée est entretenue avec précision pour un rendu impeccable en toute saison.",
+      features: ["Tonte soignée", "Fertilisation adaptée", "Traitement ciblé", "Contrôle arrosage automatique"],
       icon: "🌾"
     }
   ];
