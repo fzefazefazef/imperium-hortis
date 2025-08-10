@@ -19,10 +19,7 @@ const Index = () => {
 
   return (
     <div id="top" className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Logo et menu mobile cachés sur la page d'accueil quand le menu déroulant est disponible */}
-      <div className="xl:block hidden">
-        <LogoHeader isVisible={!isMenuOpen} />
-      </div>
+      <LogoHeader isVisible={!isMenuOpen} />
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
       {/* Hero Section */}
