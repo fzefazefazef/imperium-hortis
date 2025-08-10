@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
@@ -8,6 +8,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const Services = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const { ref: buttonRef, isIntersecting: buttonVisible } = useIntersectionObserver();
 
   const services = [
@@ -128,11 +129,17 @@ const Services = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/#top">
-                <Button variant="minimal" size="xl" className="font-inter font-medium">
-                  {t('services.back')}
-                </Button>
-              </Link>
+              <Button 
+                variant="minimal" 
+                size="xl" 
+                className="font-inter font-medium"
+                onClick={() => {
+                  navigate('/');
+                  window.scrollTo(0, 0);
+                }}
+              >
+                {t('services.back')}
+              </Button>
             </div>
           </div>
         </div>

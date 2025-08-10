@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
@@ -8,6 +8,7 @@ import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const Portfolio = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const { ref: buttonsRef, isIntersecting: buttonsVisible } = useIntersectionObserver();
 
   const inspirations = [
@@ -143,11 +144,17 @@ const Portfolio = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/#top">
-                <Button variant="minimal" size="xl" className="font-inter font-medium">
-                  {t('portfolio.back')}
-                </Button>
-              </Link>
+              <Button 
+                variant="minimal" 
+                size="xl" 
+                className="font-inter font-medium"
+                onClick={() => {
+                  navigate('/');
+                  window.scrollTo(0, 0);
+                }}
+              >
+                {t('portfolio.back')}
+              </Button>
               <p className="mt-2 font-inter text-[10px] leading-tight opacity-40">
                 {t('portfolio.note')}
               </p>

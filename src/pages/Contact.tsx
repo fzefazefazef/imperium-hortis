@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,6 +11,7 @@ import Layout from "@/components/Layout";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -276,11 +277,17 @@ const Contact = () => {
             </div>
 
             <div className="text-center mt-16">
-              <Link to="/#top">
-                <Button variant="minimal" size="xl" className="font-inter font-medium">
-                  {t('contact.back')}
-                </Button>
-              </Link>
+              <Button 
+                variant="minimal" 
+                size="xl" 
+                className="font-inter font-medium"
+                onClick={() => {
+                  navigate('/');
+                  window.scrollTo(0, 0);
+                }}
+              >
+                {t('contact.back')}
+              </Button>
             </div>
           </div>
         </div>

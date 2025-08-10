@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Layout from "@/components/Layout";
 
 const Philosophie = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   return (
     <Layout navTheme="default">
@@ -146,11 +147,17 @@ const Philosophie = () => {
 
           {/* Call to Action */}
           <div className="text-center pb-32">
-            <Link to="/#top">
-              <Button variant="outline" size="lg" className="font-cinzel font-light tracking-wider text-sage-green border-sage-green hover:bg-sage-green hover:text-deep-charcoal transition-all duration-300 px-12 py-4">
-                RETOUR À L'ACCUEIL
-              </Button>
-            </Link>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="font-cinzel font-light tracking-wider text-sage-green border-sage-green hover:bg-sage-green hover:text-deep-charcoal transition-all duration-300 px-12 py-4"
+              onClick={() => {
+                navigate('/');
+                window.scrollTo(0, 0);
+              }}
+            >
+              RETOUR À L'ACCUEIL
+            </Button>
           </div>
         </div>
       </div>
