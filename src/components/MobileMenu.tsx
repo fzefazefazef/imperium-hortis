@@ -100,8 +100,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                 ))}
               </div>
 
-              {/* Language Section */}
-              <div className="border-t border-whisper-gold/20 pt-6">
+              {/* Language Section - Hidden on tablet only */}
+              <div className="border-t border-whisper-gold/20 pt-6 md:hidden lg:block">
                 <button
                   onClick={() => setShowLanguages(!showLanguages)}
                   className="flex items-center justify-between w-full font-cinzel-decorative text-lg font-semibold text-whisper-gold mb-4"

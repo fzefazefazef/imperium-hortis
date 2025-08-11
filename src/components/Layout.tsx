@@ -48,16 +48,16 @@ const Layout: React.FC<LayoutProps> = ({
   };
 
   const isTablet = windowWidth >= 768 && windowWidth < 1024;
-  const shouldShowMobileMenu = !isTablet;
+  const shouldShowMobileMenu = windowWidth < 1280; // Show mobile menu on mobile and tablet
 
   return (
     <div className="min-h-screen">
       {showLogo && <LogoHeader isVisible={!isMenuOpen} />}
       {shouldShowMobileMenu && <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />}
       
-      {/* Desktop Navigation - Hidden on tablets */}
-      {showDesktopNav && !isTablet && (
-        <nav className="absolute top-16 2xl:top-8 right-2 2xl:right-8 z-30 hidden lg:block">
+      {/* Desktop Navigation - Visible on desktop only, hidden on tablet and mobile */}
+      {showDesktopNav && (
+        <nav className="absolute top-16 2xl:top-8 right-2 2xl:right-8 z-30 hidden xl:block">
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
             {[
               { name: t('nav.philosophie'), path: "/philosophie" },
