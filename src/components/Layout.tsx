@@ -40,7 +40,7 @@ const Layout: React.FC<LayoutProps> = ({
     return `${baseClasses} text-white lg:!text-black hover:text-whisper-gold lg:hover:!text-gray-700 after:bg-whisper-gold lg:after:bg-black`;
   };
 
-  const shouldShowMobileMenu = !(location.pathname === '/' && window.innerWidth >= 768 && window.innerWidth < 1536);
+  const shouldShowMobileMenu = !(window.innerWidth >= 768 && window.innerWidth < 1024);
 
   return (
     <div className="min-h-screen">
