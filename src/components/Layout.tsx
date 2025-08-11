@@ -40,10 +40,12 @@ const Layout: React.FC<LayoutProps> = ({
     return `${baseClasses} text-white lg:!text-black hover:text-whisper-gold lg:hover:!text-gray-700 after:bg-whisper-gold lg:after:bg-black`;
   };
 
+  const shouldShowMobileMenu = !(location.pathname === '/' && window.innerWidth >= 768 && window.innerWidth < 1536);
+
   return (
     <div className="min-h-screen">
       {showLogo && <LogoHeader isVisible={!isMenuOpen} />}
-      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+      {shouldShowMobileMenu && <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />}
       
       {/* Desktop Navigation - Only visible on very large screens (2xl and above) */}
       {showDesktopNav && (
