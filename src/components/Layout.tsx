@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LogoHeader from "@/components/LogoHeader";
 import MobileMenu from "@/components/MobileMenu";
 import { Link, useLocation } from "react-router-dom";
@@ -20,6 +20,13 @@ const Layout: React.FC<LayoutProps> = ({
   const { t } = useLanguage();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const getNavLinkClasses = () => {
     const baseClasses = "font-cinzel-decorative text-xs sm:text-sm font-medium transition-all duration-300 hover:scale-105 tracking-wider relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left text-right sm:text-left";
@@ -40,15 +47,16 @@ const Layout: React.FC<LayoutProps> = ({
     return `${baseClasses} text-white lg:!text-black hover:text-whisper-gold lg:hover:!text-gray-700 after:bg-whisper-gold lg:after:bg-black`;
   };
 
-  const shouldShowMobileMenu = !(window.innerWidth >= 768 && window.innerWidth < 1024);
+  const isTablet = windowWidth >= 768 && windowWidth < 1024;
+  const shouldShowMobileMenu = !isTablet;
 
   return (
     <div className="min-h-screen">
       {showLogo && <LogoHeader isVisible={!isMenuOpen} />}
       {shouldShowMobileMenu && <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />}
       
-      {/* Desktop Navigation - Hidden on tablets (768px-1024px), visible on desktop (1024px+) */}
-      {showDesktopNav && (
+      {/* Desktop Navigation - Hidden on tablets */}
+      {showDesktopNav && !isTablet && (
         <nav className="absolute top-16 2xl:top-8 right-2 2xl:right-8 z-30 hidden lg:block">
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
             {[
