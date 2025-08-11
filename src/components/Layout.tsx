@@ -47,9 +47,9 @@ const Layout: React.FC<LayoutProps> = ({
       {showLogo && <LogoHeader isVisible={!isMenuOpen} />}
       {shouldShowMobileMenu && <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />}
       
-      {/* Desktop Navigation - Only visible on very large screens (2xl and above) */}
+      {/* Desktop Navigation - Only visible on very large screens (2xl and above) and not on tablets */}
       {showDesktopNav && (
-        <nav className="absolute top-16 2xl:top-8 right-2 2xl:right-8 z-30 hidden 2xl:block">
+        <nav className="absolute top-16 2xl:top-8 right-2 2xl:right-8 z-30 hidden 3xl:block">
           <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
             {[
               { name: t('nav.philosophie'), path: "/philosophie" },
