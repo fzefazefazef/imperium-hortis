@@ -22,6 +22,22 @@ const Index = () => {
       <LogoHeader isVisible={!isMenuOpen} />
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
+      {/* CSS pour cacher les éléments de navigation sur tablette uniquement */}
+      <style>
+        {`
+          @media screen and (min-width: 768px) and (max-width: 1024px) {
+            /* Cache les liens de navigation du desktop */
+            nav[class*="absolute top-16"] {
+              display: none !important;
+            }
+            /* Cache les boutons de langue dans le menu mobile */
+            .border-t.border-whisper-gold\\/20.pt-6 {
+              display: none !important;
+            }
+          }
+        `}
+      </style>
+      
       {/* Hero Section */}
       <HeroSection />
 
