@@ -50,7 +50,6 @@ const translations = {
     'services.custom.desc': 'Chaque projet est unique. Nous créons des solutions personnalisées qui répondent parfaitement à vos besoins spécifiques et à votre vision.',
     'services.custom.btn': 'Consultation gratuite',
     'services.back': 'Retour à l\'accueil',
-    'services.discover': 'Découvrir nos savoir-faires',
     
     // Projects
     'projects.villa.azzurra': 'Jardin méditerranéen de 2000m² avec terrasses étagées et bassin à débordement',
@@ -198,7 +197,6 @@ const translations = {
     'services.custom.desc': 'Each project is unique. We create personalized solutions that perfectly meet your specific needs and vision.',
     'services.custom.btn': 'Free consultation',
     'services.back': 'Back to home',
-    'services.discover': 'Discover our expertise',
     
     // Projects
     'projects.villa.azzurra': '2000m² Mediterranean garden with tiered terraces and infinity pool',
@@ -345,7 +343,6 @@ const translations = {
     'services.custom.desc': 'Ogni progetto è unico. Creiamo soluzioni personalizzate che soddisfano perfettamente le vostre esigenze specifiche e la vostra visione.',
     'services.custom.btn': 'Consulenza gratuita',
     'services.back': 'Torna alla home',
-    'services.discover': 'Scopri le nostre competenze',
     
     // Projects
     'projects.villa.azzurra': 'Giardino mediterraneo di 2000m² con terrazze a gradoni e piscina a sfioro',

@@ -162,7 +162,7 @@ const Index = () => {
                onClick={() => navigate('/services')}
                className="font-cinzel font-medium hover:shadow-luxury hover:scale-110 transition-all duration-500"
              >
-               {t('services.discover')}
+               Découvrir nos savoir-faires
              </Button>
            </div>
          </div>
