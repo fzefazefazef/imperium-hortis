@@ -32,13 +32,41 @@ const HeroSection = () => {
           muted
           loop
           playsInline
+          controls={false}
           preload="none"
           onLoadedData={(e) => {
             (e.target as HTMLVideoElement).style.opacity = '1';
           }}
+          style={{
+            pointerEvents: 'none', // Empêche toute interaction
+          }}
         >
           <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
         </video>
+        
+        {/* CSS pour masquer tous les contrôles vidéo sur mobile */}
+        <style>
+          {`
+            video::-webkit-media-controls {
+              display: none !important;
+            }
+            video::-webkit-media-controls-panel {
+              display: none !important;
+            }
+            video::-webkit-media-controls-play-button {
+              display: none !important;
+            }
+            video::-webkit-media-controls-start-playback-button {
+              display: none !important;
+            }
+            video::-moz-media-controls {
+              display: none !important;
+            }
+            video::-ms-media-controls {
+              display: none !important;
+            }
+          `}
+        </style>
       </div>
       
       
