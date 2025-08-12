@@ -32,8 +32,8 @@ const Contact = () => {
     
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.description) {
       toast({
-        title: "Erreur",
-        description: "Veuillez remplir tous les champs obligatoires.",
+        title: t('contact.error.title'),
+        description: t('contact.error.fields'),
         variant: "destructive",
       });
       return;
@@ -55,8 +55,8 @@ const Contact = () => {
       if (error) throw error;
 
       toast({
-        title: "Message envoyé !",
-        description: "Votre demande a été envoyée avec succès. Nous vous recontacterons rapidement.",
+        title: t('contact.success.title'),
+        description: t('contact.success.desc'),
       });
 
       // Reset form
@@ -72,8 +72,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
-        title: "Erreur",
-        description: "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+        title: t('contact.error.title'),
+        description: t('contact.error.submit'),
         variant: "destructive",
       });
     } finally {
@@ -141,7 +141,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="exemple@email.com"
+                      placeholder={t('contact.form.placeholder.email')}
                       className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                       required
                     />
@@ -156,7 +156,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+33 6 42 86 78 90"
+                      placeholder={t('contact.form.placeholder.phone')}
                       className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                     />
                   </div>
@@ -169,7 +169,7 @@ const Contact = () => {
                       name="projectType"
                       value={formData.projectType}
                       onChange={handleInputChange}
-                      placeholder="Décrivez votre type de projet..."
+                      placeholder={t('contact.form.placeholder.project')}
                       className="bg-background/50 border-whisper-gold/30 text-soft-white placeholder:text-soft-white/50"
                     />
                   </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                     className="w-full font-inter font-medium"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Envoi en cours..." : t('contact.form.submit')}
+                    {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
                   </Button>
                 </form>
               </div>
@@ -231,9 +231,9 @@ const Contact = () => {
                               height="18" 
                               className="group-hover:scale-110 transition-transform duration-200"
                             />
-                            <span className="font-inter text-sm text-green-400 group-hover:text-green-300">
-                              Contactez-nous
-                            </span>
+                             <span className="font-inter text-sm text-green-400 group-hover:text-green-300">
+                               {t('contact.whatsapp')}
+                             </span>
                           </a>
                         </div>
                       </div>
@@ -256,16 +256,16 @@ const Contact = () => {
                     {t('contact.areas.title')}
                   </h3>
                   
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      "Cannes", "Monaco", "Nice", "Antibes",
-                      "Saint Paul de Vence", "Menton", "Grasse", "Saint Jean Cap-Ferrat"
-                    ].map((city) => (
-                      <div key={city} className="flex items-center space-x-2">
-                        <span className="text-whisper-gold">•</span>
-                        <span className="font-inter text-soft-white/80">{city}</span>
-                      </div>
-                    ))}
+                   <div className="grid grid-cols-2 gap-4">
+                     {[
+                       t('contact.cities.cannes'), t('contact.cities.monaco'), t('contact.cities.nice'), t('contact.cities.antibes'),
+                       t('contact.cities.saintpaul'), t('contact.cities.menton'), t('contact.cities.grasse'), t('contact.cities.saintjean')
+                     ].map((city) => (
+                       <div key={city} className="flex items-center space-x-2">
+                         <span className="text-whisper-gold">•</span>
+                         <span className="font-inter text-soft-white/80">{city}</span>
+                       </div>
+                     ))}
                   </div>
                   
                   <p className="font-inter text-soft-white/60 text-sm mt-4">
