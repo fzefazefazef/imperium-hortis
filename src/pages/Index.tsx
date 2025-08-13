@@ -22,31 +22,6 @@ const Index = () => {
       <LogoHeader isVisible={!isMenuOpen} />
       <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
       
-      {/* CSS pour cacher les éléments de navigation sur tablette uniquement */}
-      <style>
-        {`
-          @media screen and (min-width: 768px) and (max-width: 1024px) {
-            /* Cache les liens de navigation du desktop */
-            nav[class*="absolute top-16"] {
-              display: none !important;
-            }
-            /* Cache toute la section language dans le menu mobile */
-            .border-t.border-whisper-gold\\/20.pt-6,
-            div[class*="border-t border-whisper-gold/20 pt-6"] {
-              display: none !important;
-            }
-            /* Cache aussi les boutons de langue individuels */
-            button[class*="flex items-center space-x-3"],
-            .space-y-3.ml-4 {
-              display: none !important;
-            }
-            /* Cache le bouton Globe et texte Langue */
-            button[class*="flex items-center justify-between w-full font-cinzel-decorative"] {
-              display: none !important;
-            }
-          }
-        `}
-      </style>
       
       {/* Hero Section */}
       <HeroSection />
