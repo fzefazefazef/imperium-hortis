@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
@@ -14,6 +15,22 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex items-start justify-start overflow-hidden bg-gradient-to-br from-deep-charcoal via-midnight-blue to-deep-charcoal">
+      {/* CSS pour cacher navigation et langues sur tablette uniquement */}
+      <style>
+        {`
+          @media screen and (min-width: 768px) and (max-width: 1024px) {
+            /* Cache les boutons de langue */
+            .language-selector-desktop {
+              display: none !important;
+            }
+            /* Cache la navigation desktop */
+            .navigation-desktop {
+              display: none !important;
+            }
+          }
+        `}
+      </style>
+
       {/* Luxury Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 z-10"></div>
       <div className="absolute top-20 right-20 w-96 h-96 bg-whisper-gold/5 rounded-full blur-3xl"></div>
@@ -73,8 +90,8 @@ const HeroSection = () => {
       
       {/* Mobile Menu handled by Layout */}
 
-      {/* Language Selector - Desktop Only */}
-      <div className="absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-30 hidden sm:block">
+      {/* Language Selector - Desktop Only - Hidden on tablet */}
+      <div className="language-selector-desktop absolute top-4 sm:top-8 left-1/2 transform -translate-x-1/2 z-30 hidden sm:block">
         <div className="flex space-x-2 sm:space-x-6">
           <Button 
             variant="ghost" 
@@ -122,8 +139,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Navigation - Desktop Only */}
-      <nav className="absolute top-16 sm:top-8 right-2 sm:right-8 z-30 hidden sm:block">
+      {/* Navigation - Desktop Only - Hidden on tablet */}
+      <nav className="navigation-desktop absolute top-16 sm:top-8 right-2 sm:right-8 z-30 hidden sm:block">
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8">
           {[
             { name: t('nav.philosophie'), path: "/philosophie" },
