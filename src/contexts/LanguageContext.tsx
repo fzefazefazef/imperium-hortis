@@ -239,25 +239,25 @@ const translations = {
     // Hero Section
     'hero.title': 'Imperium Hortis',
     'hero.subtitle': "Creation and Maintenance of Prestigious Mediterranean Gardens on the French Riviera",
-    'hero.btn.services': 'Our expertise',
+    'hero.btn.services': 'Our know-how',
     'hero.btn.consultation': 'Private consultation',
     
     // About - Homepage Section
     'about.title': 'A tradition of excellence',
-    'about.intro.text1': 'Maintenance and creation of prestigious outdoor spaces on the French Riviera: family expertise for three generations\n\nFor three generations, Imperium Hortis has been shaping and maintaining prestigious outdoor spaces on the French Riviera.',
+    'about.intro.text1': 'Maintenance and creation of prestigious outdoor spaces on the French Riviera: family know-how for three generations\n\nFor three generations, Imperium Hortis shapes and maintains prestigious outdoor spaces on the French Riviera.',
     'about.intro.text2': 'From Monaco to Saint-Tropez, we create and preserve exceptional gardens that combine Mediterranean elegance and timeless refinement.\nEach project, whether creation or maintenance, is a custom work, designed in perfect harmony with local architecture, the unique climate of the Riviera and the requirements of a demanding clientele.',
     
     // Home Services
-    'home.services.title': 'Our expertise',
+    'home.services.title': 'Our know-how',
     'home.services.gardens.title': 'Exceptional gardens',
-    'home.services.gardens.desc': 'Design and creation of custom gardens for prestigious villas',
+    'home.services.gardens.desc': 'Design and realization of custom gardens for prestigious villas',
     'home.services.terraces.title': 'Landscape lighting',
     'home.services.terraces.desc': 'Artistic lighting to enhance your garden at night',
     'home.services.art.title': 'Landscape maintenance',
     'home.services.art.desc': 'Plant sculptures and personalized care for prestigious gardens',
     
     // Home Contact
-    'home.contact.title': 'Let\'s create your garden of eternity together',
+    'home.contact.title': 'Let us create together your garden of eternity',
     'home.contact.desc': 'Each garden tells a story. What will yours be? Discover how we can transform your vision into reality.',
     'home.contact.appointment': 'Private consultation',
     'home.contact.portfolio': 'Complete portfolio',
@@ -267,7 +267,7 @@ const translations = {
     'footer.motto': 'Where gardens whisper grandeur',
     
     // Index Page Specific
-    'index.services.discover': 'Discover our expertise',
+    'index.services.discover': 'Discover our know-how',
     
     // Services Page Specific
     'services.seasonal.title': 'Seasonal Plant Staging',
@@ -346,35 +346,35 @@ const translations = {
     // Hero Section
     'hero.title': 'Imperium Hortis',
     'hero.subtitle': "Creazione e Manutenzione di Giardini Mediterranei di Prestigio sulla Costa Azzurra",
-    'hero.btn.services': 'Le nostre competenze',
-    'hero.btn.consultation': 'Consulenza privata',
+    'hero.btn.services': 'I nostri saperi',
+    'hero.btn.consultation': 'Consultazione privata',
     
     // About - Homepage Section
     'about.title': 'Una tradizione di eccellenza',
-    'about.intro.text1': 'Manutenzione e creazione di spazi esterni di prestigio sulla Costa Azzurra: un know-how familiare da tre generazioni\n\nDa tre generazioni, Imperium Hortis modella e mantiene spazi esterni prestigiosi sulla Costa Azzurra.',
-    'about.intro.text2': 'Da Monaco a Saint-Tropez, creiamo e preserviamo giardini d\'eccezione che uniscono eleganza mediterranea e raffinatezza senza tempo.\nOgni progetto, che si tratti di creazione o manutenzione, è un\'opera su misura, concepita in perfetta armonia con l\'architettura locale, il clima unico della Riviera e le esigenze di una clientela esigente.',
+    'about.intro.text1': 'Manutenzione e creazione di spazi esterni di prestigio sulla Costa Azzurra: un sapere familiare da tre generazioni\n\nDa tre generazioni, Imperium Hortis plasma e mantiene spazi esterni prestigiosi sulla Costa Azzurra.',
+    'about.intro.text2': 'Da Monaco a Saint-Tropez, creiamo e preserviamo giardini d\'eccellenza che uniscono eleganza mediterranea e raffinatezza senza tempo.\nOgni progetto, che si tratti di creazione o manutenzione, è un\'opera su misura, concepita in perfetta armonia con l\'architettura locale, il clima unico della Riviera e le esigenze di una clientela esigente.',
     
     // Home Services
-    'home.services.title': 'Le nostre competenze',
-    'home.services.gardens.title': 'Giardini d\'eccezione',
-    'home.services.gardens.desc': 'Progettazione e realizzazione di giardini su misura per ville di prestigio',
+    'home.services.title': 'I nostri saperi',
+    'home.services.gardens.title': 'Giardini d\'eccellenza',
+    'home.services.gardens.desc': 'Concezione e realizzazione di giardini su misura per ville di prestigio',
     'home.services.terraces.title': 'Illuminazione paesaggistica',
-    'home.services.terraces.desc': 'Illuminazione artistica per valorizzare il vostro giardino di notte',
+    'home.services.terraces.desc': 'Messa in luce artistica per sublimare il vostro giardino di notte',
     'home.services.art.title': 'Manutenzione paesaggistica',
     'home.services.art.desc': 'Sculture vegetali e cure personalizzate per giardini di prestigio',
     
     // Home Contact
-    'home.contact.title': 'Creiamo insieme il vostro giardino dell\'eternità',
+    'home.contact.title': 'Creiamo insieme il vostro giardino d\'eternità',
     'home.contact.desc': 'Ogni giardino racconta una storia. Quale sarà la vostra? Scoprite come possiamo trasformare la vostra visione in realtà.',
-    'home.contact.appointment': 'Consulenza privata',
+    'home.contact.appointment': 'Consultazione privata',
     'home.contact.portfolio': 'Portfolio completo',
     
     // Footer
     'footer.rights': '© 2024 Imperium Hortis. Tutti i diritti riservati.',
-    'footer.motto': 'Dove i giardini sussurrano grandezza',
+    'footer.motto': 'Dove i giardini mormorano la grandezza',
     
     // Index Page Specific
-    'index.services.discover': 'Scopri le nostre competenze',
+    'index.services.discover': 'Scoprire i nostri saperi',
     
     // Services Page Specific
     'services.seasonal.title': 'Messa in Scena Vegetale Stagionale',
