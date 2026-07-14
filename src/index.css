@@ -8,18 +8,36 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Ultra-Premium Design System */
-    --background: 0 0% 99%;
-    --foreground: 210 15% 20%;
+    /* =====================================================================
+       PALETTE v2 — Redesign « arche impériale »
+       L'or (brass) ne survit qu'en filets 1px. Accents = vert impérial.
+       Hex de référence → HSL :
+         cream #F7F3EC · cream-deep #EFE9DC · ink #1C231A · imperial #2E4B33
+         imperial-deep #1F3423 · sage #7A8B6F · brass #B08D4C
+         text #2A2E26 · text-soft #5C6155
+       ===================================================================== */
+    --cream: 42 30% 94%;
+    --cream-deep: 40 33% 90%;
+    --ink: 107 15% 12%;
+    --imperial: 130 24% 24%;
+    --imperial-deep: 131 25% 16%;
+    --sage: 96 11% 49%;
+    --brass: 39 40% 49%;
+    --text: 90 10% 16%;
+    --text-soft: 85 7% 36%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 210 15% 25%;
+    /* Design System (remappé sur la palette v2) */
+    --background: var(--cream);
+    --foreground: var(--text);
+
+    --card: 40 43% 98%;            /* #FDFBF7 — cartes qui se détachent du crème */
+    --card-foreground: var(--text);
 
     --popover: 0 0% 98%;
     --popover-foreground: 210 15% 25%;
 
-    --primary: 210 15% 25%;
-    --primary-foreground: 0 0% 99%;
+    --primary: var(--imperial);
+    --primary-foreground: var(--cream);
 
     --secondary: 210 10% 90%;
     --secondary-foreground: 210 15% 30%;
@@ -33,34 +51,35 @@ All colors MUST be HSL.
     --destructive: 0 40% 55%;
     --destructive-foreground: 0 0% 99%;
 
-    --border: 210 12% 88%;
-    --input: 210 12% 90%;
-    --ring: 210 15% 25%;
+    --border: 130 12% 85%;
+    --input: 130 12% 84%;
+    --ring: var(--imperial);
 
     --radius: 0.875rem;
 
-    /* Refined Luxury Colors */
-    --pearl-white: 0 0% 99%;
-    --warm-ivory: 40 20% 96%;
-    --soft-graphite: 210 15% 25%;
-    --whisper-gold: 40 25% 85%;
-    --muted-sage: 120 8% 80%;
-    --charcoal-navy: 210 20% 18%;
-    --pure-alabaster: 35 30% 98%;
+    /* Anciennes couleurs « luxe » repointées sur la palette v2 (transition douce).
+       whisper-gold -> brass (filets 1px), les charbons bleutés -> ink vert-noir. */
+    --pearl-white: var(--cream);
+    --warm-ivory: var(--cream-deep);
+    --soft-graphite: var(--text);
+    --whisper-gold: var(--brass);
+    --muted-sage: var(--sage);
+    --charcoal-navy: var(--ink);
+    --pure-alabaster: 40 43% 98%;
 
     /* Subtle Premium Gradients */
-    --gradient-hero: linear-gradient(135deg, 
-      hsl(0 0% 99%) 0%, 
-      hsl(40 20% 97%) 30%,
-      hsl(210 10% 96%) 70%,
-      hsl(40 15% 94%) 100%);
+    --gradient-hero: linear-gradient(135deg,
+      hsl(42 30% 94%) 0%,
+      hsl(40 24% 93%) 30%,
+      hsl(40 18% 92%) 70%,
+      hsl(40 22% 91%) 100%);
     --gradient-accent: linear-gradient(90deg, 
       hsl(40 25% 85% / 0.08) 0%, 
       hsl(120 8% 80% / 0.05) 100%);
     --gradient-luxury: linear-gradient(45deg,
       hsl(40 25% 85% / 0.15) 0%,
       hsl(210 10% 90% / 0.08) 50%,
-      hsl(0 0% 95% / 0.05) 100%);
+      hsl(42 30% 92% / 0.05) 100%);
 
     /* Exquisite Shadows */
     --shadow-luxury: 0 25px 50px -15px hsl(210 15% 25% / 0.04), 
@@ -134,15 +153,480 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  /* Filet de sécurité anti-débordement horizontal (v4) : un élément fixed/absolute
+     mal borné (ex. bug de containing-block avec backdrop-filter) peut sinon rendre
+     le document horizontalement scrollable et exposer du contenu hors écran. */
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
-    @apply bg-background text-foreground font-playfair;
+    @apply bg-background text-foreground font-inter;
   }
-  
+
+  /* Titres en Cinzel (régulier) par défaut ; le corps en Inter. */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-cinzel-decorative;
+    @apply font-cinzel;
   }
-  
-  p, span, div {
-    @apply font-playfair;
+}
+
+/* ===========================================================================
+   Icônes animées maison (AnimatedIcons.tsx) — remplacent les émojis des cartes
+   services de la home. Animations continues, jouées une fois l'icône visible.
+   =========================================================================== */
+@layer utilities {
+  /* SproutIcon : feuilles qui s'ouvrent en oscillation douce, phases opposées */
+  .ih-sprout-leaf-left {
+    transform-box: fill-box;
+    transform-origin: bottom right;
+    animation: ih-sprout-sway-left 3.2s ease-in-out infinite;
+  }
+  .ih-sprout-leaf-right {
+    transform-box: fill-box;
+    transform-origin: bottom left;
+    animation: ih-sprout-sway-right 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-sprout-sway-left {
+    0%, 100% { transform: rotate(-7deg); }
+    50%      { transform: rotate(5deg); }
+  }
+  @keyframes ih-sprout-sway-right {
+    0%, 100% { transform: rotate(7deg); }
+    50%      { transform: rotate(-5deg); }
+  }
+
+  /* SunIcon : halo pulsant + rayons en rotation lente qui scintillent */
+  .ih-sun-halo {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-sun-halo 2.4s ease-in-out infinite;
+  }
+  .ih-sun-rays {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-sun-spin 6s linear infinite, ih-sun-twinkle 2s ease-in-out infinite;
+  }
+  @keyframes ih-sun-halo {
+    0%, 100% { opacity: 0.25; transform: scale(0.9); }
+    50%      { opacity: 0.55; transform: scale(1.1); }
+  }
+  @keyframes ih-sun-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes ih-sun-twinkle {
+    0%, 100% { opacity: 0.55; }
+    50%      { opacity: 1; }
+  }
+
+  /* WateringCanIcon : arrosoir qui s'incline + gouttes décalées */
+  .ih-can-body {
+    transform-box: fill-box;
+    transform-origin: bottom center;
+    animation: ih-can-tilt 3.2s ease-in-out infinite;
+  }
+  .ih-can-drop {
+    animation: ih-can-drop 3.2s ease-in-out infinite;
+    opacity: 0;
+  }
+  .ih-can-drop-2 { animation-delay: 0.3s; }
+  .ih-can-drop-3 { animation-delay: 0.6s; }
+  @keyframes ih-can-tilt {
+    0%, 100%   { transform: rotate(0deg); }
+    40%, 60%   { transform: rotate(-11deg); }
+  }
+  @keyframes ih-can-drop {
+    0%       { opacity: 0; transform: translateY(0); }
+    20%      { opacity: 1; }
+    100%     { opacity: 0; transform: translateY(16px); }
+  }
+
+  /* Respect de prefers-reduced-motion : on fige toutes ces animations */
+  @media (prefers-reduced-motion: reduce) {
+    .ih-sprout-leaf-left,
+    .ih-sprout-leaf-right,
+    .ih-sun-halo,
+    .ih-sun-rays,
+    .ih-can-body,
+    .ih-can-drop {
+      animation: none !important;
+    }
+  }
+
+  /* --- FlowerIcon : pétales qui pulsent en phases décalées + feuille qui ondule --- */
+  .ih-flower-petal {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-flower-pulse 3.2s ease-in-out infinite;
+  }
+  .ih-flower-petal-2 { animation-delay: 0.3s; }
+  .ih-flower-petal-3 { animation-delay: 0.6s; }
+  @keyframes ih-flower-pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50%      { transform: scale(1.1) rotate(4deg); }
+  }
+  .ih-flower-leaf {
+    transform-box: fill-box;
+    transform-origin: bottom center;
+    animation: ih-flower-leaf-sway 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-flower-leaf-sway {
+    0%, 100% { transform: rotate(-6deg); }
+    50%      { transform: rotate(6deg); }
+  }
+
+  /* --- TopiaryIcon : boule sur tronc qui oscille + points qui pulsent en alternance --- */
+  .ih-topiary-sway {
+    transform-box: fill-box;
+    transform-origin: bottom center;
+    animation: ih-topiary-sway 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-topiary-sway {
+    0%, 100% { transform: rotate(-3deg); }
+    50%      { transform: rotate(3deg); }
+  }
+  .ih-topiary-dot {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-topiary-dot 3.2s ease-in-out infinite;
+  }
+  .ih-topiary-dot-2 { animation-delay: 1.6s; }
+  @keyframes ih-topiary-dot {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(1.25); }
+  }
+
+  /* --- ShearsIcon : lames en opposition (pic à 18%) + feuille qui tombe en boucle --- */
+  .ih-shears-blade-a {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-shears-a 3.2s ease-in-out infinite;
+  }
+  .ih-shears-blade-b {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-shears-b 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-shears-a {
+    0%, 100% { transform: rotate(0deg); }
+    18%      { transform: rotate(-9deg); }
+  }
+  @keyframes ih-shears-b {
+    0%, 100% { transform: rotate(0deg); }
+    18%      { transform: rotate(9deg); }
+  }
+  .ih-shears-leaf {
+    animation: ih-shears-leaf-fall 3.2s ease-in-out infinite;
+    opacity: 0;
+  }
+  @keyframes ih-shears-leaf-fall {
+    0%   { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+    15%  { opacity: 1; }
+    80%  { opacity: 0; transform: translate(6px, 18px) rotate(45deg); }
+    100% { opacity: 0; transform: translate(6px, 18px) rotate(45deg); }
+  }
+
+  /* --- IrrigationIcon : gouttes en cascade décalée + ondulation d'eau --- */
+  .ih-irrigation-drop {
+    animation: ih-irrigation-drop 3.2s ease-in-out infinite;
+    opacity: 0;
+  }
+  .ih-irrigation-drop-2 { animation-delay: 0.35s; }
+  .ih-irrigation-drop-3 { animation-delay: 0.7s; }
+  @keyframes ih-irrigation-drop {
+    0%   { opacity: 0; transform: translateY(0); }
+    15%  { opacity: 1; }
+    70%  { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 0; transform: translateY(20px); }
+  }
+  .ih-irrigation-wave {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-irrigation-wave 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-irrigation-wave {
+    0%, 100% { opacity: 0.5; transform: scaleY(1); }
+    50%      { opacity: 1;   transform: scaleY(1.3); }
+  }
+
+  /* --- LightIcon : halo pulsant (glow vert) + rayons qui scintillent en décalé --- */
+  .ih-light-halo {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-light-pulse 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-light-pulse {
+    0%, 100% { transform: scale(1);    filter: drop-shadow(0 0 2px rgba(46,75,51,.5)); }
+    50%      { transform: scale(1.12); filter: drop-shadow(0 0 8px rgba(46,75,51,.75)); }
+  }
+  .ih-light-ray { animation: ih-light-twinkle 3.2s ease-in-out infinite; }
+  .ih-light-ray-2 { animation-delay: 0.3s; }
+  .ih-light-ray-3 { animation-delay: 0.6s; }
+  .ih-light-ray-4 { animation-delay: 0.9s; }
+  .ih-light-ray-5 { animation-delay: 1.2s; }
+  @keyframes ih-light-twinkle {
+    0%, 100% { opacity: 0.35; }
+    50%      { opacity: 1; }
+  }
+
+  /* --- GrowthIcon : rayons en rotation continue + pousse qui respire --- */
+  .ih-growth-sun-rays {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ih-growth-spin 6.4s linear infinite;
+  }
+  @keyframes ih-growth-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  .ih-growth-sprout {
+    transform-box: fill-box;
+    transform-origin: bottom center;
+    animation: ih-growth-breathe 3.2s ease-in-out infinite;
+  }
+  @keyframes ih-growth-breathe {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.07); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ih-flower-petal,
+    .ih-flower-leaf,
+    .ih-topiary-sway,
+    .ih-topiary-dot,
+    .ih-shears-blade-a,
+    .ih-shears-blade-b,
+    .ih-shears-leaf,
+    .ih-irrigation-drop,
+    .ih-irrigation-wave,
+    .ih-light-halo,
+    .ih-light-ray,
+    .ih-growth-sun-rays,
+    .ih-growth-sprout {
+      animation: none !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* ===========================================================================
+   Reveal (Reveal.tsx) — apparitions au scroll, one-shot.
+   easing signature : cubic-bezier(0.2, 0.8, 0.2, 1)
+   =========================================================================== */
+@layer utilities {
+  .reveal { will-change: opacity, transform; }
+
+  .reveal--up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal--up.is-visible { opacity: 1; transform: translateY(0); }
+
+  .reveal--image {
+    opacity: 0;
+    clip-path: inset(12% 0 12% 0);
+    transform: scale(1.04);
+    transition: opacity 1.1s cubic-bezier(0.2, 0.8, 0.2, 1),
+                clip-path 1.1s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal--image.is-visible { opacity: 1; clip-path: inset(0 0 0 0); transform: scale(1); }
+
+  .reveal--line {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal--line.is-visible { transform: scaleX(1); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal--up,
+    .reveal--image,
+    .reveal--line {
+      opacity: 1 !important;
+      transform: none !important;
+      clip-path: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+/* ===========================================================================
+   Boutons pilule signature (button.tsx variants). L'effet de pression au hover
+   (translateY + ombre de profondeur qui se réduit) est ici ; le radius / la
+   police / le timing sont posés en utilitaires dans la variante cva.
+   =========================================================================== */
+@layer components {
+  .btn-pill-primary {
+    background-color: hsl(var(--imperial));
+    color: hsl(var(--cream));
+    padding: 13px 28px;
+    letter-spacing: 0.06em;
+    box-shadow: 0 4px 0 hsl(var(--imperial-deep)), 0 10px 24px rgba(31, 52, 35, 0.25);
+  }
+  .btn-pill-primary:hover {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 hsl(var(--imperial-deep)), 0 4px 12px rgba(31, 52, 35, 0.25);
+  }
+
+  .btn-pill-cream {
+    background-color: hsl(var(--cream));
+    color: hsl(var(--imperial));
+    padding: 13px 28px;
+    letter-spacing: 0.06em;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25), 0 10px 24px rgba(0, 0, 0, 0.18);
+  }
+  .btn-pill-cream:hover {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .btn-pill-ghost-light {
+    background-color: transparent;
+    color: hsl(var(--cream));
+    padding: 13px 28px;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(247, 243, 236, 0.45);
+  }
+  .btn-pill-ghost-light:hover {
+    border-color: hsl(var(--cream));
+    background-color: rgba(247, 243, 236, 0.08);
+  }
+
+  .btn-pill-ghost-dark {
+    background-color: transparent;
+    color: hsl(var(--imperial));
+    padding: 13px 28px;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(46, 75, 51, 0.4);
+  }
+  .btn-pill-ghost-dark:hover {
+    border-color: hsl(var(--imperial));
+    background-color: rgba(46, 75, 51, 0.06);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-pill-primary:hover,
+    .btn-pill-cream:hover {
+      transform: none;
+    }
+  }
+}
+
+/* ===========================================================================
+   Navigation — soulignement 1px qui se dessine de gauche à droite au hover.
+   Utilise currentColor pour suivre la couleur du texte (cream / ink).
+   =========================================================================== */
+@layer components {
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .nav-link:hover::after { transform: scaleX(1); transform-origin: left; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-link::after { transition: none; }
+  }
+}
+
+/* ===========================================================================
+   Titres à dégradé animé (« shine ») + indicateur de scroll du hero.
+   =========================================================================== */
+@layer utilities {
+  .text-shine {
+    background: linear-gradient(100deg, #F7F3EC 15%, #C9D4B8 35%, #9FB88A 50%, #C9D4B8 65%, #F7F3EC 85%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: ih-shine 5.5s ease-in-out infinite;
+  }
+  /* Variante CTA (teintes vertes plus douces) */
+  .text-shine-soft {
+    background: linear-gradient(100deg, #F7F3EC 20%, #AFC69B 50%, #F7F3EC 80%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: ih-shine 5.5s ease-in-out infinite;
+  }
+  @keyframes ih-shine {
+    0%, 100% { background-position: 0% center; }
+    50%      { background-position: 100% center; }
+  }
+
+  .scroll-indicator {
+    position: relative;
+    width: 1px;
+    height: 52px;
+    background: rgba(247, 243, 236, 0.22);
+    overflow: hidden;
+  }
+  .scroll-indicator::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background: linear-gradient(to bottom, transparent, #F7F3EC, transparent);
+    animation: ih-scroll-run 2s ease-in-out infinite;
+  }
+  @keyframes ih-scroll-run {
+    0%   { transform: translateY(-18px); }
+    100% { transform: translateY(52px); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .text-shine, .text-shine-soft {
+      animation: none;
+      background-position: 0% center;
+    }
+    .scroll-indicator::after { animation: none; opacity: 0.4; }
+  }
+}
+
+/* ===========================================================================
+   Cartes services — trait impérial qui grandit depuis le centre du bord haut.
+   =========================================================================== */
+@layer components {
+  .service-card { position: relative; }
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background-color: hsl(var(--imperial));
+    transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .service-card:hover::before { width: 56px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-card::before { transition: none; }
+  }
+}
+
+/* ===========================================================================
+   Piliers romains (Philosophie) — trait impérial qui parcourt le bord haut au hover.
+   =========================================================================== */
+@layer components {
+  @media (prefers-reduced-motion: reduce) {
+    .pillar-hover-line { transition: none; }
   }
 }

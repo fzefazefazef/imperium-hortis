@@ -1,6 +1,23 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type Language = 'fr' | 'en' | 'it';
+
+const STORAGE_KEY = 'imperium-hortis-lang';
+const SUPPORTED: Language[] = ['fr', 'en', 'it'];
+
+// Détermine la langue initiale : localStorage > langue du navigateur > 'fr'
+const getInitialLanguage = (): Language => {
+  if (typeof window === 'undefined') return 'fr';
+  const stored = window.localStorage.getItem(STORAGE_KEY);
+  if (stored && SUPPORTED.includes(stored as Language)) {
+    return stored as Language;
+  }
+  const nav = window.navigator.language?.slice(0, 2).toLowerCase();
+  if (nav && SUPPORTED.includes(nav as Language)) {
+    return nav as Language;
+  }
+  return 'fr';
+};
 
 interface LanguageContextType {
   language: Language;
@@ -22,7 +39,8 @@ const translations = {
     // Hero Section
     'hero.title': 'Imperium Hortis',
     'hero.subtitle': "Création et Entretien de Jardins Méditerranéens de Prestige sur la Côte d'Azur",
-    'hero.btn.services': 'Nos savoir-faire',
+    'hero.eyebrow': "Côte d'Azur · Monaco — Saint-Tropez",
+    'hero.btn.services': 'Découvrir nos savoir-faire',
     'hero.btn.consultation': 'Consultation privée',
     
     // Services Page
@@ -80,7 +98,6 @@ const translations = {
     'portfolio.cta.title': 'Imaginez Votre Jardin d\'Exception',
     'portfolio.cta.desc': 'Vous imaginez un jardin élégant, unique, conçu sur-mesure pour votre lieu de vie ? Contactez-nous pour une première rencontre confidentielle.',
     'portfolio.cta.btn1': 'Démarrer mon projet',
-    'portfolio.cta.btn2': 'Télécharger le portfolio complet',
     'portfolio.back': 'Retour à l\'accueil',
     
     // Contact Page
@@ -149,10 +166,19 @@ const translations = {
     'home.contact.desc': 'Chaque jardin raconte une histoire. Quelle sera la vôtre ? Découvrez comment nous pouvons transformer votre vision en réalité.',
     'home.contact.appointment': 'Consultation privée',
     'home.contact.portfolio': 'Portfolio complet',
-    
+
+    // Home v2 — eyebrows & signatures
+    'home.tradition.eyebrow': 'Notre héritage',
+    'home.tradition.signature': 'Maison fondée sur la Riviera',
+    'home.cta.eyebrow': 'Commencer',
+    'home.cta.portfolio': 'Voir nos réalisations',
+
     // Footer
     'footer.company': 'Imperium Hortis',
     'footer.tagline': 'L\'excellence paysagère depuis 1952',
+    'footer.description': 'Création et entretien de jardins méditerranéens de prestige sur la Côte d\'Azur.',
+    'footer.nav': 'Navigation',
+    'footer.zone': 'De Monaco à Saint-Tropez',
     'footer.contact': 'Contact',
     'footer.showroom': 'Showroom',
     'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
@@ -226,6 +252,15 @@ const translations = {
     'philosophy.pillars.sustainability.desc': 'Arrosages optimisés, écosystèmes équilibrés, pratiques respectueuses du climat méditerranéen.',
     'philosophy.pillars.excellence.title': 'EXCELLENCE',
     'philosophy.pillars.excellence.desc': 'Finitions d\'exception, suivi minutieux, service à la hauteur des plus grandes exigences.',
+
+    // Philosophy v3 — piliers en chiffres romains (I/II/III)
+    'philosophy.roman.heritage.title': 'Héritage',
+    'philosophy.roman.heritage.desc': 'Trois générations de savoir-faire transmis avec exigence, entre tradition méditerranéenne et regard tourné vers l\'avenir.',
+    'philosophy.roman.exigence.title': 'Exigence',
+    'philosophy.roman.exigence.desc': 'Une rigueur portée à chaque étape, un sens aigu du détail et un interlocuteur unique pour orchestrer vos espaces.',
+    'philosophy.roman.serenite.title': 'Sérénité',
+    'philosophy.roman.serenite.desc': 'Une gestion harmonieuse et discrète, pensée pour préserver l\'intimité de votre domaine en toute sécurité.',
+
     'philosophy.cta': 'RETOUR À L\'ACCUEIL',
   },
   en: {
@@ -239,7 +274,8 @@ const translations = {
     // Hero Section
     'hero.title': 'Imperium Hortis',
     'hero.subtitle': "Creation and Maintenance of Prestigious Mediterranean Gardens on the French Riviera",
-    'hero.btn.services': 'Our know-how',
+    'hero.eyebrow': "French Riviera · Monaco — Saint-Tropez",
+    'hero.btn.services': 'Discover our know-how',
     'hero.btn.consultation': 'Private consultation',
     
     // About - Homepage Section
@@ -261,6 +297,12 @@ const translations = {
     'home.contact.desc': 'Each garden tells a story. What will yours be? Discover how we can transform your vision into reality.',
     'home.contact.appointment': 'Private consultation',
     'home.contact.portfolio': 'Complete portfolio',
+
+    // Home v2 — eyebrows & signatures
+    'home.tradition.eyebrow': 'Our heritage',
+    'home.tradition.signature': 'A house founded on the Riviera',
+    'home.cta.eyebrow': 'Begin',
+    'home.cta.portfolio': 'View our work',
     
     // Footer
     'footer.rights': '© 2024 Imperium Hortis. All rights reserved.',
@@ -333,7 +375,134 @@ const translations = {
     'philosophy.pillars.sustainability.desc': 'Optimized irrigation, balanced ecosystems, practices respectful of the Mediterranean climate.',
     'philosophy.pillars.excellence.title': 'EXCELLENCE',
     'philosophy.pillars.excellence.desc': 'Exceptional finishes, meticulous monitoring, service worthy of the highest demands.',
+
+    // Philosophy v3 — Roman numeral pillars (I/II/III)
+    'philosophy.roman.heritage.title': 'Heritage',
+    'philosophy.roman.heritage.desc': 'Three generations of expertise passed down with rigor, between Mediterranean tradition and a forward-looking vision.',
+    'philosophy.roman.exigence.title': 'Rigor',
+    'philosophy.roman.exigence.desc': 'Rigor applied at every step, a keen sense of detail, and a single dedicated contact to orchestrate your spaces.',
+    'philosophy.roman.serenite.title': 'Serenity',
+    'philosophy.roman.serenite.desc': 'Harmonious, discreet management designed to preserve the privacy of your estate in complete security.',
+
     'philosophy.cta': 'BACK TO HOME',
+
+    // --- Completed translations (parity with FR) ---
+    // Services Page
+    'services.title': 'Our Services',
+    'services.subtitle': 'Discover our complete range of landscaping services, designed to transform your outdoor spaces into true living works of art.',
+    'services.service1.title': 'Design of Exceptional Gardens',
+    'services.service1.desc': 'Complete creation of bespoke gardens for prestigious properties',
+    'services.service1.features': ['Complete landscape study', 'Selection of rare species', 'Botanical architectural design', 'Project supervision'],
+    'services.service2.title': 'Mediterranean Terraces and Patios',
+    'services.service2.desc': 'Design of terraces with panoramic views over the French Riviera',
+    'services.service2.features': ['Bespoke furniture', 'Intelligent irrigation systems', 'Ambient lighting', 'Pergolas and arbours'],
+    'services.service3.title': 'Water Gardens and Fountains',
+    'services.service3.desc': 'Installation of ponds, fountains and cascades for a refreshing atmosphere',
+    'services.service3.features': ['Natural ponds', 'Artistic fountains', 'Underwater lighting', 'Balanced ecosystem'],
+    'services.service4.title': 'VIP Maintenance',
+    'services.service4.desc': 'Premium maintenance to preserve the beauty of your garden all year round',
+    'services.service4.features': ['Dedicated team', 'Discreet interventions', 'Organic products', 'Seasonal advice'],
+    'services.service5.title': 'Landscape Lighting',
+    'services.service5.desc': 'Artistic illumination to enhance your garden at night',
+    'services.service5.features': ['Latest-generation LED', 'Intelligent programming', 'Dramatic effects', 'Energy savings'],
+    'services.service6.title': 'Plant Sculptures',
+    'services.service6.desc': 'Topiary art and living sculptures for gardens unique in the world',
+    'services.service6.features': ['Bespoke topiaries', 'Temporary sculptures', 'Private events', 'Artistic creations'],
+    'services.custom.title': 'Bespoke Service',
+    'services.custom.desc': 'Every project is unique. We create personalised solutions that perfectly meet your specific needs and your vision.',
+    'services.custom.btn': 'Free consultation',
+    'services.back': 'Back to home',
+
+    // Projects
+    'projects.villa.azzurra': 'A 2,000 m² Mediterranean garden with tiered terraces and an infinity pool',
+    'projects.chateau.lumiere': 'Complete restoration of historic gardens with the creation of a boxwood labyrinth',
+    'projects.penthouse.croisette': 'A 500 m² panoramic terrace with hanging gardens and plant sculptures',
+    'projects.villa.del.mare': 'Vertical garden and water terraces with views over the Mediterranean',
+    'projects.domaine.oliviers': 'A 5-hectare park with a centuries-old olive grove and themed gardens',
+    'projects.spa.imperial': 'Sensory and therapeutic gardens for a luxury wellness centre',
+
+    // Categories
+    'category.residence': 'Private residence',
+    'category.heritage': 'Historic heritage',
+    'category.terrace': 'Luxury terrace',
+    'category.innovation': 'Landscape innovation',
+    'category.domain': 'Grand estate',
+    'category.commercial': 'Commercial space',
+
+    // Portfolio
+    'portfolio.subtitle': 'Every garden tells a story.\nOur vision draws inspiration from Mediterranean landscapes, blending natural sobriety, architectural lines and plant elegance. This selection of atmospheres reflects our aesthetic standards, our attention to detail and the art of creating unique, sustainable and deeply harmonious outdoor spaces.',
+    'portfolio.inspirations.title': 'Landscape Signatures',
+    'portfolio.inspiration1.title': 'Chic Mediterranean atmosphere',
+    'portfolio.inspiration1.desc': 'Sculpted olive trees, natural stone, luminous terraces with soft lines.',
+    'portfolio.inspiration2.title': 'Plant minimalism',
+    'portfolio.inspiration2.desc': 'Sober, balanced compositions where every plant finds its rightful place.',
+    'portfolio.inspiration3.title': 'Sophisticated plant palette',
+    'portfolio.inspiration3.desc': 'Plays of texture, noble foliage and delicate blooms in muted tones.',
+    'portfolio.inspiration4.title': 'Contemporary escape',
+    'portfolio.inspiration4.desc': 'Structured pathways, integrated designer furniture, mirror ponds and subtle lighting.',
+    'portfolio.note': 'The visuals shown here are offered for inspiration. Our own projects will be added very soon.',
+    'portfolio.cta.title': 'Imagine Your Exceptional Garden',
+    'portfolio.cta.desc': 'Do you envision an elegant, unique garden, designed bespoke for your living space? Contact us for a first confidential meeting.',
+    'portfolio.cta.btn1': 'Start my project',
+    'portfolio.back': 'Back to home',
+
+    // Contact Page
+    'contact.title': 'Contact',
+    'contact.subtitle': 'Get in touch with our experts to bring your vision to life. Every project begins with a conversation.',
+    'contact.form.title': 'Consultation Request',
+    'contact.form.firstname': 'First name',
+    'contact.form.lastname': 'Last name',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Phone',
+    'contact.form.project': 'Project type',
+    'contact.form.budget': 'Estimated budget',
+    'contact.form.description': 'Describe your project',
+    'contact.form.submit': 'Send my request',
+    'contact.info.title': 'Our Details',
+    'contact.info.showroom': 'Main Showroom',
+    'contact.info.phone': 'Phone',
+    'contact.info.email': 'Email',
+    'contact.info.hours': 'Opening hours',
+    'contact.areas.title': 'Areas We Serve',
+    'contact.areas.note': 'And the whole French Riviera on request',
+    'contact.emergency.title': 'Emergency Service',
+    'contact.emergency.desc': 'For landscaping emergencies (storms, irrigation systems, etc.)',
+    'contact.back': 'Back to home',
+
+    // Philosophy Page (short version)
+    'philosophy.title': 'Our Philosophy',
+    'philosophy.art.title': 'The Art of the Imperial Garden',
+    'philosophy.art.desc1': 'At Imperium Hortis, we believe that every garden is a living work of art, a testament to the eternal beauty of nature tamed by the expert hand of man. Our philosophy is rooted in excellence, tradition and harmonious innovation.',
+    'philosophy.art.desc2': 'We do not simply create gardens; we orchestrate plant symphonies that evolve with the seasons, revealing new mysteries with every glance, with every stroll.',
+    'philosophy.heritage.title': 'Inherited Excellence',
+    'philosophy.heritage.desc': 'Three generations of master gardeners have forged our unique expertise, passing down the secrets of Mediterranean landscape art from father to son.',
+    'philosophy.innovation.title.old': 'Respectful Innovation',
+    'philosophy.innovation.desc.old': 'We marry ancestral techniques with modern technologies, creating sustainable ecosystems that respect the environment.',
+    'philosophy.commitment.title': 'Our Commitment',
+    'philosophy.commitment.authenticity': 'Authenticity',
+    'philosophy.commitment.authenticity.desc': 'Respect for local species',
+    'philosophy.commitment.sustainability': 'Sustainability',
+    'philosophy.commitment.sustainability.desc': 'Ecological solutions',
+    'philosophy.commitment.luxury': 'Luxury',
+    'philosophy.commitment.luxury.desc': 'Exceptional finishes',
+    'philosophy.back': 'Back to home',
+
+    // Common
+    'common.image': 'Project image',
+
+    // About (short version)
+    'about.text': 'Since 1923, our house has perpetuated the art of the Mediterranean garden with unrivalled passion. Every creation reflects our commitment to excellence and our deep respect for Provençal nature.',
+    'about.gallery': 'Gallery of our most emblematic creations',
+
+    // Footer
+    'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'Landscape excellence since 1952',
+    'footer.description': 'Creation and maintenance of prestigious Mediterranean gardens on the French Riviera.',
+    'footer.nav': 'Navigation',
+    'footer.zone': 'From Monaco to Saint-Tropez',
+    'footer.contact': 'Contact',
+    'footer.showroom': 'Showroom',
+    'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, France',
   },
   it: {
     // Navigation
@@ -346,7 +515,8 @@ const translations = {
     // Hero Section
     'hero.title': 'Imperium Hortis',
     'hero.subtitle': "Creazione e Manutenzione di Giardini Mediterranei di Prestigio sulla Costa Azzurra",
-    'hero.btn.services': 'I nostri saperi',
+    'hero.eyebrow': "Costa Azzurra · Monaco — Saint-Tropez",
+    'hero.btn.services': 'Scoprire i nostri saperi',
     'hero.btn.consultation': 'Consultazione privata',
     
     // About - Homepage Section
@@ -368,6 +538,12 @@ const translations = {
     'home.contact.desc': 'Ogni giardino racconta una storia. Quale sarà la vostra? Scoprite come possiamo trasformare la vostra visione in realtà.',
     'home.contact.appointment': 'Consultazione privata',
     'home.contact.portfolio': 'Portfolio completo',
+
+    // Home v2 — eyebrows & signatures
+    'home.tradition.eyebrow': 'Il nostro patrimonio',
+    'home.tradition.signature': 'Una maison fondata sulla Riviera',
+    'home.cta.eyebrow': 'Iniziare',
+    'home.cta.portfolio': 'Vedere le nostre realizzazioni',
     
     // Footer
     'footer.rights': '© 2024 Imperium Hortis. Tutti i diritti riservati.',
@@ -440,12 +616,151 @@ const translations = {
     'philosophy.pillars.sustainability.desc': 'Irrigazioni ottimizzate, ecosistemi equilibrati, pratiche rispettose del clima mediterraneo.',
     'philosophy.pillars.excellence.title': 'ECCELLENZA',
     'philosophy.pillars.excellence.desc': 'Finiture d\'eccezione, monitoraggio meticoloso, servizio all\'altezza delle più grandi esigenze.',
+
+    // Philosophy v3 — pilastri in numeri romani (I/II/III)
+    'philosophy.roman.heritage.title': 'Eredità',
+    'philosophy.roman.heritage.desc': 'Tre generazioni di savoir-faire tramandato con esigenza, tra tradizione mediterranea e uno sguardo rivolto al futuro.',
+    'philosophy.roman.exigence.title': 'Rigore',
+    'philosophy.roman.exigence.desc': 'Un rigore applicato in ogni fase, un senso acuto del dettaglio e un unico interlocutore per orchestrare i vostri spazi.',
+    'philosophy.roman.serenite.title': 'Serenità',
+    'philosophy.roman.serenite.desc': 'Una gestione armoniosa e discreta, pensata per preservare l\'intimità della vostra proprietà in totale sicurezza.',
+
     'philosophy.cta': 'RITORNO ALLA HOME',
+
+    // --- Traduzioni complete (parità con FR) ---
+    // Services Page
+    'services.title': 'I Nostri Servizi',
+    'services.subtitle': 'Scoprite la nostra gamma completa di servizi paesaggistici, concepiti per trasformare i vostri spazi esterni in vere opere d\'arte vegetali.',
+    'services.service1.title': 'Progettazione di Giardini d\'Eccezione',
+    'services.service1.desc': 'Creazione completa di giardini su misura per proprietà di prestigio',
+    'services.service1.features': ['Studio paesaggistico completo', 'Selezione di essenze rare', 'Design architettonico vegetale', 'Supervisione della realizzazione'],
+    'services.service2.title': 'Terrazze e Patii Mediterranei',
+    'services.service2.desc': 'Realizzazione di terrazze con vista panoramica sulla Costa Azzurra',
+    'services.service2.features': ['Arredi su misura', 'Sistemi di irrigazione intelligenti', 'Illuminazione d\'ambiente', 'Pergole e gazebo'],
+    'services.service3.title': 'Giardini Acquatici e Fontane',
+    'services.service3.desc': 'Installazione di bacini, fontane e cascate per un\'atmosfera rinfrescante',
+    'services.service3.features': ['Bacini naturali', 'Fontane artistiche', 'Illuminazione subacquea', 'Ecosistema equilibrato'],
+    'services.service4.title': 'Manutenzione VIP',
+    'services.service4.desc': 'Manutenzione premium per preservare la bellezza del vostro giardino tutto l\'anno',
+    'services.service4.features': ['Squadra dedicata', 'Interventi discreti', 'Prodotti biologici', 'Consigli stagionali'],
+    'services.service5.title': 'Illuminazione Paesaggistica',
+    'services.service5.desc': 'Messa in luce artistica per sublimare il vostro giardino di notte',
+    'services.service5.features': ['LED di ultima generazione', 'Programmazione intelligente', 'Effetti scenografici', 'Risparmio energetico'],
+    'services.service6.title': 'Sculture Vegetali',
+    'services.service6.desc': 'Arte topiaria e sculture viventi per giardini unici al mondo',
+    'services.service6.features': ['Topiarie su misura', 'Sculture temporanee', 'Eventi privati', 'Creazioni artistiche'],
+    'services.custom.title': 'Servizio Su Misura',
+    'services.custom.desc': 'Ogni progetto è unico. Creiamo soluzioni personalizzate che rispondono perfettamente alle vostre esigenze specifiche e alla vostra visione.',
+    'services.custom.btn': 'Consultazione gratuita',
+    'services.back': 'Ritorno alla home',
+
+    // Projects
+    'projects.villa.azzurra': 'Giardino mediterraneo di 2000 m² con terrazze digradanti e piscina a sfioro',
+    'projects.chateau.lumiere': 'Restauro completo dei giardini storici con la creazione di un labirinto di bosso',
+    'projects.penthouse.croisette': 'Terrazza panoramica di 500 m² con giardini pensili e sculture vegetali',
+    'projects.villa.del.mare': 'Giardino verticale e terrazze acquatiche con vista sul Mediterraneo',
+    'projects.domaine.oliviers': 'Parco di 5 ettari con uliveto secolare e giardini tematici',
+    'projects.spa.imperial': 'Giardini sensoriali e terapeutici per un centro benessere di lusso',
+
+    // Categories
+    'category.residence': 'Residenza privata',
+    'category.heritage': 'Patrimonio storico',
+    'category.terrace': 'Terrazza di lusso',
+    'category.innovation': 'Innovazione paesaggistica',
+    'category.domain': 'Grande tenuta',
+    'category.commercial': 'Spazio commerciale',
+
+    // Portfolio
+    'portfolio.subtitle': 'Ogni giardino racconta una storia.\nLa nostra visione si ispira ai paesaggi mediterranei, mescolando sobrietà naturale, linee architettoniche ed eleganza vegetale. Questa selezione di atmosfere riflette la nostra esigenza estetica, il nostro senso del dettaglio e l\'arte di creare spazi esterni unici, sostenibili e profondamente armoniosi.',
+    'portfolio.inspirations.title': 'Firme Paesaggistiche',
+    'portfolio.inspiration1.title': 'Atmosfera mediterranea chic',
+    'portfolio.inspiration1.desc': 'Ulivi scolpiti, pietre naturali, terrazze luminose dalle linee morbide.',
+    'portfolio.inspiration2.title': 'Minimalismo vegetale',
+    'portfolio.inspiration2.desc': 'Composizioni sobrie ed equilibrate dove ogni pianta trova il suo giusto posto.',
+    'portfolio.inspiration3.title': 'Palette vegetale sofisticata',
+    'portfolio.inspiration3.desc': 'Giochi di texture, fogliami nobili, fioriture delicate in toni ovattati.',
+    'portfolio.inspiration4.title': 'Evasione contemporanea',
+    'portfolio.inspiration4.desc': 'Viali strutturati, arredi di design integrati, bacini a specchio e illuminazioni discrete.',
+    'portfolio.note': 'Le immagini qui presentate sono proposte a titolo d\'ispirazione. Le nostre realizzazioni personali saranno aggiunte molto presto.',
+    'portfolio.cta.title': 'Immaginate il Vostro Giardino d\'Eccezione',
+    'portfolio.cta.desc': 'Immaginate un giardino elegante, unico, concepito su misura per il vostro luogo di vita? Contattateci per un primo incontro confidenziale.',
+    'portfolio.cta.btn1': 'Avviare il mio progetto',
+    'portfolio.back': 'Ritorno alla home',
+
+    // Contact Page
+    'contact.title': 'Contatto',
+    'contact.subtitle': 'Mettetevi in contatto con i nostri esperti per dare vita alla vostra visione. Ogni progetto inizia con una conversazione.',
+    'contact.form.title': 'Richiesta di Consultazione',
+    'contact.form.firstname': 'Nome',
+    'contact.form.lastname': 'Cognome',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Telefono',
+    'contact.form.project': 'Tipo di progetto',
+    'contact.form.budget': 'Budget stimato',
+    'contact.form.description': 'Descrivete il vostro progetto',
+    'contact.form.submit': 'Invia la mia richiesta',
+    'contact.info.title': 'I Nostri Recapiti',
+    'contact.info.showroom': 'Showroom Principale',
+    'contact.info.phone': 'Telefono',
+    'contact.info.email': 'Email',
+    'contact.info.hours': 'Orari',
+    'contact.areas.title': 'Zone di Intervento',
+    'contact.areas.note': 'E tutta la Costa Azzurra su richiesta',
+    'contact.emergency.title': 'Servizio di Emergenza',
+    'contact.emergency.desc': 'Per le emergenze paesaggistiche (tempeste, sistemi di irrigazione, ecc.)',
+    'contact.back': 'Ritorno alla home',
+
+    // Philosophy Page (versione breve)
+    'philosophy.title': 'La Nostra Filosofia',
+    'philosophy.art.title': 'L\'Arte del Giardino Imperiale',
+    'philosophy.art.desc1': 'Da Imperium Hortis, crediamo che ogni giardino sia un\'opera d\'arte vivente, una testimonianza dell\'eterna bellezza della natura addomesticata dalla mano esperta dell\'uomo. La nostra filosofia affonda le radici nell\'eccellenza, nella tradizione e nell\'innovazione armoniosa.',
+    'philosophy.art.desc2': 'Non creiamo semplicemente giardini; orchestriamo sinfonie vegetali che evolvono con le stagioni, rivelando nuovi misteri a ogni sguardo, a ogni passeggiata.',
+    'philosophy.heritage.title': 'Eccellenza Ereditata',
+    'philosophy.heritage.desc': 'Tre generazioni di maestri giardinieri hanno forgiato il nostro savoir-faire unico, trasmettendo i segreti dell\'arte paesaggistica mediterranea di padre in figlio.',
+    'philosophy.innovation.title.old': 'Innovazione Rispettosa',
+    'philosophy.innovation.desc.old': 'Uniamo le tecniche ancestrali alle tecnologie moderne, creando ecosistemi sostenibili che rispettano l\'ambiente.',
+    'philosophy.commitment.title': 'Il Nostro Impegno',
+    'philosophy.commitment.authenticity': 'Autenticità',
+    'philosophy.commitment.authenticity.desc': 'Rispetto delle essenze locali',
+    'philosophy.commitment.sustainability': 'Sostenibilità',
+    'philosophy.commitment.sustainability.desc': 'Soluzioni ecologiche',
+    'philosophy.commitment.luxury': 'Lusso',
+    'philosophy.commitment.luxury.desc': 'Finiture d\'eccezione',
+    'philosophy.back': 'Ritorno alla home',
+
+    // Common
+    'common.image': 'Immagine del progetto',
+
+    // About (versione breve)
+    'about.text': 'Dal 1923, la nostra maison perpetua l\'arte del giardino mediterraneo con una passione ineguagliabile. Ogni creazione riflette il nostro impegno verso l\'eccellenza e il nostro profondo rispetto per la natura provenzale.',
+    'about.gallery': 'Galleria delle nostre creazioni più emblematiche',
+
+    // Footer
+    'footer.company': 'Imperium Hortis',
+    'footer.tagline': 'L\'eccellenza paesaggistica dal 1952',
+    'footer.description': 'Creazione e manutenzione di giardini mediterranei di prestigio sulla Costa Azzurra.',
+    'footer.nav': 'Navigazione',
+    'footer.zone': 'Da Monaco a Saint-Tropez',
+    'footer.contact': 'Contatto',
+    'footer.showroom': 'Showroom',
+    'footer.address': '123 Boulevard de la Croisette\n06400 Cannes, Francia',
   }
 };
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('fr');
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  // Persiste la langue choisie et synchronise <html lang="…"> (SEO / accessibilité)
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem(STORAGE_KEY, lang);
+    }
+  };
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   const t = (key: string): string => {
     const translation = translations[language][key as keyof typeof translations[typeof language]];

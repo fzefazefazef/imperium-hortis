@@ -1,295 +1,192 @@
 import { Button } from "@/components/ui/button";
 import HeroSection from "@/components/HeroSection";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { OptimizedButton3DWrapper } from "@/components/OptimizedButton3DWrapper";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
+import ArchImage from "@/components/ArchImage";
+import ArchPattern from "@/components/ArchPattern";
+import OliveBranch from "@/components/OliveBranch";
 import { useLanguage } from "@/contexts/LanguageContext";
-import FluidButtonBackground from "@/components/FluidButtonBackground";
-import LogoHeader from "@/components/LogoHeader";
-import MobileMenu from "@/components/MobileMenu";
+import { SproutIcon, SunIcon, WateringCanIcon } from "@/components/AnimatedIcons";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+
+const TRADITION_IMG = "/lovable-uploads/ee27c698-a25c-4ad1-b54c-c46f6a762fff.png";
+
+const services = [
+  { key: "gardens", Icon: SproutIcon },
+  { key: "terraces", Icon: SunIcon },
+  { key: "art", Icon: WateringCanIcon },
+] as const;
 
 const Index = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { ref: servicesRef, isIntersecting: servicesVisible } = useIntersectionObserver();
-  const { ref: titleRef, isIntersecting: titleVisible } = useIntersectionObserver();
-  const { ref: contactButtonsRef, isIntersecting: contactButtonsVisible } = useIntersectionObserver();
 
   return (
-    <div id="top" className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <LogoHeader isVisible={!isMenuOpen} />
-      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
-      
-      
-      {/* Hero Section */}
+    <div className="min-h-screen bg-cream text-ink overflow-x-hidden">
+      <Navbar />
       <HeroSection />
 
-      {/* Introduction Section */}
-      <section className="py-32 px-8 md:px-16 lg:px-24 bg-gradient-to-b from-deep-charcoal to-midnight-blue">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-fade-in">
-              <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:!text-black mb-8">
-                {t('about.title')}
+      {/* ===== Une tradition d'excellence ===== */}
+      <section className="relative bg-cream py-20 px-6 md:px-12 lg:px-20 md:py-28 overflow-hidden">
+        <OliveBranch className="pointer-events-none absolute -left-10 top-1/2 -translate-y-1/2 w-[420px] text-imperial opacity-[0.10] hidden md:block" />
+
+        <div className="relative mx-auto max-w-6xl grid items-center gap-12 md:gap-[72px] md:[grid-template-columns:1.05fr_0.95fr]">
+          {/* Texte */}
+          <div>
+            <Reveal className="flex items-center gap-3 mb-6">
+              <span className="h-px w-8 bg-brass" />
+              <span className="font-inter text-[11px] uppercase tracking-[0.26em] text-imperial">
+                {t("home.tradition.eyebrow")}
+              </span>
+            </Reveal>
+
+            <Reveal delay={120}>
+              <h2 className="font-cinzel font-semibold text-ink mb-7" style={{ fontSize: "clamp(30px, 4vw, 44px)" }}>
+                {t("about.title")}
               </h2>
-              
-              <div className="space-y-6">
-                <div className="font-cinzel text-lg text-soft-white/90 leading-relaxed">
-                  {t('about.intro.text1').split('\n\n').map((paragraph, index) => (
-                    <p key={index} className={index === 0 ? "text-sage-green/90 italic mb-6 text-xl" : "mb-6"}>
-                      {paragraph}
+            </Reveal>
+
+            <Reveal delay={240}>
+              <div className="space-y-5">
+                {t("about.intro.text1")
+                  .split("\n\n")
+                  .map((p, i) => (
+                    <p
+                      key={i}
+                      className={`font-inter font-light leading-[1.85] ${
+                        i === 0 ? "text-imperial italic text-[17px]" : "text-ink-soft text-[15.5px]"
+                      }`}
+                    >
+                      {p}
                     </p>
                   ))}
-                </div>
-                
-                <div className="font-cinzel text-lg text-soft-white/85 leading-relaxed">
-                  {t('about.intro.text2').split('\n').map((line, index) => (
-                    <p key={index} className="mb-4 last:mb-0">
+              </div>
+            </Reveal>
+
+            <Reveal delay={360}>
+              <div className="mt-5 space-y-3">
+                {t("about.intro.text2")
+                  .split("\n")
+                  .map((line, i) => (
+                    <p key={i} className="font-inter font-light text-[15.5px] leading-[1.85] text-ink-soft">
                       {line}
                     </p>
                   ))}
-                </div>
               </div>
-            </div>
-            
-            <div className="relative animate-fade-in">
-              <div className="aspect-video bg-gradient-accent rounded-2xl shadow-luxury border border-whisper-gold/20 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/ee27c698-a25c-4ad1-b54c-c46f6a762fff.png" 
-                  alt="Jardin méditerranéen avec lavandes et oliviers - Imperium Hortis"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-whisper-gold/20 rounded-full blur-xl"></div>
+            </Reveal>
+
+            {/* Filet + signature */}
+            <div className="mt-9 flex items-center gap-4">
+              <Reveal variant="line" delay={200} className="h-px w-16 bg-brass" />
+              <span className="font-cinzel text-[13px] uppercase tracking-[0.18em] text-imperial">
+                {t("home.tradition.signature")}
+              </span>
             </div>
           </div>
+
+          {/* Image en arche */}
+          <Reveal variant="image" delay={200} className="mx-auto w-full max-w-[min(380px,80vw)]">
+            <ArchImage src={TRADITION_IMG} alt={t("about.title")} />
+          </Reveal>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-24 px-8 md:px-16 lg:px-24 bg-midnight-blue/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 
-            ref={titleRef}
-            className={`font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:!text-black text-center mb-16 transition-all duration-1000 ${
-              titleVisible 
-                ? 'opacity-100 translate-y-0 animate-fade-in' 
-                : 'opacity-0 translate-y-12'
-            }`}
-          >
-            {t('home.services.title')}
-          </h2>
-          
-          <div 
-            ref={servicesRef}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {[
-              {
-                title: t('home.services.gardens.title'),
-                description: t('home.services.gardens.desc'),
-                icon: "🌿"
-              },
-              {
-                title: t('home.services.terraces.title'), 
-                description: t('home.services.terraces.desc'),
-                icon: "💡"
-              },
-              {
-                title: t('home.services.art.title'),
-                description: t('home.services.art.desc'),
-                icon: "🌳"
-              }
-            ].map((service, index) => (
-              <div
-                key={index}
-                className={`group p-8 rounded-2xl bg-card border border-whisper-gold/20 hover:border-whisper-gold/40 transition-all duration-700 hover:shadow-glow hover:scale-105 transform ${
-                  servicesVisible 
-                    ? 'opacity-100 translate-y-0 animate-fade-in' 
-                    : 'opacity-0 translate-y-16'
-                }`}
-                style={{ 
-                  animationDelay: servicesVisible ? `${index * 0.3}s` : '0s',
-                  transitionDelay: servicesVisible ? `${index * 0.2}s` : '0s'
-                }}
-              >
-                <div className={`text-4xl mb-4 transition-all duration-500 ${
-                  servicesVisible ? 'animate-scale-in' : ''
-                }`} style={{ animationDelay: servicesVisible ? `${0.5 + index * 0.2}s` : '0s' }}>
-                  {service.icon}
+      {/* ===== Nos savoir-faire (services) ===== */}
+      <section className="bg-cream-deep py-20 px-6 md:px-12 lg:px-20 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <Reveal className="flex flex-col items-center text-center mb-16">
+            <span className="font-cinzel font-semibold text-ink" style={{ fontSize: "clamp(28px, 3.6vw, 40px)" }}>
+              {t("home.services.title")}
+            </span>
+            <span className="mt-5 h-px w-16 bg-brass" />
+          </Reveal>
+
+          <div className="grid gap-7 md:grid-cols-3">
+            {services.map((s, i) => (
+              <Reveal key={s.key} delay={120 * (i + 1)}>
+                <div
+                  className="service-card group h-full rounded-[18px] bg-[#FDFBF7] border border-imperial/[0.14] hover:border-imperial/30 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_40px_rgba(28,35,26,0.09)]"
+                  style={{ padding: "40px 26px" }}
+                >
+                  <s.Icon size={54} />
+                  <h3 className="mt-5 font-cinzel font-semibold text-[17px] text-ink">
+                    {t(`home.services.${s.key}.title`)}
+                  </h3>
+                  <p className="mt-3 font-inter font-light text-[13.5px] leading-[1.7] text-ink-soft">
+                    {t(`home.services.${s.key}.desc`)}
+                  </p>
                 </div>
-                <h3 className="font-cinzel-decorative text-xl font-semibold text-soft-white mb-4 group-hover:text-whisper-gold transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="font-cinzel text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                  {service.description}
-                </p>
-              </div>
+              </Reveal>
             ))}
-           </div>
-           
-           <div className="text-center mt-16">
-             <Button 
-               variant="hero-luxury"
-               size="xl"
-               onClick={() => navigate('/services')}
-               className="font-cinzel font-medium hover:shadow-luxury hover:scale-110 transition-all duration-500"
-             >
-               {t('index.services.discover')}
-             </Button>
-           </div>
-         </div>
-       </section>
-
-      {/* Contact Section */}
-      <section className="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal to-midnight-blue">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <h2 className="font-cinzel-decorative text-3xl md:text-4xl lg:text-5xl font-semibold text-soft-white lg:!text-black mb-8">
-            {t('home.contact.title')}
-          </h2>
-          <p className="font-cinzel text-lg text-soft-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {t('home.contact.desc')}
-          </p>
-          
-          <div 
-            ref={contactButtonsRef}
-            className={`flex flex-col sm:flex-row gap-6 justify-center transition-all duration-1000 ${
-              contactButtonsVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}
-          >
-            <OptimizedButton3DWrapper 
-              isVisible={contactButtonsVisible} 
-              delay={0.1}
-              className="w-full sm:w-auto"
-            >
-               <Button 
-                 variant="hero-luxury"
-                 size="xl" 
-                 onClick={() => {
-                   navigate('/contact');
-                   window.scrollTo(0, 0);
-                 }}
-                 className={`relative overflow-hidden font-playfair font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
-                   contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
-                 }`}
-                 style={{ 
-                   animationDelay: contactButtonsVisible ? '0.1s' : '0s',
-                   background: contactButtonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
-                   backgroundSize: '300% 100%',
-                   boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
-                 }}
-               >
-                 <FluidButtonBackground />
-                 <span className="relative z-10">{t('home.contact.appointment')}</span>
-                </Button>
-             </OptimizedButton3DWrapper>
-            
-            <OptimizedButton3DWrapper 
-              isVisible={contactButtonsVisible} 
-              delay={0.3}
-              className="w-full sm:w-auto"
-            >
-               <Button 
-                 variant="hero-luxury" 
-                 size="xl" 
-                 onClick={() => {
-                   navigate('/portfolio');
-                   window.scrollTo(0, 0);
-                 }}
-                 className={`relative overflow-hidden font-cinzel font-medium hover-scale transform transition-all duration-500 hover:shadow-luxury hover:scale-110 w-full ${
-                   contactButtonsVisible ? 'animate-fade-in animate-light-sweep' : ''
-                 }`}
-                 style={{ 
-                   animationDelay: contactButtonsVisible ? '0.3s' : '0s',
-                   background: contactButtonsVisible ? 'linear-gradient(135deg, rgba(255, 126, 95, 0.4), rgba(255, 193, 7, 0.5), rgba(255, 171, 64, 0.4))' : 'transparent',
-                   backgroundSize: '300% 100%',
-                   boxShadow: contactButtonsVisible ? '0 0 35px rgba(255, 171, 64, 0.6), inset 0 0 25px rgba(255, 193, 7, 0.3)' : 'none'
-                 }}
-               >
-                 <FluidButtonBackground />
-                 <span className="relative z-10">{t('home.contact.portfolio')}</span>
-                </Button>
-             </OptimizedButton3DWrapper>
           </div>
+
+          <Reveal delay={480} className="text-center mt-14">
+            <Button
+              variant="pill-ghost-dark"
+              size="pill"
+              onClick={() => {
+                navigate("/services");
+                window.scrollTo(0, 0);
+              }}
+            >
+              {t("index.services.discover")}
+            </Button>
+          </Reveal>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-20 px-8 md:px-16 lg:px-24 bg-gradient-to-t from-deep-charcoal via-midnight-blue/30 to-deep-charcoal border-t border-whisper-gold/40">
-        <div className="max-w-4xl mx-auto">
-          {/* Ornamental Top Border */}
-          <div className="flex items-center justify-center mb-12">
-            <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1"></div>
-            <div className="mx-6 text-whisper-gold/70 text-xl">❦</div>
-            <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/50 to-transparent flex-1"></div>
-          </div>
-          
-          {/* Main Footer Content */}
-          <div className="text-center mb-16">
-            <h3 className="font-cinzel text-4xl font-bold text-soft-white lg:!text-black mb-4 tracking-widest uppercase">
-              IMPERIUM HORTIS
-            </h3>
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-8 h-px bg-whisper-gold/60"></div>
-              <div className="mx-4 text-whisper-gold/70">◆</div>
-              <div className="w-8 h-px bg-whisper-gold/60"></div>
-            </div>
-              <p className="font-cinzel text-xl text-soft-graphite max-w-2xl mx-auto leading-relaxed italic tracking-wider">
-              "{t('footer.motto')}"
+      {/* ===== CTA jardin d'éternité ===== */}
+      <section className="relative bg-ink text-center overflow-hidden py-20 px-6 md:py-28">
+        <ArchPattern />
+
+        <div className="relative mx-auto max-w-2xl flex flex-col items-center">
+          <Reveal className="flex items-center gap-4 mb-6">
+            <span className="h-px w-9 bg-brass/80" />
+            <span className="font-inter text-[11.5px] uppercase tracking-[0.28em] text-sage">
+              {t("home.cta.eyebrow")}
+            </span>
+            <span className="h-px w-9 bg-brass/80" />
+          </Reveal>
+
+          <Reveal delay={120}>
+            <h2 className="font-cinzel font-semibold text-cream leading-[1.15]" style={{ fontSize: "clamp(30px, 4.5vw, 50px)" }}>
+              <span className="text-shine-soft">{t("home.contact.title")}</span>
+            </h2>
+          </Reveal>
+
+          <Reveal delay={240}>
+            <p className="mt-6 font-inter font-light text-[15px] leading-[1.75] text-cream/65 max-w-[460px]">
+              {t("home.contact.desc")}
             </p>
-          </div>
-          
-          {/* Contact Information with Refined Style */}
-          <div className="bg-gradient-to-r from-whisper-gold/5 via-whisper-gold/8 to-whisper-gold/5 backdrop-blur-sm border border-whisper-gold/20 p-6 px-4 md:p-10 mb-16 relative overflow-hidden">
-            {/* Subtle Corner Ornaments */}
-            <div className="absolute top-2 left-2 text-whisper-gold/40 text-sm">◢</div>
-            <div className="absolute top-2 right-2 text-whisper-gold/40 text-sm">◣</div>
-            <div className="absolute bottom-2 left-2 text-whisper-gold/40 text-sm">◥</div>
-            <div className="absolute bottom-2 right-2 text-whisper-gold/40 text-sm">◤</div>
-            
-            <h4 className="font-cinzel-decorative text-2xl font-semibold text-whisper-gold mb-8 text-center tracking-wide">
-              Contact
-            </h4>
-            <div className="flex flex-col items-start pl-0 -ml-4 md:flex-row md:items-center md:justify-center md:ml-0 md:pl-0 space-y-6 md:space-y-0 md:space-x-16">
-              <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
-                  <span className="text-whisper-gold text-lg">☎</span>
-                </div>
-                <a href="tel:+33763638357" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
-                  +33 7 63 63 83 57
-                </a>
-              </div>
-              <div className="flex items-center space-x-4 group">
-                <div className="w-10 h-10 rounded-full bg-whisper-gold/10 flex items-center justify-center border border-whisper-gold/30">
-                  <span className="text-whisper-gold text-lg">✉</span>
-                </div>
-                <a href="mailto:contact@imperiumhortis.com" className="font-cinzel text-soft-white/90 group-hover:text-whisper-gold transition-colors duration-300 tracking-wide hover:underline cursor-pointer">
-                  contact@imperiumhortis.com
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          {/* Refined Copyright */}
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/30 to-transparent flex-1"></div>
-              <div className="mx-6 text-whisper-gold/50 text-sm">❦</div>
-              <div className="h-px bg-gradient-to-r from-transparent via-whisper-gold/30 to-transparent flex-1"></div>
-            </div>
-            <p className="font-cinzel text-soft-white/60 text-sm tracking-widest">
-              {t('footer.rights')}
-            </p>
-            <div className="mt-4 text-whisper-gold/40 text-xs font-cinzel tracking-widest">
-              MMXXIV
-            </div>
-          </div>
+          </Reveal>
+
+          <Reveal delay={360} className="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Button
+              variant="pill-cream"
+              size="pill"
+              onClick={() => {
+                navigate("/contact");
+                window.scrollTo(0, 0);
+              }}
+            >
+              {t("home.contact.appointment")}
+            </Button>
+            <Button
+              variant="pill-ghost-light"
+              size="pill"
+              onClick={() => {
+                navigate("/portfolio");
+                window.scrollTo(0, 0);
+              }}
+            >
+              {t("home.cta.portfolio")}
+            </Button>
+          </Reveal>
         </div>
-      </footer>
+      </section>
+
+      <Footer />
     </div>
   );
 };

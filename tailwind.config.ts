@@ -19,8 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'cinzel': ['Cinzel', 'serif'],
 				'cinzel-decorative': ['Cinzel Decorative', 'serif'],
 				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -72,7 +74,24 @@ export default {
 				'whisper-gold': 'hsl(var(--whisper-gold))',
 				'muted-sage': 'hsl(var(--muted-sage))',
 				'charcoal-navy': 'hsl(var(--charcoal-navy))',
-				'pure-alabaster': 'hsl(var(--pure-alabaster))'
+				'pure-alabaster': 'hsl(var(--pure-alabaster))',
+
+				/* --- Palette v2 « arche impériale » --- */
+				'cream': 'hsl(var(--cream))',
+				'cream-deep': 'hsl(var(--cream-deep))',
+				'ink': 'hsl(var(--ink))',
+				'imperial': {
+					DEFAULT: 'hsl(var(--imperial))',
+					deep: 'hsl(var(--imperial-deep))'
+				},
+				'sage': 'hsl(var(--sage))',
+				'brass': 'hsl(var(--brass))',
+				'ink-soft': 'hsl(var(--text-soft))',
+				/* Alias des anciens noms (transition) — pointent vers la palette v2 */
+				'soft-white': 'hsl(var(--cream))',
+				'sage-green': 'hsl(var(--sage))',
+				'deep-charcoal': 'hsl(var(--ink))',
+				'midnight-blue': 'hsl(var(--ink))'
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',

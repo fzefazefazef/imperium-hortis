@@ -1,139 +1,162 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 interface MobileMenuProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  /** true quand la nav a défilé (au-dessus d'un fond crème) → icône encre */
+  scrolled?: boolean;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
-  const [showLanguages, setShowLanguages] = useState(false);
-  const { setLanguage, t } = useLanguage();
+/**
+ * Audit du bug "menu fantôme" (v4) — causes confirmées présentes avant correction :
+ *  - #6 (confirmée par mesure) : le panneau/overlay `fixed` était rendu DANS <header>,
+ *    qui applique `backdrop-blur` une fois scrollé. Un backdrop-filter sur un ancêtre
+ *    crée un containing block pour ses descendants `position:fixed` : l'overlay se
+ *    retrouvait borné à la hauteur du header (mesuré 64px) au lieu du viewport entier,
+ *    et son contenu (Navigation/Langue/CTA) débordait visiblement par-dessus la page.
+ *    → Fix : portail React direct dans document.body, hors de l'arbre du header.
+ *  - #3 : rien ne fermait le panneau sur un changement de route hors clic menu
+ *    (ex. logo cliqué pendant que le menu est ouvert, retour navigateur sur la même
+ *    route). → Fix : useEffect sur useLocation().pathname.
+ *  - #4 : aucun verrouillage du scroll du body à l'ouverture. → Fix : useEffect dédié
+ *    avec cleanup systématique (fermeture ET démontage).
+ *  - #1, #2, #5 : déjà corrects (démontage complet `{isOpen && ...}`, pas d'enfant
+ *    fixed isolé) ; `overflow-x` de sécurité ajouté sur html/body dans index.css.
+ */
+const MobileMenu: React.FC<MobileMenuProps> = ({ scrolled = false }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { setLanguage, language, t } = useLanguage();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleNavigation = (path: string) => {
+  // Filet de sécurité : ferme le panneau à tout changement de route (logo cliqué,
+  // navigation programmatique, bouton retour du navigateur).
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Verrouille le scroll du body tant que le panneau est ouvert ; le cleanup couvre
+  // aussi bien la fermeture normale que le démontage (navigation en cours d'ouverture).
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const go = (path: string) => {
     navigate(path);
     window.scrollTo(0, 0);
     setIsOpen(false);
   };
 
-  const handleLanguageChange = (lang: 'fr' | 'en' | 'it') => {
-    setLanguage(lang);
-    setShowLanguages(false);
-    setIsOpen(false);
-  };
-
-  const navigationItems = [
-    { name: t('nav.home'), path: "/" },
-    { name: t('nav.philosophie'), path: "/philosophie" },
-    { name: t('nav.services'), path: "/services" },
-    { name: t('nav.portfolio'), path: "/portfolio" },
-    { name: t('nav.contact'), path: "/contact" }
+  const items = [
+    { name: t("nav.home"), path: "/" },
+    { name: t("nav.philosophie"), path: "/philosophie" },
+    { name: t("nav.services"), path: "/services" },
+    { name: t("nav.portfolio"), path: "/portfolio" },
+    { name: t("nav.contact"), path: "/contact" },
   ];
 
-  const languages: Array<{ code: 'fr' | 'en' | 'it', name: string, flag: JSX.Element }> = [
-    { code: 'fr' as const, name: 'Français', flag: (
-      <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
-        <rect width="8" height="16" fill="#0055A4"/>
-        <rect x="8" width="8" height="16" fill="#FFFFFF"/>
-        <rect x="16" width="8" height="16" fill="#EF4135"/>
-      </svg>
-    )},
-    { code: 'en' as const, name: 'English', flag: (
-      <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
-        <rect width="24" height="16" fill="#012169"/>
-        <path d="M0,0 L24,16 M24,0 L0,16" stroke="#FFFFFF" strokeWidth="2"/>
-        <path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" strokeWidth="1"/>
-        <rect x="10" width="4" height="16" fill="#FFFFFF"/>
-        <rect width="24" height="3" y="6.5" fill="#FFFFFF"/>
-        <rect x="11" width="2" height="16" fill="#C8102E"/>
-        <rect width="24" height="1.5" y="7.25" fill="#C8102E"/>
-      </svg>
-    )},
-    { code: 'it' as const, name: 'Italiano', flag: (
-      <svg width="24" height="16" viewBox="0 0 24 16" className="border border-gray-400">
-        <rect width="8" height="16" fill="#009246"/>
-        <rect x="8" width="8" height="16" fill="#FFFFFF"/>
-        <rect x="16" width="8" height="16" fill="#CE2B37"/>
-      </svg>
-    )}
-  ];
+  const langs: Array<"fr" | "en" | "it"> = ["fr", "en", "it"];
 
   return (
     <div className="xl:hidden">
-      {/* Menu Toggle Button */}
-      <Button
-        variant="ghost"
-        size="sm"
+      {/* Toggle */}
+      <button
+        type="button"
+        aria-label="Menu"
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-12 left-8 z-50 p-2 bg-black/20 hover:bg-black/40 backdrop-blur-sm border border-white/20"
+        className={`relative z-50 flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-300 ${
+          isOpen
+            ? "text-cream"
+            : scrolled
+              ? "text-ink hover:bg-ink/5"
+              : "text-cream hover:bg-cream/10"
+        }`}
       >
-        {isOpen ? (
-          <X className="h-6 w-6 text-white" />
-        ) : (
-          <Menu className="h-6 w-6 text-white" />
-        )}
-      </Button>
+        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+      </button>
 
-      {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm">
-          <div className="fixed right-0 top-0 h-full w-80 bg-gradient-to-b from-deep-charcoal to-midnight-blue border-l border-whisper-gold/20 shadow-2xl">
-            <div className="flex flex-col h-full pt-20 px-6">
-              
-              {/* Navigation Items */}
-              <div className="space-y-6 mb-8">
-                <h3 className="font-cinzel-decorative text-lg font-semibold text-whisper-gold mb-4">
-                  Navigation
-                </h3>
-                {navigationItems.map((item, index) => (
-                  <button
-                    key={item.name}
-                    onClick={() => handleNavigation(item.path)}
-                    className="block w-full text-left font-cinzel-decorative text-base font-medium text-white hover:text-whisper-gold transition-all duration-300 py-2 border-b border-whisper-gold/10 hover:border-whisper-gold/30"
-                  >
-                    {item.name}
-                  </button>
-                ))}
-              </div>
-
-              {/* Language Section */}
-              <div className="border-t border-whisper-gold/20 pt-6">
-                <button
-                  onClick={() => setShowLanguages(!showLanguages)}
-                  className="flex items-center justify-between w-full font-cinzel-decorative text-lg font-semibold text-whisper-gold mb-4"
-                >
-                  <span className="flex items-center">
-                    <Globe className="h-5 w-5 mr-2" />
-                    Langue
-                  </span>
-                  <span className={`transform transition-transform ${showLanguages ? 'rotate-180' : ''}`}>
-                    ▼
-                  </span>
-                </button>
-                
-                {showLanguages && (
-                  <div className="space-y-3 ml-4">
-                    {languages.map((lang) => (
+      {/* Overlay + panneau : portés dans document.body, jamais dans <header>
+          (voir note d'audit ci-dessus) — se démonte entièrement à la fermeture. */}
+      {isOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-40 bg-ink/70 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+          >
+            <div
+              className="fixed right-0 top-0 h-full w-80 max-w-[85vw] overflow-y-auto bg-ink border-l border-brass/25 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex min-h-full flex-col pt-24 px-8 pb-10">
+                {/* Navigation */}
+                <div className="mb-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="h-px w-8 bg-brass/60" />
+                    <span className="font-inter text-[11px] uppercase tracking-[0.22em] text-brass">
+                      Navigation
+                    </span>
+                  </div>
+                  <div className="space-y-1">
+                    {items.map((item) => (
                       <button
-                        key={lang.code}
-                        onClick={() => handleLanguageChange(lang.code)}
-                        className="flex items-center space-x-3 w-full text-left font-cinzel text-sm text-white hover:text-whisper-gold transition-colors duration-300 py-2"
+                        key={item.path}
+                        onClick={() => go(item.path)}
+                        className="block w-full text-left font-cinzel text-lg text-cream/90 hover:text-cream transition-colors duration-300 py-2.5 border-b border-cream/10"
                       >
-                        {lang.flag}
-                        <span>{lang.name}</span>
+                        {item.name}
                       </button>
                     ))}
                   </div>
-                )}
+                </div>
+
+                {/* Langues */}
+                <div className="mb-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="h-px w-8 bg-brass/60" />
+                    <span className="font-inter text-[11px] uppercase tracking-[0.22em] text-brass">
+                      Langue
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 font-inter text-sm tracking-[0.14em]">
+                    {langs.map((code) => (
+                      <button
+                        key={code}
+                        onClick={() => {
+                          setLanguage(code);
+                          setIsOpen(false);
+                        }}
+                        className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center uppercase transition-colors duration-300 ${
+                          language === code
+                            ? "text-cream underline underline-offset-4 decoration-1"
+                            : "text-cream/50 hover:text-cream"
+                        }`}
+                      >
+                        {code}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <Button
+                  variant="pill-cream"
+                  size="pill"
+                  className="w-full"
+                  onClick={() => go("/contact")}
+                >
+                  {t("hero.btn.consultation")}
+                </Button>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </div>
   );
 };

@@ -18,10 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        luxury: "bg-transparent border border-soft-white/30 text-soft-white hover:bg-soft-white/10 hover:border-whisper-gold/50 backdrop-blur-sm transition-all duration-500",
-        minimal: "bg-whisper-gold/20 text-soft-white border border-whisper-gold/40 hover:bg-whisper-gold/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
-        "hero-luxury": "bg-transparent border border-white/30 text-white hover:bg-white/10 hover:border-whisper-gold/50 backdrop-blur-sm transition-all duration-500",
-        "hero-minimal": "bg-whisper-gold/20 text-white border border-whisper-gold/40 hover:bg-whisper-gold/30 hover:shadow-glow transition-all duration-500 backdrop-blur-sm",
+        // --- Boutons pilule signature v2 (à utiliser avec size="pill") ---
+        "pill-primary": "btn-pill-primary rounded-full font-inter text-[13px] normal-case [transition-duration:180ms] [transition-timing-function:cubic-bezier(0.2,0.8,0.2,1)]",
+        "pill-ghost-light": "btn-pill-ghost-light rounded-full font-inter text-[13px] normal-case [transition-duration:180ms] [transition-timing-function:cubic-bezier(0.2,0.8,0.2,1)]",
+        "pill-ghost-dark": "btn-pill-ghost-dark rounded-full font-inter text-[13px] normal-case [transition-duration:180ms] [transition-timing-function:cubic-bezier(0.2,0.8,0.2,1)]",
+        "pill-cream": "btn-pill-cream rounded-full font-inter text-[13px] normal-case [transition-duration:180ms] [transition-timing-function:cubic-bezier(0.2,0.8,0.2,1)]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -29,6 +30,9 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-8",
         xl: "h-14 rounded-lg px-12 text-base",
         icon: "h-10 w-10",
+        // Taille neutre pour les pilules : padding/hauteur portés par la variante.
+        pill: "",
+        "pill-sm": "text-[12px]",
       },
     },
     defaultVariants: {
