@@ -1,17 +1,16 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Reveal from "@/components/Reveal";
 
-const HERO_POSTER = "/lovable-uploads/ee27c698-a25c-4ad1-b54c-c46f6a762fff.png";
-
 const HeroSection = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVideoReady, setIsVideoReady] = useState(false);
 
-  // prefers-reduced-motion : on met la vidéo en pause, le poster reste affiché.
+  // prefers-reduced-motion : on met la vidéo en pause, le fond ink + contenu restent affichés.
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -27,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink">
-      {/* Vidéo de fond — poster natif affiché tant qu'elle n'est pas prête ou en pause (reduced-motion) */}
+      {/* Fond encre uni — visible sous la vidéo tant qu'elle n'a pas de frame prête (ou en reduced-motion) */}
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
@@ -37,8 +36,13 @@ const HeroSection = () => {
         playsInline
         controls={false}
         preload="metadata"
-        poster={HERO_POSTER}
-        style={{ pointerEvents: "none" }}
+        onCanPlay={() => setIsVideoReady(true)}
+        onLoadedData={() => setIsVideoReady(true)}
+        style={{
+          pointerEvents: "none",
+          opacity: isVideoReady ? 1 : 0,
+          transition: "opacity 0.4s ease",
+        }}
       >
         <source src="/Professional_Mode_Transform_this_still_image_into_.mp4" type="video/mp4" />
       </video>
