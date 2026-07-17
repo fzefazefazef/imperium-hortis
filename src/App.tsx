@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import GtagRouteTracker from "./components/GtagRouteTracker";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <GtagRouteTracker />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/philosophie" element={<Philosophie />} />
