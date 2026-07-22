@@ -55,7 +55,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
+      const response = await fetch('https://imperium-hortis.vercel.app/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
