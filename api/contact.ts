@@ -14,7 +14,13 @@ export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   try {
-    const { firstname, lastname, email, phone, project, budget, description, honeypot } = req.body || {};
+    const body = req.body || {};
+    console.log(
+      '[contact] payload received — keys filled?',
+      Object.fromEntries(Object.entries(body).map(([key, value]) => [key, Boolean(String(value ?? '').trim())]))
+    );
+
+    const { firstname, lastname, email, phone, project, budget, description, honeypot } = body;
 
     // Honeypot anti-spam : si rempli, on renvoie succès factice sans envoyer
     if (honeypot) return res.status(200).json({ ok: true });

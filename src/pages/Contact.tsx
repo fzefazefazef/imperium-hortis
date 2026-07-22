@@ -69,9 +69,21 @@ const Contact = () => {
         }),
       });
 
-      const data = await response.json();
-      if (!response.ok || data?.error) {
-        throw new Error(data?.error || 'Envoi impossible');
+      const responseText = await response.text();
+      if (!response.ok) {
+        console.error('[contact] server responded with an error:', response.status, responseText);
+        throw new Error(`Envoi impossible (${response.status})`);
+      }
+
+      let data: { error?: string } = {};
+      try {
+        data = responseText ? JSON.parse(responseText) : {};
+      } catch {
+        console.error('[contact] non-JSON response body:', responseText);
+      }
+      if (data?.error) {
+        console.error('[contact] server returned an error:', data.error);
+        throw new Error(data.error);
       }
 
       toast({

@@ -1,10 +1,5 @@
 {
   "buildCommand": null,
   "outputDirectory": null,
-  "framework": null,
-  "functions": {
-    "api/contact.ts": {
-      "runtime": "@vercel/node@3"
-    }
-  }
+  "framework": null
 }
