@@ -10,7 +10,6 @@ import whatsappIcon from "@/assets/whatsapp-icon.png";
 import Layout from "@/components/Layout";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
-import { supabase } from "@/integrations/supabase/client";
 
 const inputClass =
   "bg-[#FDFBF7] border-imperial/20 text-ink placeholder:text-ink-soft/50 rounded-xl focus-visible:ring-imperial";
@@ -56,8 +55,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke('contact', {
-        body: {
+      const response = await fetch(import.meta.env.VITE_CONTACT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
           firstname: formData.firstName,
           lastname: formData.lastName,
           email: formData.email,
@@ -65,11 +66,12 @@ const Contact = () => {
           project: formData.projectType,
           description: formData.description,
           honeypot,
-        },
+        }),
       });
 
-      if (error || data?.error) {
-        throw error || new Error(data.error);
+      const data = await response.json();
+      if (!response.ok || data?.error) {
+        throw new Error(data?.error || 'Envoi impossible');
       }
 
       toast({
