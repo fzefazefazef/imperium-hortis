@@ -10,6 +10,7 @@ import whatsappIcon from "@/assets/whatsapp-icon.png";
 import Layout from "@/components/Layout";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
+import { supabase } from "@/integrations/supabase/client";
 
 const inputClass =
   "bg-[#FDFBF7] border-imperial/20 text-ink placeholder:text-ink-soft/50 rounded-xl focus-visible:ring-imperial";
@@ -36,11 +37,6 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    // TODO (client / Lovable) : brancher ici l'envoi réel du formulaire.
-    // Email de destination prévu : contact@imperiumhortis.com
-    // Ce formulaire est actuellement un front fonctionnel (validation, états, anti-spam)
-    // sans service d'envoi connecté. Suggestion : Resend, ou une Edge Function Supabase,
-    // à intégrer directement dans le projet Lovable du client.
     e.preventDefault();
 
     // Anti-spam : si le honeypot est rempli, on ignore silencieusement la soumission.
@@ -60,9 +56,21 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Envoi simulé côté front (pas de service d'envoi branché — cf. TODO ci-dessus).
-      // Conserve l'UX complète : état de chargement, toast de succès, reset du formulaire.
-      await new Promise((resolve) => setTimeout(resolve, 600));
+      const { data, error } = await supabase.functions.invoke('contact', {
+        body: {
+          firstname: formData.firstName,
+          lastname: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          project: formData.projectType,
+          description: formData.description,
+          honeypot,
+        },
+      });
+
+      if (error || data?.error) {
+        throw error || new Error(data.error);
+      }
 
       toast({
         title: t('contact.success.title'),

@@ -23,3 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+*.tsbuildinfo
+
+# Env / secrets — never commit real credentials
+.env
+.env.*
+env.example.txt
