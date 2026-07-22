@@ -55,35 +55,33 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://imperium-hortis.vercel.app/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          firstname: formData.firstName,
-          lastname: formData.lastName,
+          access_key: '8c26eaac-fda6-4419-8b77-686cf9dd63f9',
+          subject: `Nouvelle demande — ${formData.firstName} ${formData.lastName}`,
+          from_name: `${formData.firstName} ${formData.lastName}`,
           email: formData.email,
           phone: formData.phone,
           project: formData.projectType,
           description: formData.description,
-          honeypot,
+          replyto: formData.email,
+          botcheck: honeypot,
         }),
       });
 
       const responseText = await response.text();
-      if (!response.ok) {
-        console.error('[contact] server responded with an error:', response.status, responseText);
-        throw new Error(`Envoi impossible (${response.status})`);
-      }
-
-      let data: { error?: string } = {};
+      let data: { success?: boolean; message?: string } = {};
       try {
         data = responseText ? JSON.parse(responseText) : {};
       } catch {
         console.error('[contact] non-JSON response body:', responseText);
       }
-      if (data?.error) {
-        console.error('[contact] server returned an error:', data.error);
-        throw new Error(data.error);
+
+      if (!response.ok || !data?.success) {
+        console.error('[contact] server responded with an error:', response.status, responseText);
+        throw new Error(data?.message || `Envoi impossible (${response.status})`);
       }
 
       toast({
